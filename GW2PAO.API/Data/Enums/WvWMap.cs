@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace GW2PAO.API.Data.Enums
 {
-    public enum WvWMap
+    public enum WvWMap // Using real map number as enum values.
     {
         Unknown,
-        BlueBorderlands,
-        GreenBorderlands,
-        RedAplineBorderlands,
-        RedDesertBorderlands,
-        EternalBattlegrounds
+        EternalBattlegrounds = 38,
+        GreenAlpineBorderlands = 95,
+        BlueAlpineBorderlands = 96,
+        RedDesertBorderlands = 1099 // There's no more Red Alpine Borderland now.
     }
 }

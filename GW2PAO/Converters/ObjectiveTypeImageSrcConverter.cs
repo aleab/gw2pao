@@ -73,6 +73,12 @@ namespace GW2PAO.Converters
                     case ObjectiveType.CarversAscent:
                         imagePath += "CarversAscent";
                         break;
+                    case ObjectiveType.Mercenary:
+                        imagePath += "Mercenary";
+                        break;
+                    case ObjectiveType.Spawn:
+                        imagePath += "Spawn";
+                        break;
                     default:
                         break;
                 }

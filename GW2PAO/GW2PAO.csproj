@@ -1029,6 +1029,14 @@
     <Resource Include="Images\Misc\day.png" />
     <Resource Include="Images\Misc\night.png" />
     <Resource Include="Images\Title\daynight.png" />
+    <Resource Include="Images\WvW\Blue\Mercenary.png" />
+    <Resource Include="Images\WvW\Blue\Spawn.png" />
+    <Resource Include="Images\WvW\Green\Mercenary.png" />
+    <Resource Include="Images\WvW\Green\Spawn.png" />
+    <Resource Include="Images\WvW\Red\Mercenary.png" />
+    <Resource Include="Images\WvW\Red\Spawn.png" />
+    <Resource Include="Images\WvW\Neutral\Mercenary.png" />
+    <Resource Include="Images\WvW\Neutral\Spawn.png" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

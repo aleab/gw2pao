@@ -275,14 +275,13 @@ namespace GW2PAO.API.Services
                     CompetitiveMap mapDetails = null;
                     switch (map)
                     {
-                        case WvWMap.BlueBorderlands:
+                        case WvWMap.BlueAlpineBorderlands:
                             mapDetails = matchDetails.Maps.FirstOrDefault(m => m is BlueBorderlands);
                             break;
-                        case WvWMap.GreenBorderlands:
+                        case WvWMap.GreenAlpineBorderlands:
                             mapDetails = matchDetails.Maps.FirstOrDefault(m => m is GreenBorderlands);
                             break;
                         case WvWMap.RedDesertBorderlands:
-                        case WvWMap.RedAplineBorderlands:
                             mapDetails = matchDetails.Maps.FirstOrDefault(m => m is RedBorderlands);
                             break;
                         case WvWMap.EternalBattlegrounds:
@@ -380,9 +379,9 @@ namespace GW2PAO.API.Services
                             var objData = new WvWObjective();
 
                             if (mapDetails is BlueBorderlands)
-                                objData.Map = WvWMap.BlueBorderlands;
+                                objData.Map = WvWMap.BlueAlpineBorderlands;
                             else if (mapDetails is GreenBorderlands)
-                                objData.Map = WvWMap.GreenBorderlands;
+                                objData.Map = WvWMap.GreenAlpineBorderlands;
                             else if (mapDetails is RedBorderlands)
                                 objData.Map = WvWMap.RedDesertBorderlands;
                             else if (mapDetails is EternalBattlegrounds)

@@ -18,12 +18,11 @@ namespace GW2PAO.Converters
             {
                 switch (map)
                 {
-                    case WvWMap.BlueBorderlands:
+                    case WvWMap.BlueAlpineBorderlands:
                         return Properties.Resources.BlueBorderlands;
-                    case WvWMap.GreenBorderlands:
+                    case WvWMap.GreenAlpineBorderlands:
                         return Properties.Resources.GreenBorderlands;
                     case WvWMap.RedDesertBorderlands:
-                    case WvWMap.RedAplineBorderlands:
                         return Properties.Resources.RedBorderlands;
                     case WvWMap.EternalBattlegrounds:
                         return Properties.Resources.EternalBattlegrounds;
@@ -37,12 +36,11 @@ namespace GW2PAO.Converters
             {
                 switch (map)
                 {
-                    case WvWMap.BlueBorderlands:
+                    case WvWMap.BlueAlpineBorderlands:
                         return System.Windows.Media.Colors.SkyBlue;
-                    case WvWMap.GreenBorderlands:
+                    case WvWMap.GreenAlpineBorderlands:
                         return System.Windows.Media.Colors.LightGreen;
                     case WvWMap.RedDesertBorderlands:
-                    case WvWMap.RedAplineBorderlands:
                         return System.Windows.Media.Colors.Pink;
                     case WvWMap.EternalBattlegrounds:
                         return System.Windows.Media.Colors.White;
@@ -55,12 +53,11 @@ namespace GW2PAO.Converters
             {
                 switch (map)
                 {
-                    case WvWMap.BlueBorderlands:
+                    case WvWMap.BlueAlpineBorderlands:
                         return System.Windows.Media.Brushes.SkyBlue;
-                    case WvWMap.GreenBorderlands:
+                    case WvWMap.GreenAlpineBorderlands:
                         return System.Windows.Media.Brushes.LightGreen;
                     case WvWMap.RedDesertBorderlands:
-                    case WvWMap.RedAplineBorderlands:
                         return System.Windows.Media.Brushes.Pink;
                     case WvWMap.EternalBattlegrounds:
                         return System.Windows.Media.Brushes.White;

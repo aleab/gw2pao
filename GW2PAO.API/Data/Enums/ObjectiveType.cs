@@ -17,6 +17,8 @@ namespace GW2PAO.API.Data.Enums
         BattlesHollow,
         BauersEstate,
         OrchardOverlook,
-        CarversAscent
+        CarversAscent,
+        Mercenary,
+        Spawn
     }
 }

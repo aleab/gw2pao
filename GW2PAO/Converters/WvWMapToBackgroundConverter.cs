@@ -16,12 +16,11 @@ namespace GW2PAO.Converters
 
             switch (map)
             {
-                case WvWMap.BlueBorderlands:
+                case WvWMap.BlueAlpineBorderlands:
                     return "/Images/Backgrounds/Small1_b.png";
-                case WvWMap.GreenBorderlands:
+                case WvWMap.GreenAlpineBorderlands:
                     return "/Images/Backgrounds/Small1_g.png";
                 case WvWMap.RedDesertBorderlands:
-                case WvWMap.RedAplineBorderlands:
                     return "/Images/Backgrounds/Small1_r.png";
                 case WvWMap.EternalBattlegrounds:
                 case WvWMap.Unknown:

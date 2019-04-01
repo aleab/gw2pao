@@ -117,12 +117,12 @@ namespace GW2PAO.Modules.WvW.ViewModels.WvWTracker
         /// </summary>
         public bool IsUsingBlueBorderlands
         {
-            get { return this.controller.MapOverride == WvWMap.BlueBorderlands; }
+            get { return this.controller.MapOverride == WvWMap.BlueAlpineBorderlands; }
             set
             {
                 if (value)
                 {
-                    this.controller.MapOverride = WvWMap.BlueBorderlands;
+                    this.controller.MapOverride = WvWMap.BlueAlpineBorderlands;
                     this.NotifyMapSelectionChanged();
                 }
             }
@@ -133,12 +133,12 @@ namespace GW2PAO.Modules.WvW.ViewModels.WvWTracker
         /// </summary>
         public bool IsUsingGreenBorderlands
         {
-            get { return this.controller.MapOverride == WvWMap.GreenBorderlands; }
+            get { return this.controller.MapOverride == WvWMap.GreenAlpineBorderlands; }
             set
             {
                 if (value)
                 {
-                    this.controller.MapOverride = WvWMap.GreenBorderlands;
+                    this.controller.MapOverride = WvWMap.GreenAlpineBorderlands;
                     this.NotifyMapSelectionChanged();
                 }
             }

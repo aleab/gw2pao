@@ -111,12 +111,10 @@ namespace GW2PAO.Modules.WvW
                         return WvWMap.EternalBattlegrounds;
                     case WvWMapIDs.RedDesertBorderlands:
                         return WvWMap.RedDesertBorderlands;
-                    case WvWMapIDs.RedAplineBorderlands:
-                        return WvWMap.RedAplineBorderlands;
                     case WvWMapIDs.GreenAplineBorderlands:
-                        return WvWMap.GreenBorderlands;
+                        return WvWMap.GreenAlpineBorderlands;
                     case WvWMapIDs.BlueAplineBorderlands:
-                        return WvWMap.BlueBorderlands;
+                        return WvWMap.BlueAlpineBorderlands;
                     default:
                         return WvWMap.Unknown;
                 }
@@ -754,14 +752,13 @@ namespace GW2PAO.Modules.WvW
                 {
                     switch (objectiveData.Map)
                     {
-                        case WvWMap.BlueBorderlands:
+                        case WvWMap.BlueAlpineBorderlands:
                             canShow = this.UserData.AreBlueBorderlandsNotificationsEnabled;
                             break;
-                        case WvWMap.GreenBorderlands:
+                        case WvWMap.GreenAlpineBorderlands:
                             canShow = this.UserData.AreGreenBorderlandsNotificationsEnabled;
                             break;
                         case WvWMap.RedDesertBorderlands:
-                        case WvWMap.RedAplineBorderlands:
                             canShow = this.UserData.AreRedBorderlandsNotificationsEnabled;
                             break;
                         case WvWMap.EternalBattlegrounds:

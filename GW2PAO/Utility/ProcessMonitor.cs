@@ -195,7 +195,6 @@ namespace GW2PAO.Utility
         {
             return mapId == WvWMapIDs.EternalBattlegrounds
                 || mapId == WvWMapIDs.RedDesertBorderlands
-                || mapId == WvWMapIDs.RedAplineBorderlands
                 || mapId == WvWMapIDs.GreenAplineBorderlands
                 || mapId == WvWMapIDs.BlueAplineBorderlands;
         }
