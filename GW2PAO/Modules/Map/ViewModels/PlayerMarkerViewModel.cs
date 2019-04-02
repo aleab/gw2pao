@@ -108,10 +108,18 @@ namespace GW2PAO.Modules.Map.ViewModels
                     if (this.continent == null)
                         this.continent = this.DetermineCurrentContinent();
 
+                    // Don't know why, but it works when cont.Width / cont.Height value is 32768(Old continent size, now it's 49152).
+                    // Override it when player is in Tyria(ID 1)
+                    if (continent.Id == 1)
+                    {
+                        continent.Width = 32768;
+                        continent.Height = 32768;
+                    }
+
                     // Update the task's continent location
                     var mapPoint = transform.Transform(this.location);
                     this.taskViewModel.Task.ContinentLocation = new Point(
-                        ((this.continent.Width * mapPoint.X) / 360.0) + (continent.Width / 2),
+                        ((continent.Width * mapPoint.X) / 360.0) + (continent.Width / 2),
                         (continent.Height / 2) - ((mapPoint.Y * continent.Height) / 360.0));
 
                     // Determine the map and set the map location accordingly

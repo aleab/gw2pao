@@ -368,12 +368,7 @@ namespace GW2PAO.Modules.WvW.ViewModels
             {
                 this.IsVisible = false;
             }
-            else if (!this.userData.AreBloodlustObjectivesShown &&
-                        (this.Type == ObjectiveType.TempleofLostPrayers
-                         || this.Type == ObjectiveType.BattlesHollow
-                         || this.Type == ObjectiveType.BauersEstate
-                         || this.Type == ObjectiveType.OrchardOverlook
-                         || this.Type == ObjectiveType.CarversAscent) )
+            else if (!this.userData.AreBloodlustObjectivesShown && this.Type == ObjectiveType.Ruin)
             {
                 this.IsVisible = false;
             }
@@ -426,11 +421,7 @@ namespace GW2PAO.Modules.WvW.ViewModels
         {
             logger.Debug("Copying enemy-headed-to text of \"{0}\"", this.Name);
             string name = this.CanCopyChatCode() ? this.ModelData.ChatCode : this.Name;
-            if (this.Type != ObjectiveType.BattlesHollow
-                && this.Type != ObjectiveType.BauersEstate
-                && this.Type != ObjectiveType.CarversAscent
-                && this.Type != ObjectiveType.OrchardOverlook
-                && this.Type != ObjectiveType.TempleofLostPrayers)
+            if (this.Type != ObjectiveType.Ruin)
             {
                 System.Windows.Clipboard.SetDataObject(string.Format(Resources.WvWEnemyHeadedClipboardText, name, this.Location, this.Type));
             }
@@ -469,11 +460,7 @@ namespace GW2PAO.Modules.WvW.ViewModels
 
             string name = this.CanCopyChatCode() ? this.ModelData.ChatCode : this.Name;
 
-            if (this.Type != ObjectiveType.BattlesHollow
-                && this.Type != ObjectiveType.BauersEstate
-                && this.Type != ObjectiveType.CarversAscent
-                && this.Type != ObjectiveType.OrchardOverlook
-                && this.Type != ObjectiveType.TempleofLostPrayers)
+            if (this.Type != ObjectiveType.Ruin)
             {
                 System.Windows.Clipboard.SetDataObject(string.Format(Resources.WvWPlayerHeadedClipboardText, name, this.Location, this.Type, distance, distanceUnits));
             }

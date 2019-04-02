@@ -3,10 +3,10 @@
   <Objectives>
     <Objective>
       <ID ObjectiveId="1" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOsDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAEAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>4548</X>
-        <Y>17078.4</Y>
+        <X>6470.4</X>
+        <Y>16276.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
@@ -14,10 +14,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="2" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOIDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAIAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>25620</X>
-        <Y>-20251.2</Y>
+        <X>23896.8</X>
+        <Y>-18902.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
@@ -25,10 +25,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="3" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPMDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAMAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-19802.4</X>
-        <Y>-17690.4</Y>
+        <X>-21348.7</X>
+        <Y>-19101.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
@@ -36,10 +36,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="4" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPUDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAQAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-7497.6</X>
-        <Y>-25468.8</Y>
+        <X>-6993.6</X>
+        <Y>-26474.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -47,10 +47,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="5" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPADAAA=]</ChatCode>
+      <ChatCode>[&amp;DAUAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>18393.6</X>
-        <Y>13939.2</Y>
+        <X>18859.2</X>
+        <Y>14332.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -58,10 +58,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="6" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BO0DAAA=]</ChatCode>
+      <ChatCode>[&amp;DAYAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-16848.72</X>
-        <Y>19048.8</Y>
+        <X>-15670.8</X>
+        <Y>18916.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -69,10 +69,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="7" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOcDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAcAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>13310.4</X>
-        <Y>-28867.2</Y>
+        <X>13053.6</X>
+        <Y>-29332.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -80,10 +80,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="8" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOQDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAgAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>25802.4</X>
-        <Y>-2716.8</Y>
+        <X>25639.2</X>
+        <Y>-3271.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -91,10 +91,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="9" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BN4DAAA=]</ChatCode>
+      <ChatCode>[&amp;DAkAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>2690.4</X>
-        <Y>-5174.4</Y>
+        <X>2683.2</X>
+        <Y>-5812.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Castle</Type>
@@ -102,10 +102,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="10" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPgDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAoAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-22010.16</X>
-        <Y>-2349.6</Y>
+        <X>-22152.7</X>
+        <Y>-2140.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
@@ -113,10 +113,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="11" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPcDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAsAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-26110.56</X>
-        <Y>-12943.2</Y>
+        <X>-25923.8</X>
+        <Y>-11011.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -124,10 +124,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="12" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPkDAAA=]</ChatCode>
+      <ChatCode>[&amp;DAwAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-12559.92</X>
-        <Y>-5227.2</Y>
+        <X>-14107</X>
+        <Y>-6974.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -135,10 +135,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="13" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPYDAAA=]</ChatCode>
+      <ChatCode>[&amp;DA0AAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>15682.08</X>
-        <Y>-25161.6</Y>
+        <X>-16513</X>
+        <Y>-25737</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -146,10 +146,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="14" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPQDAAA=]</ChatCode>
+      <ChatCode>[&amp;DA4AAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-5013.6</X>
-        <Y>-17596.8</Y>
+        <X>-7732.8</X>
+        <Y>-17947.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -157,10 +157,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="15" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOUDAAA=]</ChatCode>
+      <ChatCode>[&amp;DA8AAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>21544.8</X>
-        <Y>-27280.8</Y>
+        <X>23008.8</X>
+        <Y>-27760.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -168,10 +168,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="16" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOgDAAA=]</ChatCode>
+      <ChatCode>[&amp;DBAAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>10137.6</X>
-        <Y>-21256.8</Y>
+        <X>8546.4</X>
+        <Y>-21369.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -179,10 +179,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="17" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BO8DAAA=]</ChatCode>
+      <ChatCode>[&amp;DBEAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-5599.2</X>
-        <Y>22768.8</Y>
+        <X>-5697.6</X>
+        <Y>19670.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -190,10 +190,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="18" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOwDAAA=]</ChatCode>
+      <ChatCode>[&amp;DBIAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-6684</X>
-        <Y>7200</Y>
+        <X>-7324.8</X>
+        <Y>6040.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -201,10 +201,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="19" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BPEDAAA=]</ChatCode>
+      <ChatCode>[&amp;DBMAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>12072</X>
-        <Y>10622.4</Y>
+        <X>11308.8</X>
+        <Y>6705.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -212,10 +212,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="20" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BO4DAAA=]</ChatCode>
+      <ChatCode>[&amp;DBQAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>13173.6</X>
-        <Y>2058</Y>
+        <X>14313.6</X>
+        <Y>20299.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -223,10 +223,10 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="21" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOMDAAA=]</ChatCode>
+      <ChatCode>[&amp;DBUAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>17412</X>
-        <Y>-5109.6</Y>
+        <X>15897.6</X>
+        <Y>-4651.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
@@ -234,608 +234,773 @@
     </Objective>
     <Objective>
       <ID ObjectiveId="22" Map="EternalBattlegrounds" />
-      <ChatCode>[&amp;BOYDAAA=]</ChatCode>
+      <ChatCode>[&amp;DBYAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>29232</X>
-        <Y>-11200.8</Y>
+        <X>30535.2</X>
+        <Y>-11028</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
       <Map>EternalBattlegrounds</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="37" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCQFAAA=]</ChatCode>
+      <ID ObjectiveId="123" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DHsAAAAmAAAA]</ChatCode>
       <MapLocation>
-        <X>-441.6</X>
-        <Y>9160.8</Y>
+        <X>-15851.8</X>
+        <Y>2121.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Mercenary</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="125" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DH0AAAAmAAAA]</ChatCode>
+      <MapLocation>
+        <X>18868.8</X>
+        <Y>4161.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Mercenary</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="126" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DH4AAAAmAAAA]</ChatCode>
+      <MapLocation>
+        <X>3028.8</X>
+        <Y>-27398.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Mercenary</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="124" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DHwAAAAmAAAA]</ChatCode>
+      <MapLocation>
+        <X>861.6</X>
+        <Y>26541.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="130" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DIIAAAAmAAAA]</ChatCode>
+      <MapLocation>
+        <X>30340.8</X>
+        <Y>-28452</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="131" Map="EternalBattlegrounds" />
+      <ChatCode>[&amp;DIMAAAAmAAAA]</ChatCode>
+      <MapLocation>
+        <X>-29640.5</X>
+        <Y>-27928.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>EternalBattlegrounds</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="99" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGMAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-148.8</X>
+        <Y>24035.76</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="100" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGQAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>27326.4</X>
+        <Y>-19123.2</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="101" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGUAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-27981.12</X>
+        <Y>-19224</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="102" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGYAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-22036.32</X>
+        <Y>23671.92</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="104" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGgAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>23740.8</X>
+        <Y>20152.08</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="105" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGkAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>12165.6</X>
+        <Y>-25370.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="106" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGoAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-34134.72</X>
+        <Y>-3362.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>RedDesertBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="34" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCUFAAA=]</ChatCode>
+      <ID ObjectiveId="109" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DG0AAABLBAAA]</ChatCode>
       <MapLocation>
-        <X>-648</X>
-        <Y>-32762.4</Y>
+        <X>32404.8</X>
+        <Y>11390.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>RedDesertBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="35" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCoFAAA=]</ChatCode>
+      <ID ObjectiveId="110" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DG4AAABLBAAA]</ChatCode>
       <MapLocation>
-        <X>-7545.6</X>
-        <Y>-17548.8</Y>
+        <X>-12146.4</X>
+        <Y>-20095.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>RedDesertBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="36" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCYFAAA=]</ChatCode>
+      <ID ObjectiveId="113" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHEAAABLBAAA]</ChatCode>
       <MapLocation>
-        <X>11155.2</X>
-        <Y>-16648.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>BlueBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="33" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCgFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-22857.6</X>
-        <Y>-6789.6</Y>
+        <X>638.4</X>
+        <Y>8966.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>RedDesertBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="38" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BC0FAAA=]</ChatCode>
+      <ID ObjectiveId="114" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHIAAABLBAAA]</ChatCode>
       <MapLocation>
-        <X>12969.6</X>
-        <Y>12840</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>BlueBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="39" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BB8FAAA=]</ChatCode>
-      <MapLocation>
-        <X>232.8</X>
-        <Y>34180.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="40" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCwFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-14152.8</X>
-        <Y>14712</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>BlueBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="32" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCAFAAA=]</ChatCode>
-      <MapLocation>
-        <X>22420.8</X>
-        <Y>-5016</Y>
+        <X>34872</X>
+        <Y>-5092.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>RedDesertBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="32" Map="RedBorderlands" />
-      <ChatCode>[&amp;BA8FAAA=]</ChatCode>
+      <ID ObjectiveId="115" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHMAAABLBAAA]</ChatCode>
       <MapLocation>
-        <X>22420.8</X>
-        <Y>-5016</Y>
+        <X>-34496.4</X>
+        <Y>11993.76</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="116" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHQAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-64.8</X>
+        <Y>-32637.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="117" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DG0AAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>32404.8</X>
+        <Y>11390.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="108" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGwAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-26629.7</X>
+        <Y>-30504</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="107" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DGsAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>30206.4</X>
+        <Y>-30648</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Spawn</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="118" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHYAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>3919.2</X>
+        <Y>-16900.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="119" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHcAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-7279.2</X>
+        <Y>-6422.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="120" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHgAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>5748</X>
+        <Y>-6823.2</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="121" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHkAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-8414.4</X>
+        <Y>-13572</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="122" Map="RedDesertBorderlands" />
+      <ChatCode>[&amp;DHoAAABLBAAA]</ChatCode>
+      <MapLocation>
+        <X>-592.8</X>
+        <Y>972</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>RedDesertBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="32" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCAAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>28239.6</X>
+        <Y>-5059.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>RedBorderlands</Map>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="33" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBMFAAA=]</ChatCode>
+      <ID ObjectiveId="33" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCEAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>-22857.36</X>
-        <Y>-6789.6</Y>
+        <X>-25030.6</X>
+        <Y>-6878.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>RedBorderlands</Map>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="34" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBgFAAA=]</ChatCode>
+      <ID ObjectiveId="37" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCUAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>-648</X>
-        <Y>-32762.4</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="35" Map="RedBorderlands" />
-      <ChatCode>[&amp;BB4FAAA=]</ChatCode>
-      <MapLocation>
-        <X>-7545.6</X>
-        <Y>-17548.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="36" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBkFAAA=]</ChatCode>
-      <MapLocation>
-        <X>11155.2</X>
-        <Y>-16648.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="37" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBYFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-441.6</X>
-        <Y>9160.8</Y>
+        <X>-569.76</X>
+        <Y>5625.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>RedBorderlands</Map>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="38" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBoFAAA=]</ChatCode>
+      <ID ObjectiveId="36" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCQAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>-14153.28</X>
-        <Y>14712</Y>
+        <X>12073.2</X>
+        <Y>-17757.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
-      <Map>RedBorderlands</Map>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="39" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBIFAAA=]</ChatCode>
+      <ID ObjectiveId="35" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCMAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>232.8</X>
-        <Y>34180.08</Y>
+        <X>-9338.64</X>
+        <Y>-16056</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="38" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCYAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>-15197.5</X>
+        <Y>14203.2</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="40" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCgAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>14530.08</X>
+        <Y>15352.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="34" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCIAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>72</X>
+        <Y>-32400</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="40" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBsFAAA=]</ChatCode>
+      <ID ObjectiveId="39" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DDQAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>12969.6</X>
-        <Y>12840</Y>
+        <X>-20578.1</X>
+        <Y>11299.2</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>Tower</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Camp</Type>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="32" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDAFAAA=]</ChatCode>
+      <ID ObjectiveId="53" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DDUAAABfAAAA]</ChatCode>
       <MapLocation>
-        <X>22421.04</X>
-        <Y>-5016</Y>
+        <X>-19669.9</X>
+        <Y>-18813.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="51" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DDMAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>22892.4</X>
+        <Y>12828</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="50" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DDIAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>22629.6</X>
+        <Y>-19941.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="52" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DCcAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>110.64</X>
+        <Y>34600.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Camp</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="66" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DEIAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>6822.48</X>
+        <Y>-10610.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="65" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DEEAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>5978.16</X>
+        <Y>-2088</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="64" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DEAAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>-5250.96</X>
+        <Y>-794.4</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="63" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DD8AAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>-7608</X>
+        <Y>-9712.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="62" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DD4AAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>-308.88</X>
+        <Y>-16068</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="111" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DG8AAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>564.48</X>
+        <Y>23844</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="103" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DGcAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>18053.04</X>
+        <Y>-32923.2</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="112" Map="GreenAlpineBorderlands" />
+      <ChatCode>[&amp;DHAAAABfAAAA]</ChatCode>
+      <MapLocation>
+        <X>-16679.3</X>
+        <Y>-32548.8</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Ruin</Type>
+      <Map>GreenAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="37" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCUAAABgAAAA]</ChatCode>
+      <MapLocation>
+        <X>-568.8</X>
+        <Y>5625.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>GreenBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="36" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BD4FAAA=]</ChatCode>
+      <ID ObjectiveId="33" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCEAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>11154.72</X>
-        <Y>-16648.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="34" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDkFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-648</X>
-        <Y>-32762.4</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="33" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BC8FAAA=]</ChatCode>
-      <MapLocation>
-        <X>-22857.36</X>
-        <Y>-6789.6</Y>
+        <X>-25029.6</X>
+        <Y>-6878.4</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>GreenBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="35" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BD0FAAA=]</ChatCode>
+      <ID ObjectiveId="32" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCAAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-7544.64</X>
-        <Y>-17548.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Tower</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="37" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDIFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-441.6</X>
-        <Y>9160.8</Y>
+        <X>28238.4</X>
+        <Y>-5059.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Keep</Type>
-      <Map>GreenBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="38" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDYFAAA=]</ChatCode>
+      <ID ObjectiveId="38" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCgAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-14153.52</X>
-        <Y>14712</Y>
+        <X>14529.6</X>
+        <Y>15352.8</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
-      <Map>GreenBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="39" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDwFAAA=]</ChatCode>
+      <ID ObjectiveId="35" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCMAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-21083.28</X>
-        <Y>11462.4</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="53" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDgFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-19053.12</X>
-        <Y>-18657.6</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="50" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBcFAAA=]</ChatCode>
-      <MapLocation>
-        <X>22442.4</X>
-        <Y>-19444.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="51" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBQFAAA=]</ChatCode>
-      <MapLocation>
-        <X>23253.6</X>
-        <Y>12273.6</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="52" Map="RedBorderlands" />
-      <ChatCode>[&amp;BB0FAAA=]</ChatCode>
-      <MapLocation>
-        <X>-21083.28</X>
-        <Y>11462.4</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="53" Map="RedBorderlands" />
-      <ChatCode>[&amp;BBwFAAA=]</ChatCode>
-      <MapLocation>
-        <X>-19053.12</X>
-        <Y>-18657.6</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>RedBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="51" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDMFAAA=]</ChatCode>
-      <MapLocation>
-        <X>23253.36</X>
-        <Y>12273.6</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="50" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDoFAAA=]</ChatCode>
-      <MapLocation>
-        <X>22442.16</X>
-        <Y>-19444.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="52" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDEFAAA=]</ChatCode>
-      <MapLocation>
-        <X>232.8</X>
-        <Y>34180.8</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>Camp</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="40" Map="GreenBorderlands" />
-      <ChatCode>[&amp;BDcFAAA=]</ChatCode>
-      <MapLocation>
-        <X>12969.6</X>
-        <Y>12840</Y>
+        <X>-9338.4</X>
+        <Y>-16056</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Tower</Type>
-      <Map>GreenBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="51" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCkFAAA=]</ChatCode>
+      <ID ObjectiveId="36" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCQAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-21084</X>
-        <Y>11462.4</Y>
+        <X>12072</X>
+        <Y>-17757.6</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>BlueAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="40" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCYAAABgAAAA]</ChatCode>
+      <MapLocation>
+        <X>-15196.8</X>
+        <Y>14203.2</Y>
+        <Z>0</Z>
+      </MapLocation>
+      <Type>Tower</Type>
+      <Map>BlueAlpineBorderlands</Map>
+    </Objective>
+    <Objective>
+      <ID ObjectiveId="51" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DDQAAABgAAAA]</ChatCode>
+      <MapLocation>
+        <X>-20577.6</X>
+        <Y>11299.2</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="53" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BC4FAAA=]</ChatCode>
+      <ID ObjectiveId="53" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DDUAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-19053.6</X>
-        <Y>-18657.6</Y>
+        <X>-19670.4</X>
+        <Y>-18813.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="52" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCEFAAA=]</ChatCode>
+      <ID ObjectiveId="52" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DDMAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>23253.6</X>
-        <Y>12273.6</Y>
+        <X>22893.6</X>
+        <Y>12828</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="50" Map="BlueBorderlands" />
-      <ChatCode>[&amp;BCYFAAA=]</ChatCode>
+      <ID ObjectiveId="50" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DDIAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>22442.4</X>
-        <Y>-19444.8</Y>
+        <X>22629.6</X>
+        <Y>-19941.6</Y>
         <Z>0</Z>
       </MapLocation>
       <Type>Camp</Type>
-      <Map>BlueBorderlands</Map>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="62" Map="RedBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="39" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCcAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-279.59</X>
-        <Y>-16015.255</Y>
+        <X>110.4</X>
+        <Y>34600.8</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>TempleofLostPrayers</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Camp</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="63" Map="RedBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="34" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DCIAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-7939.68</X>
-        <Y>-9885.6</Y>
+        <X>72</X>
+        <Y>-32400</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>BattlesHollow</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Camp</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="64" Map="RedBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="66" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DEIAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-5251.525</X>
-        <Y>-783.006</Y>
+        <X>6823.2</X>
+        <Y>-10610.4</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>BauersEstate</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Ruin</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="65" Map="RedBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="65" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DEEAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>5983.413</X>
-        <Y>-2110.027</Y>
+        <X>5978.4</X>
+        <Y>-2088</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>OrchardOverlook</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Ruin</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="66" Map="RedBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="64" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DEAAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>6802.815</X>
-        <Y>-10643.904</Y>
+        <X>-5251.2</X>
+        <Y>-794.4</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>CarversAscent</Type>
-      <Map>RedBorderlands</Map>
+      <Type>Ruin</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="66" Map="BlueBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="63" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DD8AAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>6802.815</X>
-        <Y>-10643.904</Y>
+        <X>-7608</X>
+        <Y>-9712.8</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>CarversAscent</Type>
-      <Map>BlueBorderlands</Map>
+      <Type>Ruin</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="65" Map="BlueBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="62" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DD4AAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>5983.413</X>
-        <Y>-2110.027</Y>
+        <X>-309.6</X>
+        <Y>-16068</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>OrchardOverlook</Type>
-      <Map>BlueBorderlands</Map>
+      <Type>Ruin</Type>
+      <Map>BlueAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="64" Map="BlueBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="111" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DG8AAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-5251.525</X>
-        <Y>-783.006</Y>
+        <X>564</X>
+        <Y>23844</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>BauersEstate</Type>
-      <Map>BlueBorderlands</Map>
+      <Type>Spawn</Type>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="63" Map="BlueBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="103" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DGcAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-7939.68</X>
-        <Y>-9885.6</Y>
+        <X>18052.8</X>
+        <Y>-32923.2</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>BattlesHollow</Type>
-      <Map>BlueBorderlands</Map>
+      <Type>Spawn</Type>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
     <Objective>
-      <ID ObjectiveId="62" Map="BlueBorderlands" />
-      <ChatCode />
+      <ID ObjectiveId="112" Map="BlueAlpineBorderlands" />
+      <ChatCode>[&amp;DHAAAABgAAAA]</ChatCode>
       <MapLocation>
-        <X>-279.59</X>
-        <Y>-16015.255</Y>
+        <X>-16680</X>
+        <Y>-32548.8</Y>
         <Z>0</Z>
       </MapLocation>
-      <Type>TempleofLostPrayers</Type>
-      <Map>BlueBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="66" Map="GreenBorderlands" />
-      <ChatCode />
-      <MapLocation>
-        <X>6802.815</X>
-        <Y>-10643.904</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>CarversAscent</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="65" Map="GreenBorderlands" />
-      <ChatCode />
-      <MapLocation>
-        <X>5983.413</X>
-        <Y>-2110.027</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>OrchardOverlook</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="64" Map="GreenBorderlands" />
-      <ChatCode />
-      <MapLocation>
-        <X>-5251.525</X>
-        <Y>-783.006</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>BauersEstate</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="63" Map="GreenBorderlands" />
-      <ChatCode />
-      <MapLocation>
-        <X>-7939.68</X>
-        <Y>-9885.6</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>BattlesHollow</Type>
-      <Map>GreenBorderlands</Map>
-    </Objective>
-    <Objective>
-      <ID ObjectiveId="62" Map="GreenBorderlands" />
-      <ChatCode />
-      <MapLocation>
-        <X>-279.59</X>
-        <Y>-16015.255</Y>
-        <Z>0</Z>
-      </MapLocation>
-      <Type>TempleofLostPrayers</Type>
-      <Map>GreenBorderlands</Map>
+      <Type>Spawn</Type>
+      <Map>GreenAlpineBorderlands</Map>
     </Objective>
   </Objectives>
 </WvWObjectivesTable>

@@ -35,60 +35,73 @@ namespace GW2PAO.API.Data.Enums
         public static readonly WvWObjectiveId EB_Spawn_Hill_Blue      = new WvWObjectiveId(130, WvWMap.EternalBattlegrounds);
         public static readonly WvWObjectiveId EB_Spawn_Hill_Green     = new WvWObjectiveId(131, WvWMap.EternalBattlegrounds);
 
-        // Blue Apline Borderlands:
-        public static readonly WvWObjectiveId BB_Keep_Hills         = new WvWObjectiveId(32, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Keep_Bay           = new WvWObjectiveId(33, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Orchard       = new WvWObjectiveId(34, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Tower_Redbriar     = new WvWObjectiveId(35, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Tower_Greenlake    = new WvWObjectiveId(36, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Keep_Garrison      = new WvWObjectiveId(37, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Tower_Dawns        = new WvWObjectiveId(38, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Spiritholme   = new WvWObjectiveId(39, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Tower_Woodhaven    = new WvWObjectiveId(40, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Greenwater    = new WvWObjectiveId(50, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Godslore      = new WvWObjectiveId(51, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Stargrove     = new WvWObjectiveId(52, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Camp_Redvale       = new WvWObjectiveId(53, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Temple             = new WvWObjectiveId(62, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Hollow             = new WvWObjectiveId(63, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Estate             = new WvWObjectiveId(64, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Orchard            = new WvWObjectiveId(65, WvWMap.BlueAlpineBorderlands);
-        public static readonly WvWObjectiveId BB_Carvers            = new WvWObjectiveId(66, WvWMap.BlueAlpineBorderlands);
-        
         // Red Desert Borderlands:
-        public static readonly WvWObjectiveId RB_Camp_HammsLab       = new WvWObjectiveId(99, WvWMap.RedDesertBorderlands); // 10743.8,9492.51,-2955
-        public static readonly WvWObjectiveId RB_Camp_BauerFarmstead = new WvWObjectiveId(100, WvWMap.RedDesertBorderlands); // 11888.6,11290.8,-4733.89
-        public static readonly WvWObjectiveId RB_Camp_McLains        = new WvWObjectiveId(101, WvWMap.RedDesertBorderlands); // 9584.12,11295,-3857.78
-        public static readonly WvWObjectiveId RB_Tower_OdelAcademy   = new WvWObjectiveId(102, WvWMap.RedDesertBorderlands); // 9831.82,9507.67,-2897.5
-        public static readonly WvWObjectiveId RB_Tower_EternalNecro  = new WvWObjectiveId(104, WvWMap.RedDesertBorderlands); // 11739.2,9654.33,-4452.81
-        public static readonly WvWObjectiveId RB_Tower_Crankshaft    = new WvWObjectiveId(105, WvWMap.RedDesertBorderlands); // 11256.9,11551.1,-5219.09
-        public static readonly WvWObjectiveId RB_Keep_Blistering     = new WvWObjectiveId(106, WvWMap.RedDesertBorderlands); // 9327.72,10634.1,-3714.37
-        public static readonly WvWObjectiveId RB_Camp_RoysRefuge     = new WvWObjectiveId(109, WvWMap.RedDesertBorderlands); // 12100.2,10019.4,-1025.05
-        public static readonly WvWObjectiveId RB_Tower_Parched       = new WvWObjectiveId(110, WvWMap.RedDesertBorderlands); // 10243.9,11331.3,-5557.72
-        public static readonly WvWObjectiveId RB_Keep_Stoic          = new WvWObjectiveId(113, WvWMap.RedDesertBorderlands); // 10776.6,10120.4,-4120.01
-        public static readonly WvWObjectiveId RB_Keep_Ospreys        = new WvWObjectiveId(114, WvWMap.RedDesertBorderlands); // 12203,10706.2,-4254.64
-        public static readonly WvWObjectiveId RB_Camp_Boettigers     = new WvWObjectiveId(115, WvWMap.RedDesertBorderlands); // 9312.65,9994.26,-1283.43
-        public static readonly WvWObjectiveId RB_Camp_Dustwhisper    = new WvWObjectiveId(116, WvWMap.RedDesertBorderlands); // 10747.3,11853.9,-2880.79
-
-
+        public static readonly WvWObjectiveId RB_Camp_HammsLab        = new WvWObjectiveId(99, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Camp_BauerFarmstead  = new WvWObjectiveId(100, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Camp_McLains         = new WvWObjectiveId(101, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Tower_OdelAcademy    = new WvWObjectiveId(102, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Tower_EternalNecro   = new WvWObjectiveId(104, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Tower_Crankshaft     = new WvWObjectiveId(105, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Keep_Blistering      = new WvWObjectiveId(106, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Camp_RoysRefuge      = new WvWObjectiveId(109, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Spawn_Border_Blue    = new WvWObjectiveId(107, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Spawn_Border_Green   = new WvWObjectiveId(108, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Tower_Parched        = new WvWObjectiveId(110, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Keep_Stoic           = new WvWObjectiveId(113, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Keep_Ospreys         = new WvWObjectiveId(114, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Camp_Boettigers      = new WvWObjectiveId(115, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Camp_Dustwhisper     = new WvWObjectiveId(116, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Spawn_Border_Red     = new WvWObjectiveId(117, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Ruin_Higgins         = new WvWObjectiveId(118, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Ruin_Bearce          = new WvWObjectiveId(119, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Ruin_Zak             = new WvWObjectiveId(120, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Ruin_Darra           = new WvWObjectiveId(121, WvWMap.RedDesertBorderlands);
+        public static readonly WvWObjectiveId RB_Ruin_Tilly           = new WvWObjectiveId(122, WvWMap.RedDesertBorderlands);
+        
         // Green Apline Borderlands:
-        public static readonly WvWObjectiveId GB_Keep_Hills         = new WvWObjectiveId(32, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Keep_Bay           = new WvWObjectiveId(33, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Orchard       = new WvWObjectiveId(34, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Tower_Bluebriar    = new WvWObjectiveId(35, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Tower_Redlake      = new WvWObjectiveId(36, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Keep_Garrison      = new WvWObjectiveId(37, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Tower_Sunnyhill    = new WvWObjectiveId(38, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Faithleap     = new WvWObjectiveId(39, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Tower_Cragtop      = new WvWObjectiveId(40, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Redwater      = new WvWObjectiveId(50, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Foghaven      = new WvWObjectiveId(51, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Titanpaw      = new WvWObjectiveId(52, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Camp_Bluevale      = new WvWObjectiveId(53, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Temple             = new WvWObjectiveId(62, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Hollow             = new WvWObjectiveId(63, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Estate             = new WvWObjectiveId(64, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Orchard            = new WvWObjectiveId(65, WvWMap.GreenAlpineBorderlands);
-        public static readonly WvWObjectiveId GB_Carvers            = new WvWObjectiveId(66, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Keep_Hills           = new WvWObjectiveId(32, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Keep_Bay             = new WvWObjectiveId(33, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Lodge           = new WvWObjectiveId(34, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Tower_Bluebriar      = new WvWObjectiveId(35, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Tower_Redlake        = new WvWObjectiveId(36, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Keep_Garrison        = new WvWObjectiveId(37, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Tower_Sunnyhill      = new WvWObjectiveId(38, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Faithleap       = new WvWObjectiveId(39, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Tower_Cragtop        = new WvWObjectiveId(40, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Redwater        = new WvWObjectiveId(50, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Foghaven        = new WvWObjectiveId(51, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Titanpaw        = new WvWObjectiveId(52, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Camp_Bluevale        = new WvWObjectiveId(53, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Ruin_Temple          = new WvWObjectiveId(62, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Ruin_Hollow          = new WvWObjectiveId(63, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Ruin_Estate          = new WvWObjectiveId(64, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Ruin_Cohen           = new WvWObjectiveId(65, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Ruin_Patrick         = new WvWObjectiveId(66, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Spawn_Border_Red     = new WvWObjectiveId(103, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Spawn_Citadel_Green  = new WvWObjectiveId(111, WvWMap.GreenAlpineBorderlands);
+        public static readonly WvWObjectiveId GB_Spawn_Border_Blue    = new WvWObjectiveId(112, WvWMap.GreenAlpineBorderlands);
+
+        // Blue Apline Borderlands:
+        public static readonly WvWObjectiveId BB_Keep_Hills          = new WvWObjectiveId(32, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Keep_Bay            = new WvWObjectiveId(33, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Demense        = new WvWObjectiveId(34, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Tower_Redbriar      = new WvWObjectiveId(35, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Tower_Greenlake     = new WvWObjectiveId(36, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Keep_Garrison       = new WvWObjectiveId(37, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Tower_Dawns         = new WvWObjectiveId(38, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Spiritholme    = new WvWObjectiveId(39, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Tower_Woodhaven     = new WvWObjectiveId(40, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Greenwater     = new WvWObjectiveId(50, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Godslore       = new WvWObjectiveId(51, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Stargrove      = new WvWObjectiveId(52, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Camp_Redvale        = new WvWObjectiveId(53, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Ruin_Temple         = new WvWObjectiveId(62, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Ruin_Hollow         = new WvWObjectiveId(63, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Ruin_Estate         = new WvWObjectiveId(64, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Ruin_Orchard        = new WvWObjectiveId(65, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Ruin_Carvers        = new WvWObjectiveId(66, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Spawn_Border_Green  = new WvWObjectiveId(103, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Spawn_Citadel_Blue  = new WvWObjectiveId(111, WvWMap.BlueAlpineBorderlands);
+        public static readonly WvWObjectiveId BB_Spawn_Border_Red    = new WvWObjectiveId(112, WvWMap.BlueAlpineBorderlands);
     }
 }

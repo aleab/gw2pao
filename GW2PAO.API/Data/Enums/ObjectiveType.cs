@@ -13,11 +13,7 @@ namespace GW2PAO.API.Data.Enums
         Keep,
         Tower,
         Camp,
-        TempleofLostPrayers,
-        BattlesHollow,
-        BauersEstate,
-        OrchardOverlook,
-        CarversAscent,
+        Ruin,
         Mercenary,
         Spawn
     }

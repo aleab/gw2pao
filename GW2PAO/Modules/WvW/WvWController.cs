@@ -554,11 +554,7 @@ namespace GW2PAO.Modules.WvW
                                 logger.Info("{0} - {1}: {2} -> {3}", objective.Map, objective.Name, objective.PrevWorldOwnerName, objective.WorldOwnerName);
 
                                 // Bloodlust objectives don't get RI, so don't bother with a flip time or RI flag
-                                if (objective.Type != ObjectiveType.TempleofLostPrayers
-                                    && objective.Type != ObjectiveType.BattlesHollow
-                                    && objective.Type != ObjectiveType.BauersEstate
-                                    && objective.Type != ObjectiveType.OrchardOverlook
-                                    && objective.Type != ObjectiveType.CarversAscent)
+                                if (objective.Type != ObjectiveType.Ruin)
                                 {
                                     objective.FlipTime = DateTime.UtcNow;
                                     objective.IsRIActive = true;
@@ -786,11 +782,7 @@ namespace GW2PAO.Modules.WvW
                         case ObjectiveType.Camp:
                             canShow = this.UserData.AreCampNotificationsEnabled;
                             break;
-                        case ObjectiveType.BattlesHollow:
-                        case ObjectiveType.BauersEstate:
-                        case ObjectiveType.CarversAscent:
-                        case ObjectiveType.OrchardOverlook:
-                        case ObjectiveType.TempleofLostPrayers:
+                        case ObjectiveType.Ruin:
                             canShow = this.UserData.AreBloodlustNotificationsEnabled;
                             break;
                         default:
