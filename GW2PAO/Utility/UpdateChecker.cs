@@ -59,7 +59,7 @@ namespace GW2PAO.Utility
         private static Version GetLatestVersion()
         {
             var http = new HttpClient();
-            var request = http.GetStringAsync(new Uri("https://raw.githubusercontent.com/SamHurne/gw2pao/master/latest_version.txt"));
+            var request = http.GetStringAsync(new Uri("https://raw.githubusercontent.com/Spiria/gw2pao/master/latest_version.txt"));
             if (request.Wait(500)) // Should be pretty quick
             {
                 string versionString = request.Result;

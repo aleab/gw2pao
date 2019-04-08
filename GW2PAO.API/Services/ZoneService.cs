@@ -35,7 +35,7 @@ namespace GW2PAO.API.Services
         /// Key: Map ID
         /// Value: Map Name
         /// </summary>
-        private ConcurrentDictionary<int, MapName> MapNamesCache;
+        private ConcurrentDictionary<int, string> MapNamesCache;
 
         /// <summary>
         /// Static collection of zone/continent data
@@ -65,7 +65,7 @@ namespace GW2PAO.API.Services
         /// </summary>
         public ZoneService()
         {
-            this.MapNamesCache = new ConcurrentDictionary<int, MapName>();
+            this.MapNamesCache = new ConcurrentDictionary<int, string>();
             this.MapContinentsCache = new ConcurrentDictionary<int, int>();
             this.ContinentsCache = new ConcurrentDictionary<int, Data.Entities.Continent>();
             this.FloorCache = new ConcurrentDictionary<Tuple<int, int>, Floor>();
@@ -82,16 +82,17 @@ namespace GW2PAO.API.Services
                 {
                     if (this.MapNamesCache.IsEmpty)
                     {
-                        foreach (var mapName in GW2.V1.MapNames.ForCurrentUICulture().FindAll())
+                        foreach (var mapName in LocalizationUtil.IsSupportedCulture() ? GW2.V2.Maps.ForCurrentUICulture().FindAll() : GW2.V2.Maps.ForDefaultCulture().FindAll())
                         {
-                            this.MapNamesCache.TryAdd(mapName.Key, mapName.Value);
+                            this.MapNamesCache.TryAdd(mapName.Key, mapName.Value.MapName);
                         }
                     }
 
                     if (this.ContinentsCache.IsEmpty)
                     {
                         // Get all continents
-                        var continents = GW2.V2.Continents.ForCurrentUICulture().FindAll();
+                        var continents = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Continents.ForCurrentUICulture().FindAll() : GW2.V2.Continents.ForDefaultCulture().FindAll();
+
                         foreach (var continent in continents.Values)
                         {
                             Data.Entities.Continent cont = new Data.Entities.Continent(continent.ContinentId);
@@ -150,7 +151,7 @@ namespace GW2PAO.API.Services
                 // request the map info and add it our cache
                 try
                 {
-                    var map = GW2.V2.Maps.ForCurrentUICulture().Find(mapId);
+                    var map = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Maps.ForCurrentUICulture().Find(mapId) : GW2.V2.Maps.ForDefaultCulture().Find(mapId);
                     if (map != null)
                     {
                         this.MapContinentsCache.TryAdd(mapId, map.ContinentId);
@@ -186,7 +187,7 @@ namespace GW2PAO.API.Services
             try
             {
                 // Get the current map info
-                var map = GW2.V2.Maps.ForCurrentUICulture().Find(mapId);
+                var map = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Maps.ForCurrentUICulture().Find(mapId) : GW2.V2.Maps.ForDefaultCulture().Find(mapId);
                 if (map != null)
                 {
                     Data.Entities.Map m = new Data.Entities.Map(mapId);
@@ -231,7 +232,7 @@ namespace GW2PAO.API.Services
         public Data.Entities.Map GetMap(int continentId, Point continentCoordinates)
         {
             var continent = this.GetContinent(continentId);
-            var floorService = GW2.V1.Floors.ForCurrentUICulture(continentId);
+            var floorService = LocalizationUtil.IsSupportedCulture() ? GW2.V1.Floors.ForCurrentUICulture(continentId) : GW2.V1.Floors.ForDefaultCulture(continentId);
 
             var floor = this.GetFloor(continentId, continent.FloorIds.First());
             if (floor != null && floor.Regions != null)
@@ -291,7 +292,7 @@ namespace GW2PAO.API.Services
                 var continents = this.GetContinents();
 
                 // Get the current map info
-                var map = GW2.V2.Maps.ForCurrentUICulture().Find(mapId);
+                var map = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Maps.ForCurrentUICulture().Find(mapId) : GW2.V2.Maps.ForDefaultCulture().Find(mapId);
                 if (map != null)
                 {
                     // Retrieve details of items on every floor of the map
@@ -482,7 +483,7 @@ namespace GW2PAO.API.Services
                                         zoneItem.ContinentLocation = new Point(item.Coordinates.X, item.Coordinates.Y);
                                         zoneItem.Location = new Point(location.X, location.Y);
                                         zoneItem.MapId = subRegion.Value.MapId;
-                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId].Name;
+                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId];
                                         var mapChatLink = item.GetMapChatLink();
                                         if (mapChatLink != null)
                                             zoneItem.ChatCode = mapChatLink.ToString();
@@ -523,7 +524,7 @@ namespace GW2PAO.API.Services
                                         zoneItem.ContinentLocation = new Point(task.Coordinates.X, task.Coordinates.Y);
                                         zoneItem.Location = new Point(location.X, location.Y);
                                         zoneItem.MapId = subRegion.Value.MapId;
-                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId].Name;
+                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId];
                                         zoneItem.Type = ZoneItemType.HeartQuest;
                                         
                                         if (!tasks.TryAdd(zoneItem.ID, zoneItem))
@@ -553,7 +554,7 @@ namespace GW2PAO.API.Services
                                         zoneItem.ContinentLocation = new Point(skillChallenge.Coordinates.X, skillChallenge.Coordinates.Y);
                                         zoneItem.Location = new Point(location.X, location.Y);
                                         zoneItem.MapId = subRegion.Value.MapId;
-                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId].Name;
+                                        zoneItem.MapName = this.MapNamesCache[subRegion.Value.MapId];
                                         zoneItem.Type = Data.Enums.ZoneItemType.HeroPoint;
                                         
                                         if (!heroPoints.TryAdd(zoneItem.ID, zoneItem))
@@ -592,11 +593,11 @@ namespace GW2PAO.API.Services
             {
                 if (MapNamesCache.ContainsKey(mapId))
                 {
-                    return MapNamesCache[mapId].Name;
+                    return MapNamesCache[mapId];
                 }
                 else
                 {
-                    var map = GW2.V2.Maps.ForCurrentUICulture().Find(mapId);
+                    var map = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Maps.ForCurrentUICulture().Find(mapId) : GW2.V2.Maps.ForDefaultCulture().Find(mapId);
                     if (map != null)
                         return map.MapName;
                     else
@@ -629,7 +630,7 @@ namespace GW2PAO.API.Services
             }
             else
             {
-                var floorService = GW2.V1.Floors.ForCurrentUICulture(continentId);
+                var floorService = LocalizationUtil.IsSupportedCulture() ? GW2.V1.Floors.ForCurrentUICulture(continentId) : GW2.V1.Floors.ForDefaultCulture(continentId);
                 var floor = floorService.Find(floorId);
                 if (floor != null)
                 {

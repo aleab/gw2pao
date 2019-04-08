@@ -15,6 +15,7 @@ using GW2NET.V2.Items;
 using GW2PAO.API.Data;
 using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Services.Interfaces;
+using GW2PAO.API.Util;
 using NLog;
 
 namespace GW2PAO.API.Services
@@ -147,7 +148,7 @@ namespace GW2PAO.API.Services
 
             try
             {
-                var itemService = GW2.V2.Items.ForCurrentUICulture();
+                var itemService = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Items.ForCurrentUICulture() : GW2.V2.Items.ForDefaultCulture();
                 var itemDetails = itemService.Find(itemID);
                 if (itemDetails != null)
                 {
@@ -188,8 +189,8 @@ namespace GW2PAO.API.Services
             {
                 // Remove all items with itemID of 0 or less
                 var validIDs = itemIDs.Where(id => id > 0).ToList();
-
-                var itemService = GW2.V2.Items.ForCurrentUICulture();
+                
+                var itemService = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Items.ForCurrentUICulture() : GW2.V2.Items.ForDefaultCulture();
                 var itemDetails = itemService.FindAll(validIDs);
                 var prices = this.GetItemPrices(validIDs);
 

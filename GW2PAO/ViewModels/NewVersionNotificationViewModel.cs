@@ -47,7 +47,7 @@ namespace GW2PAO.ViewModels
         /// </summary>
         private void OpenDownloadPage()
         {
-            Process.Start("http://samhurne.github.io/gw2pao/#download");
+            Process.Start("https://github.com/Spiria/gw2pao/releases");
         }
     }
 }

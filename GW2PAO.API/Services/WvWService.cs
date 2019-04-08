@@ -9,6 +9,7 @@ using GW2NET;
 using GW2NET.WorldVersusWorld;
 using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Providers;
+using GW2PAO.API.Util;
 using System.ComponentModel.Composition;
 
 namespace GW2PAO.API.Services
@@ -82,7 +83,7 @@ namespace GW2PAO.API.Services
             {
                 logger.Info("Loading worlds via API");
                 this.Worlds = new List<World>();
-                var worldRepository = GW2.V2.Worlds.ForCurrentUICulture();
+                var worldRepository = LocalizationUtil.IsSupportedCulture() ? GW2.V2.Worlds.ForCurrentUICulture() : GW2.V2.Worlds.ForDefaultCulture();
                 var worlds = worldRepository.FindAll();
                 foreach (var world in worlds.Values)
                 {
