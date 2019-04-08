@@ -63,6 +63,8 @@ namespace GW2PAO.Modules.WvW
         private bool areBlueObjectivesShown;
         private bool areNeutralObjectivesShown;
         private bool areShortNamesShown;
+        private bool areMercenariesShown;
+        private bool areSpawnPointsShown;
         private WvWMap mapOverride;
         private Units distanceUnits;
         private bool autoOpenCloseTracker;
@@ -304,6 +306,24 @@ namespace GW2PAO.Modules.WvW
         }
 
         /// <summary>
+        /// True if Mercenary objectives are shown in the tracker, else false
+        /// </summary>
+        public bool AreMercenaryObjectivesShown
+        {
+            get { return this.areMercenariesShown; }
+            set { this.SetProperty(ref this.areMercenariesShown, value); }
+        }
+
+        /// <summary>
+        /// True if Spawn points are shown in the tracker, else false
+        /// </summary>
+        public bool AreSpawnPointsShown
+        {
+            get { return this.areSpawnPointsShown; }
+            set { this.SetProperty(ref this.areSpawnPointsShown, value); }
+        }
+
+        /// <summary>
         /// The property name to use when sorting objectives in the WvW tracker
         /// </summary>
         public string ObjectivesSortProperty
@@ -375,6 +395,8 @@ namespace GW2PAO.Modules.WvW
             this.AreBlueObjectivesShown = true;
             this.AreNeutralObjectivesShown = true;
             this.AreBloodlustObjectivesShown = true;
+            this.AreMercenaryObjectivesShown = true;
+            this.AreSpawnPointsShown = true;
             this.NotificationDuration = 10;
         }
 

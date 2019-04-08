@@ -1095,4 +1095,13 @@ Gebietsabschluss-Assistent umschalten</value>
   <data name="ShowVoiceChat" xml:space="preserve">
     <value>Anzeigen Voice Chat</value>
   </data>
+  <data name="ShowEndOfEvents" xml:space="preserve">
+    <value>Show "End of Events" Notification (Restart Required)</value>
+  </data>
+  <data name="MercenaryObjects" xml:space="preserve">
+    <value>Mercenary Objectives</value>
+  </data>
+  <data name="SpawnPoints" xml:space="preserve">
+    <value>Respawn Points</value>
+  </data>
 </root>

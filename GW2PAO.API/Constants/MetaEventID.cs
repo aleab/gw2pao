@@ -27,6 +27,9 @@ namespace GW2PAO.API.Constants
 
     public class MetaEventStageID
     {
+        // End of Events
+        public static readonly Guid EventEnds = new Guid("5983FB5E-B4B8-45ED-8A10-5887E963E495");
+
         // Core & LW2 Zones
         public static readonly Guid TimberlineFalls_LeyLine = new Guid("92B86E45-85CD-4AFA-8527-F9B300F3B79C");
         public static readonly Guid IronMarches_LeyLine = new Guid("D7C293F4-1B69-435F-A975-AEEE6167D542");

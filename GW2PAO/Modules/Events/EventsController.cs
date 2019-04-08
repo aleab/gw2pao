@@ -238,6 +238,11 @@ namespace GW2PAO.Modules.Events
                         foreach (var stage in metaEvent.Stages)
                         {
                             stage.Name = this.eventsService.GetLocalizedName(stage.ID);
+                            if (!this.UserData.ShowEndOfEvents)
+                            {
+                                logger.Debug("Do not show \"End of Events\", Skipping..");
+                                continue;
+                            }
                         }
 
                         logger.Debug("Initializing view models for {0}", metaEvent.ID);

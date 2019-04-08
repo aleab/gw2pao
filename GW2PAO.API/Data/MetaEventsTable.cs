@@ -74,7 +74,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(0, 20, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.TimberlineFalls_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(6, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.TimberlineFalls_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(5, 40, 0) }
                 }
             });
 
@@ -86,7 +87,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(2, 20, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.IronMarches_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(6, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.IronMarches_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(5, 40, 0) }
                 }
             });
 
@@ -98,7 +100,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(4, 20, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.GendarranFields_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(6, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.GendarranFields_LeyLine, Name = "Ley-Line Anomaly", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(5, 40, 0) }
                 }
             });
 
@@ -192,7 +195,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(0, 5, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz, Name = "Casino Blitz", Duration = new SerializableTimespan(2, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz, Name = "Casino Blitz", Duration = new SerializableTimespan(0, 25, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(1, 35, 0) }
                 }
             });
 
@@ -204,7 +208,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(1, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.DesertHighlands_Treasure, Name = "Buried Treasure", Duration = new SerializableTimespan(2, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.DesertHighlands_Treasure, Name = "Buried Treasure", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(1, 40, 0) }
                 }
             });
 
@@ -216,7 +221,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(1, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.DomainOfVabbi_Serpent, Name = "Serpent's Ire", Duration = new SerializableTimespan(1, 30, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.DomainOfVabbi_Serpent, Name = "Serpent's Ire", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(1, 0, 0) }
                 }
             });
 
@@ -228,7 +234,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(1, 45, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.DomainOfIstan_Palawadan, Name = "Palawadan", Duration = new SerializableTimespan(2, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.DomainOfIstan_Palawadan, Name = "Palawadan", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(1, 30, 0) }
                 }
             });
 
@@ -240,7 +247,8 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(1, 0, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey, Name = "Dangerous Prey", Duration = new SerializableTimespan(2, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey, Name = "Dangerous Prey", Duration = new SerializableTimespan(0, 30, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(1, 30, 0) }
                 }
             });
 
@@ -252,8 +260,10 @@ namespace GW2PAO.API.Data
                 StartOffset = new SerializableTimespan(0, 45, 0),
                 Stages = new List<MetaEventStage>()
                 {
-                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_Oil, Name = "The Oil Floes", Duration = new SerializableTimespan(1, 0, 0) },
-                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_Keep, Name = "Thunderhead Keep", Duration = new SerializableTimespan(1, 0, 0) }
+                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_Oil, Name = "The Oil Floes", Duration = new SerializableTimespan(0, 15, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(0, 45, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.ThunderheadPeaks_Keep, Name = "Thunderhead Keep", Duration = new SerializableTimespan(0, 20, 0) },
+                    new MetaEventStage() { ID = MetaEventStageID.EventEnds, Name = "End of Meta", Duration = new SerializableTimespan(0, 40, 0) }
                 }
             });
 

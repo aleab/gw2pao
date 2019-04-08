@@ -136,7 +136,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,    Name = "Palawadan"},
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
-                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"}
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"},
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Event Ends"}
             };
 
             // Spanish
@@ -155,20 +156,21 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Ayuda Outposts" },
                 new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "mapa activo" },
-                // TODO: Translate event name (It's dummy data now)
-                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Casino Blitz" },
-                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Buried Treasure" },
+                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Carrera del casino" },
+                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Tesoro Enterrado" },
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Serpent's Ire" },
-                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Noran's Homestead"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Saidra's Haven"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "New Loamhurst"},
+                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Anomalía de Línea Ley" },
+                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Anomalía de Línea Ley" },
+                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Anomalía de Línea Ley" },
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Heredad de Noran"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Refugio de Saidra"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "Nueva Loamhurst"},
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,    Name = "Palawadan"},
-                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
+                // TODO: Translate event name (It's google translated data now)
+                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Presa peligrosa"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
-                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"}
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "Las oleadas de aceite"},
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Finaliza el evento"}
             };
 
             // French
@@ -187,20 +189,21 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Régent Chak" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Aider les campements" },
                 new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Carte active" },
-                // TODO: Translate event name (It's dummy data now)
-                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Casino Blitz" },
-                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Buried Treasure" },
-                new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Serpent's Ire" },
-                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Noran's Homestead"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Saidra's Haven"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "New Loamhurst"},
+                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Casino express" },
+                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Trésor enfoui" },
+                new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Le courroux des serpents" },
+                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Anomalie des lignes de force" },
+                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Anomalie des lignes de force" },
+                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Anomalie des lignes de force" },
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Demeure de Noran"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Refuge de Saidra"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "Sylveglèbe-la-neuve"},
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,    Name = "Palawadan"},
-                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
+                // TODO: Translate event name (It's google translated data now)
+                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Proie dangereuse"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
-                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"}
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "Les floes d'huile"},
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "fin de l'événement"}
             };
 
             // German
@@ -219,20 +222,21 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
                 new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Hilfe Outposts" },
                 new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Karte Aktiv" },
-                // TODO: Translate event name (It's dummy data now)
-                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Casino Blitz" },
-                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Buried Treasure" },
-                new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Serpent's Ire" },
-                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Ley-Line Anomaly" },
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Noran's Homestead"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Saidra's Haven"},
-                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "New Loamhurst"},
+                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Kasino-Blitz" },
+                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Vergrabene Schätze" },
+                new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Zorn der Schlangen" },
+                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Linien-Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Linien-Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Ley-Linien-Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Norans Heimstatt"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Saidras Hafen"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "Neulehmwald"},
                 new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,    Name = "Palawadan"},
-                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
+                // TODO: Translate event name (It's google translated data now)
+                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Gefährliche Beute"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
-                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"}
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "Die Ölschollen"},
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Ereignis endet"}
             };
 
             Serialization.SerializeToXml(english, this.GetFilePath("en"));

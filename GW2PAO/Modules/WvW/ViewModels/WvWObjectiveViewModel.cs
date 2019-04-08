@@ -372,6 +372,14 @@ namespace GW2PAO.Modules.WvW.ViewModels
             {
                 this.IsVisible = false;
             }
+            else if (!this.userData.AreSpawnPointsShown && this.Type == ObjectiveType.Spawn)
+            {
+                this.IsVisible = false;
+            }
+            else if (!this.userData.AreMercenaryObjectivesShown && this.Type == ObjectiveType.Mercenary)
+            {
+                this.IsVisible = false;
+            }
             else
             {
                 this.IsVisible = true;

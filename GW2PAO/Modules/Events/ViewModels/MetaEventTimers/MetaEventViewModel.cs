@@ -29,6 +29,8 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private TimeSpan timeSinceStageStarted;
         private bool isVisible;
 
+        public string Name { get; set; }
+
         /// <summary>
         /// ID of the meta event
         /// </summary>

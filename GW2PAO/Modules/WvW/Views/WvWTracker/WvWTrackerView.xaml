@@ -86,6 +86,8 @@
                                 <MenuItem Header="{x:Static resx:Resources.Towers}" IsCheckable="True" IsChecked="{Binding UserData.AreTowersShown}" StaysOpenOnClick="True" />
                                 <MenuItem Header="{x:Static resx:Resources.Camps}" IsCheckable="True" IsChecked="{Binding UserData.AreCampsShown}" StaysOpenOnClick="True" />
                                 <MenuItem Header="{x:Static resx:Resources.BloodlustObjectives}" IsCheckable="True" IsChecked="{Binding UserData.AreBloodlustObjectivesShown}" StaysOpenOnClick="True" />
+                                <MenuItem Header="{x:Static resx:Resources.MercenaryObjects}" IsCheckable="True" IsChecked="{Binding UserData.AreMercenaryObjectivesShown}" StaysOpenOnClick="True" />
+                                <MenuItem Header="{x:Static resx:Resources.SpawnPoints}" IsCheckable="True" IsChecked="{Binding UserData.AreSpawnPointsShown}" StaysOpenOnClick="True" />
                             </MenuItem>
                             <MenuItem Header="{x:Static resx:Resources.SortBy}">
                                 <MenuItem Header="{x:Static resx:Resources.ObjectiveType}" IsCheckable="True" IsChecked="{Binding SortByType}" />

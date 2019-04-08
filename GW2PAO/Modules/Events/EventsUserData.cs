@@ -39,6 +39,7 @@ namespace GW2PAO.Modules.Events
         private bool useAdjustedTimeTable;
         private bool autoDetectCompletion;
         private uint notificationDuration;
+        private bool showEndOfEvents;
         private DateTime lastResetDateTime;
         private ObservableCollection<Guid> hiddenEvents = new ObservableCollection<Guid>();
         private ObservableCollection<Guid> hiddenMetaEvents = new ObservableCollection<Guid>();
@@ -106,6 +107,15 @@ namespace GW2PAO.Modules.Events
         {
             get { return this.notificationDuration; }
             set { SetProperty(ref this.notificationDuration, value); }
+        }
+
+        /// <summary>
+        /// True if user selects show "end of event" notifications, else false
+        /// </summary>
+        public bool ShowEndOfEvents
+        {
+            get { return this.showEndOfEvents; }
+            set { SetProperty(ref this.showEndOfEvents, value); }
         }
 
         /// <summary>
