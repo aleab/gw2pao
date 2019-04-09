@@ -96,7 +96,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de" };
+            var supported = new[] { "en", "es", "fr", "de", "ko" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -182,10 +182,29 @@ namespace GW2PAO.API.Providers
                 new EventName() { ID = WorldBossID.FrozenMaw, Name = "Schamanenoberhaupt der Svanir" }
             };
 
+            // Korean
+            List<EventName> korean = new List<EventName>()
+            {
+                new EventName() { ID = WorldBossID.Megadestroyer, Name = "Megadestroyer" },
+                new EventName() { ID = WorldBossID.Tequatl, Name = "Tequatl" },
+                new EventName() { ID = WorldBossID.KarkaQueen, Name = "Karka Queen" },
+                new EventName() { ID = WorldBossID.EvolvedJungleWurm, Name = "Evolved Jungle Wurm" },
+                new EventName() { ID = WorldBossID.Shatterer, Name = "Shatterer" },
+                new EventName() { ID = WorldBossID.ClawOfJormag, Name = "Claw of Jormag" },
+                new EventName() { ID = WorldBossID.ModniirUlgoth, Name = "Modniir Ulgoth" },
+                new EventName() { ID = WorldBossID.InquestGolemMarkII, Name = "Inquest Golem Mark II" },
+                new EventName() { ID = WorldBossID.TaidhaCovington, Name = "Taidha Covington" },
+                new EventName() { ID = WorldBossID.JungleWurm, Name = "Jungle Wurm" },
+                new EventName() { ID = WorldBossID.ShadowBehemoth, Name = "Shadow Behemoth" },
+                new EventName() { ID = WorldBossID.FireElemental, Name = "Fire Elemental" },
+                new EventName() { ID = WorldBossID.FrozenMaw, Name = "Frozen Maw" }
+            };
+
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
+            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
         }
 
         /// <summary>

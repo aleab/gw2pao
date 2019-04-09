@@ -1099,7 +1099,7 @@ Lorsqu'un objectif est capturé par un autre monde chez l'ennemi</value>
     <comment>For the teamspeak overlay</comment>
   </data>
   <data name="ShowEndOfEvents" xml:space="preserve">
-    <value>Show "End of Events" Notification (Restart Required)</value>
+    <value>Show "Event Ends" Notification (Restart Required)</value>
   </data>
   <data name="MercenaryObjects" xml:space="preserve">
     <value>Mercenary Objectives</value>

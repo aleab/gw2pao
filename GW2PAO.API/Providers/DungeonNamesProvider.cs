@@ -121,7 +121,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de" };
+            var supported = new[] { "en", "es", "fr", "de", "ko" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -411,10 +411,80 @@ namespace GW2PAO.API.Providers
                 }},
             };
 
+            List<DungeonName> korean = new List<DungeonName>()
+            {
+                new DungeonName { ID = DungeonID.AscalonianCatacombs, Name = "Ascalonian Catacombs", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = AscalonianCatacombsPathID.Story, Name = "Story" },
+                    new PathName() { ID = AscalonianCatacombsPathID.P1, Name = "Hodgins" },
+                    new PathName() { ID = AscalonianCatacombsPathID.P2, Name = "Detha" },
+                    new PathName() { ID = AscalonianCatacombsPathID.P3, Name = "Tzark" }
+                }},
+                new DungeonName { ID = DungeonID.CaudecusManor, Name = "Caudecus's Manor", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = CaudecusManorPathID.Story, Name = "Story" },
+                    new PathName() { ID = CaudecusManorPathID.P1, Name = "Asura" },
+                    new PathName() { ID = CaudecusManorPathID.P2, Name = "Seraph" },
+                    new PathName() { ID = CaudecusManorPathID.P3, Name = "Butler" }
+                }},
+                new DungeonName { ID = DungeonID.TwilightArbor, Name = "Twilight Arbor", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = TwilightArborPathID.Story, Name = "Story" },
+                    new PathName() { ID = TwilightArborPathID.P1, Name = "Vevina (Forward)" },
+                    new PathName() { ID = TwilightArborPathID.P2, Name = "Leurent (Up)" },
+                    new PathName() { ID = TwilightArborPathID.P3, Name = "Aetherpath" }
+                }},
+                new DungeonName { ID = DungeonID.SorrowsEmbrace, Name = "Sorrow's Embrace", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = SorrowsEmbracePathID.Story, Name = "Story" },
+                    new PathName() { ID = SorrowsEmbracePathID.P1, Name = "Fergg" },
+                    new PathName() { ID = SorrowsEmbracePathID.P2, Name = "Rasolov" },
+                    new PathName() { ID = SorrowsEmbracePathID.P3, Name = "Koptev" }
+                }},
+                new DungeonName { ID = DungeonID.CitadelOfFlame, Name = "Citadel of Flame", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = CitadelOfFlamePathID.Story, Name = "Story" },
+                    new PathName() { ID = CitadelOfFlamePathID.P1, Name = "Ferrah" },
+                    new PathName() { ID = CitadelOfFlamePathID.P2, Name = "Magg" },
+                    new PathName() { ID = CitadelOfFlamePathID.P3, Name = "Rhiannon" }
+                }},
+                new DungeonName { ID = DungeonID.HonorOfTheWaves, Name = "Honor of the Waves", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = HonorOfTheWavesPathID.Story, Name = "Story" },
+                    new PathName() { ID = HonorOfTheWavesPathID.P1, Name = "Butcher" },
+                    new PathName() { ID = HonorOfTheWavesPathID.P2, Name = "Plunderer" },
+                    new PathName() { ID = HonorOfTheWavesPathID.P3, Name = "Zealot" }
+                }},
+                new DungeonName { ID = DungeonID.CrucibleOfEternity, Name = "Crucible of Eternity", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = CrucibleOfEternityPathID.Story, Name = "Story" },
+                    new PathName() { ID = CrucibleOfEternityPathID.P1, Name = "Submarine" },
+                    new PathName() { ID = CrucibleOfEternityPathID.P2, Name = "Teleporter" },
+                    new PathName() { ID = CrucibleOfEternityPathID.P3, Name = "Front Door" }
+                }},
+                new DungeonName { ID = DungeonID.RuinedCityOfArah, Name = "Ruined City of Arah", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = RuinedCityOfArahPathID.Story, Name = "Story" },
+                    new PathName() { ID = RuinedCityOfArahPathID.P1, Name = "Jotun" },
+                    new PathName() { ID = RuinedCityOfArahPathID.P2, Name = "Mursaat" },
+                    new PathName() { ID = RuinedCityOfArahPathID.P3, Name = "Forgotten" },
+                    new PathName() { ID = RuinedCityOfArahPathID.P4, Name = "Seer" }
+                }},
+                new DungeonName { ID = DungeonID.FractalsOfTheMists, Name = "Fractals of the Mists", PathNames = new List<PathName>()
+                {
+                    new PathName() { ID = FractalsOfTheMistsPathID.Tier0, Name = "Tier 0 (1-10)" },
+                    new PathName() { ID = FractalsOfTheMistsPathID.Tier1, Name = "Tier 1 (11-20)" },
+                    new PathName() { ID = FractalsOfTheMistsPathID.Tier2, Name = "Tier 2 (21-30)" },
+                    new PathName() { ID = FractalsOfTheMistsPathID.Tier3, Name = "Tier 3 (31-40)" },
+                    new PathName() { ID = FractalsOfTheMistsPathID.Tier4, Name = "Tier 4 (41-50)" }
+                }},
+            };
+
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
+            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
         }
 
         /// <summary>

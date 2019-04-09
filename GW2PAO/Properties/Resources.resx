@@ -1095,7 +1095,7 @@
     <value>Notes</value>
   </data>
   <data name="ShowEndOfEvents" xml:space="preserve">
-    <value>Show "End of Events" Notification (Restart Required)</value>
+    <value>Show "Event Ends" Notification (Restart Required)</value>
   </data>
   <data name="SpawnPoints" xml:space="preserve">
     <value>Respawn Points</value>

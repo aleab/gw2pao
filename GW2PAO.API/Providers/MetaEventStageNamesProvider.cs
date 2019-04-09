@@ -94,7 +94,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de" };
+            var supported = new[] { "en", "es", "fr", "de", "ko" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -239,10 +239,43 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Ereignis endet"}
             };
 
+            // Korean
+            List<MetaEventStageName> korean = new List<MetaEventStageName>()
+            {
+                new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.GendarranFields_LeyLine,    Name = "Ley-Line Anomaly" },
+                new MetaEventStageName() { ID = MetaEventStageID.DryTop_CrashSite,           Name = "Crash Site" },
+                new MetaEventStageName() { ID = MetaEventStageID.DryTop_Sandstorm,           Name = "Sandstorm" },
+                new MetaEventStageName() { ID = MetaEventStageID.VerdantBrink_NightBosses,   Name = "Night Bosses" },
+                new MetaEventStageName() { ID = MetaEventStageID.VerdantBrink_Daytime,       Name = "Daytime" },
+                new MetaEventStageName() { ID = MetaEventStageID.VerdantBrink_Night,         Name = "Night" },
+                new MetaEventStageName() { ID = MetaEventStageID.AuricBasin_Challenges,      Name = "Challenges" },
+                new MetaEventStageName() { ID = MetaEventStageID.AuricBasin_Octovine,        Name = "Octovine" },
+                new MetaEventStageName() { ID = MetaEventStageID.AuricBasin_Reset,           Name = "Reset" },
+                new MetaEventStageName() { ID = MetaEventStageID.AuricBasin_Pylons,          Name = "Pylons" },
+                new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_Preparation,  Name = "Preparation" },
+                new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_ChakGerent,   Name = "Chak Gerent" },
+                new MetaEventStageName() { ID = MetaEventStageID.TangledDepths_HelpOutposts, Name = "Help Outposts" },
+                new MetaEventStageName() { ID = MetaEventStageID.DragonsStand_MapActive,     Name = "Map Active" },
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Noran,            Name = "Noran's Homestead"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Saidra,           Name = "Saidra's Haven"},
+                new MetaEventStageName() { ID = MetaEventStageID.LakeDoric_Loamhurst,        Name = "New Loamhurst"},
+                new MetaEventStageName() { ID = MetaEventStageID.CrystalOasis_CasinoBlitz,   Name = "Casino Blitz" },
+                new MetaEventStageName() { ID = MetaEventStageID.DesertHighlands_Treasure,   Name = "Buried Treasure" },
+                new MetaEventStageName() { ID = MetaEventStageID.DomainOfVabbi_Serpent,      Name = "Serpent's Ire" },
+                new MetaEventStageName() { ID = MetaEventStageID.DomainOfIstan_Palawadan,    Name = "Palawadan"},
+                new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
+                new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"},
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "이벤트 종료"}
+            };
+
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
+            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
         }
 
         /// <summary>

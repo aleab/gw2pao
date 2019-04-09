@@ -6,6 +6,7 @@ xcopy de\GW2PAO.resources.dll Locale\de\ /Y
 xcopy es\GW2PAO.resources.dll Locale\es\ /Y
 xcopy fr\GW2PAO.resources.dll Locale\fr\ /Y
 xcopy ru\GW2PAO.resources.dll Locale\ru\ /Y
+xcopy ko\GW2PAO.resources.dll Locale\ko\ /Y
 rd /S /Q en
 rd /S /Q it
 rd /S /Q ja
@@ -59,6 +60,7 @@ xcopy de\GW2PAO.resources.dll Locale\de\ /Y
 xcopy es\GW2PAO.resources.dll Locale\es\ /Y
 xcopy fr\GW2PAO.resources.dll Locale\fr\ /Y
 xcopy ru\GW2PAO.resources.dll Locale\ru\ /Y
+xcopy ko\GW2PAO.resources.dll Locale\ko\ /Y
 rd /S /Q de
 rd /S /Q en
 rd /S /Q es

@@ -234,18 +234,14 @@ namespace GW2PAO.Modules.Map.ViewModels
                 double charX = map.ContinentRectangle.X + (charPos.X - map.MapRectangle.X) * MapsHelper.MapToWorldRatio;
                 double charY = map.ContinentRectangle.Y + ((map.MapRectangle.Y + map.MapRectangle.Height) - charPos.Y) * MapsHelper.MapToWorldRatio;
 
-                // Don't know why, but it works when cont.Width / cont.Height value is 32768(Old continent size, now it's 49152).
+                // With tile service, it works when cont.Width / cont.Height value is 32768(Old continent size).
                 // Override it when player is in Tyria(ID 1)
-                if(cont.Id == 1)
-                {
-                    cont.Width = 32768;
-                    cont.Height = 32768;
-                }
-
+                // cont.Width = 32768;
+                // cont.Height = 32768;
                 var location = this.locationTransform.Transform(new System.Windows.Point(
-                    (charX - (cont.Width / 2)) / cont.Width * 360.0,
-                    ((cont.Height / 2) - charY) / cont.Height * 360.0));
-
+                    (cont.Id != 1)?((charX - (cont.Width / 2)) / cont.Width * 360.0):((charX - (32768 / 2)) / 32768 * 360.0),
+                    (cont.Id != 1)?(((cont.Height / 2) - charY) / cont.Height * 360.0):(((32768 / 2) - charY) / 32768 * 360.0)));
+                
                 if (this.CharacterLocation != location)
                 {
                     if (this.CharacterLocation != null)

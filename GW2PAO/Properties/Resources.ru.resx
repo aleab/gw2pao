@@ -1095,7 +1095,7 @@
     <value>Показать Голосовой чат</value>
   </data>
   <data name="ShowEndOfEvents" xml:space="preserve">
-    <value>Show "End of Events" Notification (Restart Required)</value>
+    <value>Show "Event Ends" Notification (Restart Required)</value>
   </data>
   <data name="MercenaryObjects" xml:space="preserve">
     <value>Mercenary Objectives</value>

@@ -30,9 +30,13 @@ namespace GW2PAO.Modules.Map.Converters
                 var point = values[0] as GW2PAO.API.Data.Entities.Point;
                 var continent = values[1] as API.Data.Entities.Continent;
 
+                // With tile service, it works when cont.Width / cont.Height value is 32768(Old continent size).
+                // Override it when player is in Tyria(ID 1)
+                // cont.Width = 32768;
+                // cont.Height = 32768;
                 var location = transform.Transform(new System.Windows.Point(
-                        (point.X - (continent.Width / 2)) / continent.Width * 360.0,
-                        ((continent.Height / 2) - point.Y) / continent.Height * 360.0));
+                    (continent.Id != 1)?((point.X - (continent.Width / 2)) / continent.Width * 360.0):((point.X - (32768 / 2)) / 32768 * 360.0),
+                    (continent.Id != 1)?(((continent.Height / 2) - point.Y) / continent.Height * 360.0):(((32768 / 2) - point.Y) / 32768 * 360.0)));
 
                 return location;
             }

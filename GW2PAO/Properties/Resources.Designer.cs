@@ -1879,7 +1879,7 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Show &quot;End of Events&quot; Notification (Restart Required)과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Show &quot;Event Ends&quot; Notification (Restart Required)과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         public static string ShowEndOfEvents {
             get {

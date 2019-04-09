@@ -116,7 +116,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de" };
+            var supported = new[] { "en", "es", "fr", "de", "ko" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -542,10 +542,114 @@ namespace GW2PAO.API.Providers
                 new ObjectiveNames() { ID = WvWObjectiveIds.BB_Spawn_Border_Green,   Cardinal = "", Full = "Green Border", Short = "Border" },
             };
 
+            // Korean
+            List<ObjectiveNames> korean = new List<ObjectiveNames>()
+            {
+                // Eternal Battleground
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Castle_Stonemist, Cardinal = "C", Full = "Stonemist Castle", Short = "Stonemist" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Keep_Overlook, Cardinal = "N", Full = "Overlook", Short = "Overlook" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Keep_Valley, Cardinal = "SE", Full = "Valley", Short = "Valley" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Keep_Lowlands, Cardinal = "SW", Full = "Lowlands", Short = "Lowlands" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Golanta, Cardinal = "SSW", Full = "Golanta Clearing", Short = "Golanta" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Pangloss, Cardinal = "NNE", Full = "Pangloss Rise", Short = "Pangloss" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Speldan, Cardinal = "NNW", Full = "Speldan Clearcut", Short = "Speldan" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Danelon, Cardinal = "SSE", Full = "Danelon Passage", Short = "Danelon" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Umberglade, Cardinal = "E", Full = "Umberglade Woods", Short = "Umberglade" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Camp_Rogues, Cardinal = "W", Full = "Rogue's Quarry", Short = "Rogue" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Aldons, Cardinal = "W", Full = "Aldon's Ledge", Short = "Aldon" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Wildcreek, Cardinal = "W", Full = "Wildcreek Run", Short = "Wildcreek" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Jerrifers, Cardinal = "SW", Full = "Jerrifer's Slough", Short = "Jerrifer" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Klovan, Cardinal = "SW", Full = "Klovan Gully", Short = "Klovan" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Langor, Cardinal = "SE", Full = "Langor Gulch", Short = "Langor" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Quentin, Cardinal = "SE", Full = "Quentin Lake", Short = "Quentin" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Mendons, Cardinal = "NW", Full = "Mendon's Gap", Short = "Mendon" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Anzalias, Cardinal = "NW", Full = "Anzalias Pass", Short = "Anzalias" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Ogrewatch, Cardinal = "NE", Full = "Ogrewatch Cut", Short = "Ogrewatch" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Veloka, Cardinal = "NE", Full = "Veloka Slope", Short = "Veloka" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Durios, Cardinal = "E", Full = "Durios Gulch", Short = "Durios" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Tower_Bravost, Cardinal = "E", Full = "Bravost Escarpment", Short = "Bravost" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Mercenary_Molevekian, Cardinal = "WNW", Full = "Molevekian Delve", Short = "Molevekian" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Mercenary_Orgath, Cardinal = "NE", Full = "Orgath Uplands", Short = "Orgath" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Mercenary_Darkrait, Cardinal = "S", Full = "Darkrait Inlet", Short = "Darkrait" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Spawn_Hill_Red, Cardinal = "", Full = "Red Hill", Short = "Red Hill" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Spawn_Hill_Blue, Cardinal = "", Full = "Blue Hill", Short = "Blue Hill" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.EB_Spawn_Hill_Green, Cardinal = "", Full = "Green Hill", Short = "Green Hill" },
+
+                // Red Desert Borderlands
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Tower_EternalNecro,  Cardinal = "NE", Full = "Eternal Necropolis", Short = "Necro" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Tower_Crankshaft,    Cardinal = "SE", Full = "Crankshaft Depot", Short = "Crank" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Tower_Parched,       Cardinal = "SW", Full = "Parched Outpost", Short = "Parched" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Keep_Blistering,     Cardinal = "W", Full = "Blistering Undercroft", Short = "Undercroft" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Keep_Stoic,          Cardinal = "C", Full = "Stoic Rampart", Short = "Stoic" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Keep_Ospreys,        Cardinal = "E", Full = "Osprey's Palace", Short = "Osprey's" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_Boettigers,     Cardinal = "NW", Full = "Boettiger's Hideaway", Short = "Boettiger's" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_Dustwhisper,    Cardinal = "S", Full = "Dustwhisper Well", Short = "Dustwhisper" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_RoysRefuge,     Cardinal = "NE", Full = "Roy's Refuge", Short = "Refuge" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_HammsLab,       Cardinal = "N", Full = "Hamm's Lab", Short = "Hamm" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_BauerFarmstead, Cardinal = "SE", Full = "Bauer Farmstead", Short = "Bauer" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Camp_McLains,        Cardinal = "SW", Full = "McLain's Encampment", Short = "McLain" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Tower_OdelAcademy,   Cardinal = "NW", Full = "O'del Academy", Short = "O'del" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Spawn_Border_Red,    Cardinal = "", Full = "Red Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Spawn_Border_Green,  Cardinal = "", Full = "Green Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Spawn_Border_Blue,   Cardinal = "", Full = "Blue Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Ruin_Higgins,        Cardinal = "", Full = "Higgins's Ascent", Short = "Ascent" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Ruin_Bearce,         Cardinal = "", Full = "Bearce's Dwelling", Short = "Dwelling" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Ruin_Zak,            Cardinal = "", Full = "Zak's Overlook", Short = "Overlook" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Ruin_Darra,          Cardinal = "", Full = "Darra's Maze", Short = "Maze" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.RB_Ruin_Tilly,          Cardinal = "", Full = "Tilly's Encampment", Short = "Encampment" },
+
+                // Green Alpine Borderlands
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Keep_Hills, Cardinal = "E", Full = "Shadaran Hills", Short = "Hills" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Keep_Bay, Cardinal = "W", Full = "Dreadfall Bay", Short = "Bay" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Keep_Garrison, Cardinal = "C", Full = "Garrison", Short = "Garrison" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Tower_Redlake, Cardinal = "SE", Full = "Redlake", Short = "Redlake" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Tower_Bluebriar, Cardinal = "SW", Full = "Bluebriar", Short = "Bluebriar" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Tower_Sunnyhill, Cardinal = "NW", Full = "Sunnyhill", Short = "Sunnyhill" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Tower_Cragtop, Cardinal = "NE", Full = "Cragtop", Short = "Cragtop" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Faithleap, Cardinal = "NW", Full = "Faithleap", Short = "Faithleap" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Bluevale, Cardinal = "SW", Full = "Bluevale Refuge", Short = "Bluevale" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Foghaven, Cardinal = "NE", Full = "Foghaven", Short = "Foghaven" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Redwater, Cardinal = "SE", Full = "Redwater Lowlands", Short = "Redwater" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Titanpaw, Cardinal = "N", Full = "The Titanpaw", Short = "Titanpaw" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Camp_Lodge, Cardinal = "S", Full = "Hero's Lodge", Short = "Lodge" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Spawn_Citadel_Green,    Cardinal = "", Full = "Green Citadel", Short = "Citadel" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Spawn_Border_Red,  Cardinal = "", Full = "Red Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Spawn_Border_Blue,   Cardinal = "", Full = "Blue Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Ruin_Patrick, Cardinal = "", Full = "Patrick's Ascent", Short = "Ascent" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Ruin_Cohen, Cardinal = "", Full = "Cohen's Overlook", Short = "Overlook" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Ruin_Estate, Cardinal = "", Full = "Bauer's Estate", Short = "Estate" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Ruin_Hollow, Cardinal = "", Full = "Battle's Hollow", Short = "Hollow" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.GB_Ruin_Temple, Cardinal = "", Full = "Temple of Lost Prayers", Short = "Temple" },
+
+                // Blue Alpine Borderlands
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Keep_Garrison, Cardinal = "C", Full = "Garrison", Short = "Garrison" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Keep_Bay, Cardinal = "W", Full = "Ascension Bay", Short = "Bay" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Keep_Hills, Cardinal = "E", Full = "Askalion Hills", Short = "Hills" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Tower_Dawns, Cardinal = "NE", Full = "Dawn's Eyrie", Short = "Dawn's" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Tower_Redbriar, Cardinal = "SW", Full = "Redbriar", Short = "Redbriar" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Tower_Greenlake, Cardinal = "SE", Full = "Greenlake", Short = "Greenlake" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Tower_Woodhaven, Cardinal = "NW", Full = "Woodhaven", Short = "Woodhaven" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Godslore, Cardinal = "NW", Full = "Godslore", Short = "Godslore" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Redvale, Cardinal = "SW", Full = "Redvale Refuge", Short = "Redvale" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Stargrove, Cardinal = "NE", Full = "Stargrove", Short = "Stargrove" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Greenwater, Cardinal = "SE", Full = "Greenwater Lowlands", Short = "Greenwater" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Spiritholme, Cardinal = "N", Full = "The Spiritholme", Short = "Spiritholme" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Camp_Demense, Cardinal = "S", Full = "Champion's Demense", Short = "Demense" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Spawn_Citadel_Blue,    Cardinal = "", Full = "Blue Citadel", Short = "Citadel" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Spawn_Border_Red,  Cardinal = "", Full = "Red Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Spawn_Border_Green,   Cardinal = "", Full = "Green Border", Short = "Border" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Ruin_Carvers, Cardinal = "", Full = "Carver's Ascent", Short = "Ascent" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Ruin_Orchard, Cardinal = "", Full = "Orchard Overlook", Short = "Overlook" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Ruin_Estate, Cardinal = "", Full = "Bauer's Estate", Short = "Estate" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Ruin_Hollow, Cardinal = "", Full = "Battle's Hollow", Short = "Hollow" },
+                new ObjectiveNames() { ID = WvWObjectiveIds.BB_Ruin_Temple, Cardinal = "", Full = "Temple of Lost Prayers", Short = "Temple" }
+            };
+
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
+            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
         }
 
         /// <summary>
