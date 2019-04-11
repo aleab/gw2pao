@@ -3,7 +3,7 @@
 
 #define MyAppName "Guild Wars 2 Personal Assistant Overlay"
 #define MyAppNameShort "GW2 Personal Assistant Overlay"
-#define MyAppVersion "4.0"
+#define MyAppVersion "3.7.8"
 #define MyAppPublisher "Samuel Hurne"
 #define MyAppURL "http://samhurne.github.io/gw2pao/"
 #define MyAppExeName "GW2PAO.exe"
@@ -31,10 +31,15 @@ LicenseFile=..\LICENSE.txt
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "korean"; MessagesFile: "compiler:Languages\Korean.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
+
+[CustomMessages]
+english.BrowserInstallation=Browser
+korean.BrowserInstallation=내장 웹 브라우저
 
 [Files]
 ; Common files:
@@ -110,7 +115,7 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppNameShort}"
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 [Components]
-Name: "Browser"; Description: "Include Web Browser Feature"; Types: full
+Name: "Browser"; Description: "{cm:BrowserInstallation}"; Types: full
 
 [Dirs]
 Name: "{app}\UserData"; Flags: uninsneveruninstall; Permissions: users-full
@@ -122,7 +127,8 @@ Name: "{app}\Locale\de"; Flags: uninsalwaysuninstall; Permissions: users-full
 Name: "{app}\Locale\en"; Flags: uninsalwaysuninstall; Permissions: users-full
 Name: "{app}\Locale\es"; Flags: uninsalwaysuninstall; Permissions: users-full
 Name: "{app}\Locale\fr"; Flags: uninsalwaysuninstall; Permissions: users-full
-Name: "{app}\Locale\ru"; Flags: uninsalwaysuninstall; Permissions: users-full
+Name: "{app}\Locale\ru"; Flags: uninsalwaysuninstall; Permissions: users-full    
+Name: "{app}\Locale\ko"; Flags: uninsalwaysuninstall; Permissions: users-full
 
 [Code]
 var
@@ -130,6 +136,8 @@ var
 
 procedure InitializeWizard;
 begin
+if ActiveLanguage = 'english' then
+ begin
   BrowserNoticePage := CreateOutputMsgPage(wpSelectComponents,
     'Web Browser Notice', '',
     'NOTE:'
@@ -140,7 +148,22 @@ begin
     + #13#10 + #13#10 +
     'Do NOT use this feature for accessing sensitive data, and, like any' + 
     ' other browser, always be careful of what sites you visit!');                                                        
-end;
+ end
+else
+if ActiveLanguage = 'korean' then
+ begin  
+  BrowserNoticePage := CreateOutputMsgPage(wpSelectComponents,
+    'Web Browser Notice', '',
+    '주의:'
+    + #13#10 + #13#10 + 
+    '내장 웹 브라우저 기능을 설치하도록 선택했습니다. ' + #13#10 + #13#10
+    '내장 웹 브라우저는 Firefox나 Google Chrome과 같은 일반 브라우저와는 달리 ' +
+    '높은 레벨의 보안 기술을 사용하고 있지 않습니다.'
+    + #13#10 + #13#10 +
+    '이 기능을 사용하더라도 개인 정보나 민감한 정보를 전송하는 사이트를 방문할 경우에는' +
+    '사용하지 마시고, 웹 사이트를 방문할 때 항상 주의하십시오.');                                                        
+ end;
+end;  
 
 function ShouldSkipPage(PageID: Integer): Boolean;
 begin
