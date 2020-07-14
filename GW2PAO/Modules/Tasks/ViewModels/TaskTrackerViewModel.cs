@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
@@ -38,14 +39,19 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         private IPlayerTasksController controller;
 
         /// <summary>
-        /// Container object for composing parts
+        /// View Model object for creating new tasks
         /// </summary>
-        private CompositionContainer container;
+        private NewTaskDialogViewModel newTaskViewModel;
 
         /// <summary>
-        /// Collection of player tasks
+        /// The backing collection of task categories
         /// </summary>
-        public AutoRefreshCollectionViewSource PlayerTasks
+        private ObservableCollection<TaskCategoryViewModel> taskCategories;
+
+        /// <summary>
+        /// Collection of task categories
+        /// </summary>
+        public AutoRefreshCollectionViewSource TaskCategories
         {
             get;
             private set;
@@ -161,10 +167,10 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         [ImportingConstructor]
         public TaskTrackerViewModel(
             IPlayerTasksController playerTasksController,
-            CompositionContainer container)
+            NewTaskDialogViewModel newTaskVm)
         {
             this.controller = playerTasksController;
-            this.container = container;
+            this.newTaskViewModel = newTaskVm;
 
             this.AddNewTaskCommand = new Microsoft.Practices.Prism.Commands.DelegateCommand(this.AddNewTask);
             this.DeleteAllCommand = new Microsoft.Practices.Prism.Commands.DelegateCommand(this.DeleteAllTasks);
@@ -172,21 +178,83 @@ namespace GW2PAO.Modules.Tasks.ViewModels
             this.ImportTasksCommand = new Microsoft.Practices.Prism.Commands.DelegateCommand(this.ImportTasks);
             this.ExportTasksCommand = new Microsoft.Practices.Prism.Commands.DelegateCommand(this.ExportTasks);
 
-            var collectionViewSource = new AutoRefreshCollectionViewSource();
-            collectionViewSource.Source = this.controller.PlayerTasks;
-            this.PlayerTasks = collectionViewSource;
-
-            switch (this.UserData.TaskTrackerSortProperty)
+            this.taskCategories = new ObservableCollection<TaskCategoryViewModel>();
+            this.TaskCategories = new AutoRefreshCollectionViewSource();
+            this.TaskCategories.Source = this.taskCategories;
+            foreach (var t in this.controller.PlayerTasks)
             {
-                case TasksUserData.TASK_TRACKER_SORT_NAME:
-                    this.OnSortingPropertyChanged(TasksUserData.TASK_TRACKER_SORT_NAME, ListSortDirection.Ascending);
+                var category = this.taskCategories.FirstOrDefault(c => c.CategoryName == t.Category);
+                if (category == null)
+                    this.taskCategories.Add(new TaskCategoryViewModel(t, this.controller, this.UserData));
+                else
+                    category.Add(t);
+                t.PropertyChanged += Task_PropertyChanged;
+            }
+            this.controller.PlayerTasks.CollectionChanged += PlayerTasks_CollectionChanged;
+            this.TaskCategories.SortDescriptions.Add(new SortDescription("CategoryName", ListSortDirection.Ascending));
+        }
+
+        private void PlayerTasks_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                    foreach (PlayerTaskViewModel t in e.NewItems)
+                    {
+                        var category = this.taskCategories.FirstOrDefault(c => c.CategoryName == t.Category);
+                        if (category == null)
+                            this.taskCategories.Add(new TaskCategoryViewModel(t, this.controller, this.UserData));
+                        else
+                            category.Add(t);
+                        t.PropertyChanged += this.Task_PropertyChanged;
+                    }
                     break;
-                case TasksUserData.TASK_TRACKER_SORT_DISTANCE:
-                    this.OnSortingPropertyChanged(TasksUserData.TASK_TRACKER_SORT_DISTANCE, ListSortDirection.Ascending);
+                case NotifyCollectionChangedAction.Remove:
+                    foreach (PlayerTaskViewModel t in e.OldItems)
+                    {
+                        t.PropertyChanged -= this.Task_PropertyChanged;
+                        var category = this.taskCategories.FirstOrDefault(c => c.CategoryName == t.Category);
+                        if (category != null)
+                            category.Remove(t);
+
+                        if (category.IsEmpty)
+                            this.taskCategories.Remove(category);
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Reset:
+                    foreach (var category in this.taskCategories)
+                    {
+                        var tasks = (ICollection<PlayerTaskViewModel>)category.PlayerTasks.Source;
+                        foreach (var t in tasks)
+                        {
+                            t.PropertyChanged -= this.Task_PropertyChanged;
+                        }
+                    }
+                    this.taskCategories.Clear();
                     break;
                 default:
-                    this.OnSortingPropertyChanged(TasksUserData.TASK_TRACKER_SORT_NAME, ListSortDirection.Ascending);
                     break;
+            }
+        }
+
+        private void Task_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Category")
+            {
+                // Move the task to it's new category
+                var task = sender as PlayerTaskViewModel;
+
+                var prevCategory = this.taskCategories.FirstOrDefault(c => c.Contains(task));
+                if (prevCategory != null)
+                    prevCategory.Remove(task);
+                if (prevCategory.IsEmpty)
+                    this.taskCategories.Remove(prevCategory);
+
+                var category = this.taskCategories.FirstOrDefault(c => c.CategoryName == task.Category);
+                if (category == null)
+                    this.taskCategories.Add(new TaskCategoryViewModel(task, this.controller, this.UserData));
+                else
+                    category.Add(task);
             }
         }
 
@@ -197,7 +265,7 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         {
             logger.Info("Displaying add new task dialog");
             AddNewTaskDialog dialog = new AddNewTaskDialog();
-            this.container.ComposeParts(dialog);
+            dialog.TaskData = this.newTaskViewModel;
             dialog.Show();
         }
 
@@ -206,11 +274,15 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         /// </summary>
         private void DeleteAllTasks()
         {
-            logger.Info("Deleting all tasks");
-            var tasksToDelete = new List<PlayerTaskViewModel>(this.controller.PlayerTasks);
-            foreach (var pt in tasksToDelete)
+            var result = Xceed.Wpf.Toolkit.MessageBox.Show(Properties.Resources.DeleteTasksConfirmation, string.Empty, System.Windows.MessageBoxButton.YesNo);
+            if (result == System.Windows.MessageBoxResult.Yes)
             {
-                this.controller.DeleteTask(pt.Task);
+                logger.Info("Deleting all tasks");
+                var tasksToDelete = new List<PlayerTaskViewModel>(this.controller.PlayerTasks);
+                foreach (var pt in tasksToDelete)
+                {
+                    this.controller.DeleteTask(pt.Task);
+                }
             }
         }
 
@@ -272,9 +344,10 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         /// </summary>
         private void OnSortingPropertyChanged(string property, ListSortDirection direction)
         {
-            this.PlayerTasks.SortDescriptions.Clear();
-            this.PlayerTasks.SortDescriptions.Add(new SortDescription(property, direction));
-            this.PlayerTasks.View.Refresh();
+            foreach (var category in this.taskCategories)
+            {
+                category.SortBy = property;
+            }
 
             this.UserData.TaskTrackerSortProperty = property;
             this.OnPropertyChanged(() => this.SortByName);

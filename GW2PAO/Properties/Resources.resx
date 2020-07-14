@@ -1103,4 +1103,37 @@
   <data name="MercenaryObjects" xml:space="preserve">
     <value>Mercenary Objectives</value>
   </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="DeleteCategoryConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete all tasks in this category?</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Uncategorized</value>
+  </data>
+  <data name="YesDeleteAll" xml:space="preserve">
+    <value>Yes, Delete All</value>
+  </data>
+  <data name="EditCategory" xml:space="preserve">
+    <value>Edit Category</value>
+  </data>
+  <data name="VisibleCategories" xml:space="preserve">
+    <value>Visible Categories</value>
+  </data>
+  <data name="DeleteTasksConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete all of your tasks?</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Clear the current drawing</comment>
+  </data>
+  <data name="CopyCharTrail" xml:space="preserve">
+    <value>Copy Character Trail</value>
+    <comment>Copies the character's trail to the drawing</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+    <comment>Save a drawing</comment>
+  </data>
 </root>

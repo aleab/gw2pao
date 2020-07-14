@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ using NLog;
 namespace GW2PAO.Modules.Tasks.ViewModels
 {
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    [Export]
+    [Export(typeof(NewTaskDialogViewModel))]
     public class NewTaskDialogViewModel : BindableBase
     {
         /// <summary>
@@ -59,10 +60,14 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         {
             get
             {
+                string name;
                 if (this.Task != null)
-                    return this.zoneService.GetZoneName(this.Task.MapID);
+                    name = this.zoneService.GetZoneName(this.Task.MapID);
                 else
-                    return string.Empty;
+                    name = string.Empty;
+                if (name.ToLower().Equals("unknown"))
+                    name = Properties.Resources.Unknown;
+                return name;
             }
         }
 
@@ -98,6 +103,15 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         }
 
         /// <summary>
+        /// Collection of existing categories the user can optionally choose from
+        /// </summary>
+        public List<string> ExistingCategories
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
         /// Command to update the location used for the task
         /// </summary>
         public ICommand RefreshLocationCommand { get; private set; }
@@ -120,6 +134,13 @@ namespace GW2PAO.Modules.Tasks.ViewModels
 
             this.ItemsProvider = new ItemResultsProvider(this.commerceService);
 
+            this.ExistingCategories = new List<string>();
+            foreach (var task in controller.PlayerTasks)
+            {
+                if (!string.IsNullOrEmpty(task.Category) && !this.ExistingCategories.Contains(task.Category))
+                    this.ExistingCategories.Add(task.Category);
+            }
+
             this.Task = new PlayerTask();
             this.RefreshLocationCommand = new DelegateCommand(this.RefreshLocation);
             this.ApplyCommand = new DelegateCommand(this.AddOrUpdateTask);
@@ -134,7 +155,8 @@ namespace GW2PAO.Modules.Tasks.ViewModels
             if (this.playerService.HasValidMapId)
             {
                 var map = this.zoneService.GetMap(this.playerService.MapId);
-                this.Task.MapID = this.playerService.MapId;
+                this.task.ContinentId = map.ContinentId;
+                this.Task.MapID = map.Id;
                 this.Task.Location = this.playerService.PlayerPosition;
                 this.Task.ContinentLocation = API.Util.MapsHelper.ConvertToWorldPos(map.ContinentRectangle, map.MapRectangle, API.Util.CalcUtil.ConvertToMapPosition(this.Task.Location));
 
@@ -149,12 +171,18 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         {
             if (!this.HasLocation)
             {
+                this.task.ContinentId = -1;
                 this.Task.MapID = -1;
                 this.Task.Location = null;
                 this.task.ContinentLocation = null;
             }
 
             this.controller.AddOrUpdateTask(this.Task);
+            this.Task = new PlayerTask(this.Task);
+            this.Task.ID = Guid.NewGuid();
+            this.Task.Name = string.Empty;
+            this.Task.Description = string.Empty;
+            this.Task.CharacterCompletions.Clear();
         }
     }
 }

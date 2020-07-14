@@ -33,6 +33,8 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         private bool isPlayerOnMap;
         private double distanceFromPlayer;
         private double directionFromPlayer;
+        private bool isAbovePlayer;
+        private bool isBelowPlayer;
         private bool isVisible;
 
         /// <summary>
@@ -41,6 +43,14 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         public string Name
         {
             get { return this.Task.Name; }
+        }
+
+        /// <summary>
+        /// The player task's category
+        /// </summary>
+        public string Category
+        {
+            get { return this.Task.Category; }
         }
 
         /// <summary>
@@ -176,6 +186,24 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         }
 
         /// <summary>
+        /// True if the task is significantly above the player's position, else false
+        /// </summary>
+        public bool IsAbovePlayer
+        {
+            get { return this.isAbovePlayer; }
+            set { SetProperty(ref this.isAbovePlayer, value); }
+        }
+
+        /// <summary>
+        /// True if the task is significantly below the player's position, else false
+        /// </summary>
+        public bool IsBelowPlayer
+        {
+            get { return this.isBelowPlayer; }
+            set { SetProperty(ref this.isBelowPlayer, value); }
+        }
+
+        /// <summary>
         /// Visibility of the task
         /// Visibility is based on multiple properties, including:
         ///     - IsCompleted and whether or not completed tasks are shown
@@ -233,6 +261,10 @@ namespace GW2PAO.Modules.Tasks.ViewModels
                     {
                         this.OnPropertyChanged(() => this.HasZoneLocation);
                         this.OnPropertyChanged(() => this.HasContinentLocation);
+                    }
+                    else if (e.PropertyName.Contains("Category"))
+                    {
+                        this.OnPropertyChanged(() => this.Category);
                     }
                 };
             if (this.Task.MapID != -1)

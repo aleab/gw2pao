@@ -20,19 +20,15 @@ using GW2PAO.Views;
 namespace GW2PAO.Modules.Tasks.Views
 {
     /// <summary>
-    /// Interaction logic for AddNewTaskDialog.xaml
+    /// Interaction logic for EditCategoryDialog.xaml
     /// </summary>
-    public partial class AddNewTaskDialog : OverlayWindow
+    public partial class EditCategoryDialog : OverlayWindow
     {
-        /// <summary>
-        /// The player task that this dialog is adding or editing
-        /// </summary>
-        [Import]
-        public NewTaskDialogViewModel TaskData
+        public EditCategoryViewModel ViewModel
         {
             get
             {
-                return this.DataContext as NewTaskDialogViewModel;
+                return this.DataContext as EditCategoryViewModel;
             }
             set
             {
@@ -45,16 +41,18 @@ namespace GW2PAO.Modules.Tasks.Views
         /// <summary>
         /// Constructs a new AddNewTaskDialog window
         /// </summary>
-        /// <param name="taskData">The task data</param>
-        public AddNewTaskDialog()
+        public EditCategoryDialog(EditCategoryViewModel vm)
         {
+            this.ViewModel = vm;
             InitializeComponent();
-            this.Loaded += AddNewTaskDialog_Loaded;
+            this.Loaded += EditCategoryDialog_Loaded;
+            this.CenterWindowOnScreen();
         }
 
-        private void AddNewTaskDialog_Loaded(object sender, RoutedEventArgs e)
+        private void EditCategoryDialog_Loaded(object sender, RoutedEventArgs e)
         {
             this.CenterWindowOnScreen();
+            this.CategoryNameTextbox.Focus();
         }
 
         /// <summary>
@@ -74,26 +72,15 @@ namespace GW2PAO.Modules.Tasks.Views
             e.Handled = true;
         }
 
-        private void OKButton_Click(object sender, RoutedEventArgs e)
+        private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            this.TaskData.ApplyCommand.Execute(null);
+            this.ViewModel.ApplyCommand.Execute(null);
             this.Close();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.IconPopup.IsOpen = true;
-            e.Handled = true;
-        }
-
-        private void OnIntelliboxSuggestItem_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            this.ItemsEntryBox.ChooseCurrentItem();
         }
     }
 }

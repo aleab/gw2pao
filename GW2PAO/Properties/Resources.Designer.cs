@@ -412,7 +412,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Center on Character과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Center on Character.
         /// </summary>
         public static string CenterOnChar {
             get {
@@ -439,7 +448,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Close과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string Clear {
+            get {
+                return ResourceManager.GetString("Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string Close {
             get {
@@ -493,7 +511,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Copy Chat Code과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Copy Character Trail.
+        /// </summary>
+        public static string CopyCharTrail {
+            get {
+                return ResourceManager.GetString("CopyCharTrail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy Chat Code.
         /// </summary>
         public static string CopyChatCode {
             get {
@@ -655,7 +682,25 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Description과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Are you sure you want to delete all tasks in this category?.
+        /// </summary>
+        public static string DeleteCategoryConfirmation {
+            get {
+                return ResourceManager.GetString("DeleteCategoryConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete all of your tasks?.
+        /// </summary>
+        public static string DeleteTasksConfirmation {
+            get {
+                return ResourceManager.GetString("DeleteTasksConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
             get {
@@ -790,7 +835,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Enable All과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Edit Category.
+        /// </summary>
+        public static string EditCategory {
+            get {
+                return ResourceManager.GetString("EditCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable All.
         /// </summary>
         public static string EnableAll {
             get {
@@ -1717,7 +1771,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Sell Listing과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sell Listing.
         /// </summary>
         public static string SellListing {
             get {
@@ -2392,7 +2455,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Unknown과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Uncategorized.
+        /// </summary>
+        public static string Uncategorized {
+            get {
+                return ResourceManager.GetString("Uncategorized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
         /// </summary>
         public static string Unknown {
             get {
@@ -2446,7 +2518,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Vistas과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Visible Categories.
+        /// </summary>
+        public static string VisibleCategories {
+            get {
+                return ResourceManager.GetString("VisibleCategories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vistas.
         /// </summary>
         public static string Vistas {
             get {
@@ -2654,7 +2735,16 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
-        ///   Zone Completion Assistant과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Looks up a localized string similar to Yes, Delete All.
+        /// </summary>
+        public static string YesDeleteAll {
+            get {
+                return ResourceManager.GetString("YesDeleteAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zone Completion Assistant.
         /// </summary>
         public static string ZoneCompletionAssistant {
             get {

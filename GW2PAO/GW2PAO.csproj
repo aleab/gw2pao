@@ -301,6 +301,7 @@
     <Compile Include="Modules\Events\Views\WorldBossTimers\WorldBossTimerView.xaml.cs">
       <DependentUpon>WorldBossTimerView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Map\Converters\CategoryToIsVisibleConverter.cs" />
     <Compile Include="Modules\Map\Converters\ContinentCoordToTileCoordConverter.cs" />
     <Compile Include="Modules\Map\Converters\ZoomToItemSizeConverter.cs" />
     <Compile Include="Modules\Map\Interfaces\IHasMapLocation.cs" />
@@ -309,7 +310,10 @@
     <Compile Include="Modules\Map\MapModule.cs" />
     <Compile Include="Modules\Map\MapUserData.cs" />
     <Compile Include="Modules\Map\MapViewController.cs" />
+    <Compile Include="Modules\Map\Models\Drawing.cs" />
     <Compile Include="Modules\Map\ViewModels\CharacterPointerViewModel.cs" />
+    <Compile Include="Modules\Map\ViewModels\DrawingsViewModel.cs" />
+    <Compile Include="Modules\Map\ViewModels\DrawingViewModel.cs" />
     <Compile Include="Modules\Map\ViewModels\PlayerMarkerViewModel.cs" />
     <Compile Include="Modules\Map\ViewModels\PlayerMarkersViewModel.cs" />
     <Compile Include="Modules\Map\ViewModels\ZoneItemsViewModel.cs" />
@@ -320,6 +324,11 @@
       <DependentUpon>MapSettingControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modules\Tasks\PlayerTasksFactory.cs" />
+    <Compile Include="Modules\Tasks\ViewModels\EditCategoryViewModel.cs" />
+    <Compile Include="Modules\Tasks\ViewModels\TaskCategoryViewModel.cs" />
+    <Compile Include="Modules\Tasks\Views\EditCategoryDialog.xaml.cs">
+      <DependentUpon>EditCategoryDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ZoneCompletion\Models\ZoneItemsStore.cs" />
     <Compile Include="Modules\Map\ViewModels\MapViewModel.cs" />
     <Compile Include="Modules\Map\Views\Controls\Map.cs" />
@@ -630,6 +639,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Modules\Tasks\Views\EditCategoryDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Modules\Tasks\Views\AddNewTaskDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -645,6 +658,10 @@
     <Page Include="Modules\WvW\Views\WvWSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\BaseControlStyles\DialogStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\BaseControlStyles\ComboBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -1050,7 +1067,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Tasks\" />
-    <Folder Include="Modules\Map\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Zone\hearts.png" />

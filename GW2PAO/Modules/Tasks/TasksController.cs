@@ -213,9 +213,11 @@ namespace GW2PAO.Modules.Tasks
                             existingTask.Task.IsDailyReset = task.IsDailyReset;
                             existingTask.Task.AutoComplete = task.AutoComplete;
                             existingTask.Task.Location = task.Location;
+                            existingTask.Task.ContinentId = task.ContinentId;
                             existingTask.Task.MapID = task.MapID;
                             existingTask.Task.IconUri = task.IconUri;
                             existingTask.Task.WaypointCode = task.WaypointCode;
+                            existingTask.Task.Category = task.Category;
                             foreach (var character in task.CharacterCompletions.Keys)
                             {
                                 if (!existingTask.Task.CharacterCompletions.ContainsKey(character))
@@ -255,9 +257,11 @@ namespace GW2PAO.Modules.Tasks
                         existingTask.Task.IsDailyReset = taskViewModel.Task.IsDailyReset;
                         existingTask.Task.AutoComplete = taskViewModel.Task.AutoComplete;
                         existingTask.Task.Location = taskViewModel.Task.Location;
+                        existingTask.Task.ContinentId = taskViewModel.Task.ContinentId;
                         existingTask.Task.MapID = taskViewModel.Task.MapID;
                         existingTask.Task.IconUri = taskViewModel.Task.IconUri;
                         existingTask.Task.WaypointCode = taskViewModel.Task.WaypointCode;
+                        existingTask.Task.Category = taskViewModel.Task.Category;
                         foreach (var character in taskViewModel.Task.CharacterCompletions.Keys)
                         {
                             if (!existingTask.Task.CharacterCompletions.ContainsKey(character))
@@ -448,6 +452,8 @@ namespace GW2PAO.Modules.Tasks
         /// </summary>
         private void RefreshTaskDistancesAngles()
         {
+            const int ABOVE_BELOW_THRESHOLD = 150;
+
             this.CurrentMapID = this.playerService.MapId;
 
             var playerPos = this.playerService.PlayerPosition;
@@ -466,11 +472,16 @@ namespace GW2PAO.Modules.Tasks
                     var newAngle = CalcUtil.CalculateAngle(CalcUtil.Vector.CreateVector(playerMapPosition, taskMapPosition),
                                                            CalcUtil.Vector.CreateVector(new API.Data.Entities.Point(0, 0), cameraDirectionMapPosition));
 
+                    bool isAbove = (ptask.Task.Location.Z > 0) && (taskMapPosition.Z - playerMapPosition.Z > ABOVE_BELOW_THRESHOLD);
+                    bool isBelow = (ptask.Task.Location.Z > 0) && (playerMapPosition.Z - taskMapPosition.Z > ABOVE_BELOW_THRESHOLD);
+
                     Threading.BeginInvokeOnUI(() =>
                         {
                             ptask.IsPlayerOnMap = true;
                             ptask.DistanceFromPlayer = newDistance;
                             ptask.DirectionFromPlayer = newAngle;
+                            ptask.IsAbovePlayer = isAbove;
+                            ptask.IsBelowPlayer = isBelow;
                         });
 
                     // Check for auto-completion detection
@@ -504,6 +515,7 @@ namespace GW2PAO.Modules.Tasks
             {
                 var continent = this.zoneService.GetContinentByMap(ptask.Task.MapID);
                 var map = this.zoneService.GetMap(ptask.Task.MapID);
+                ptask.Task.ContinentId = map.ContinentId;
                 ptask.Task.ContinentLocation = API.Util.MapsHelper.ConvertToWorldPos(map.ContinentRectangle, map.MapRectangle, CalcUtil.ConvertToMapPosition(ptask.Task.Location));
             }
         }

@@ -31,7 +31,10 @@ namespace GW2PAO.Modules.Map.ViewModels
         private IZoneService zoneService;
         private IPlayerService playerService;
         private MapControl.Location location;
+        private bool isVisible;
         private Continent continent;
+        private MapUserData userData;
+        private int currentContinentId;
 
         /// <summary>
         /// The player task's ID
@@ -116,7 +119,8 @@ namespace GW2PAO.Modules.Map.ViewModels
                     var mapPoint = transform.Transform(this.location);
                     this.taskViewModel.Task.ContinentLocation = new Point(
                         (continent.Id != 1)?(((continent.Width * mapPoint.X) / 360.0) + (continent.Width / 2)):(((32768 * mapPoint.X) / 360.0) + (32768 / 2)),
-                        (continent.Id != 1)?((continent.Height / 2) - ((mapPoint.Y * continent.Height) / 360.0)):((32768 / 2) - ((mapPoint.Y * 32768) / 360.0)));
+                        (continent.Id != 1)?((continent.Height / 2) - ((mapPoint.Y * continent.Height) / 360.0)):((32768 / 2) - ((mapPoint.Y * 32768) / 360.0))
+                        -1);
 
                     // Determine the map and set the map location accordingly
                     var map = zoneService.GetMap(this.continent.Id, this.taskViewModel.Task.ContinentLocation);
@@ -126,6 +130,8 @@ namespace GW2PAO.Modules.Map.ViewModels
                     }
                     else
                     {
+                        if (this.taskViewModel.Task.ContinentId != map.ContinentId)
+                            this.taskViewModel.Task.ContinentId = map.ContinentId;
                         if (this.taskViewModel.Task.MapID != map.Id)
                             this.taskViewModel.Task.MapID = map.Id;
 
@@ -134,6 +140,7 @@ namespace GW2PAO.Modules.Map.ViewModels
                         // Note: we really only do this to keep compatibility with pre-map player tasks (yea, not great I know...)
                         this.taskViewModel.Task.Location.X = this.taskViewModel.Task.Location.X / CalcUtil.MapConversionFactor;
                         this.taskViewModel.Task.Location.Y = this.taskViewModel.Task.Location.Y / CalcUtil.MapConversionFactor;
+                        this.taskViewModel.Task.Location.Z = -1;
                     }
                 }
             }
@@ -166,6 +173,15 @@ namespace GW2PAO.Modules.Map.ViewModels
         }
 
         /// <summary>
+        /// True if this marker is set as visible, else false
+        /// </summary>
+        public bool IsVisible
+        {
+            get { return this.isVisible; }
+            set { SetProperty(ref this.isVisible, value); }
+        }
+
+        /// <summary>
         /// Command to copy the waypoint code for the marker/task, if any
         /// </summary>
         public ICommand CopyWaypointCommand { get { return this.taskViewModel.CopyWaypointCommand; } }
@@ -184,14 +200,29 @@ namespace GW2PAO.Modules.Map.ViewModels
         /// Constructs a new Player Marker view model
         /// </summary>
         /// <param name="taskViewModel">View model of the marker's corresponding task</param>
-        public PlayerMarkerViewModel(PlayerTaskViewModel taskViewModel, IZoneService zoneService, IPlayerService playerService)
+        public PlayerMarkerViewModel(PlayerTaskViewModel taskViewModel, MapUserData userData, int currentContinentId, IZoneService zoneService, IPlayerService playerService)
         {
             this.taskViewModel = taskViewModel;
+            this.userData = userData;
+            this.currentContinentId = currentContinentId;
             this.zoneService = zoneService;
             this.playerService = playerService;
 
+            this.userData.HiddenMarkerCategories.CollectionChanged += HiddenMarkerCategories_CollectionChanged;
             this.taskViewModel.PropertyChanged += TaskViewModel_PropertyChanged;
             this.taskViewModel.Task.PropertyChanged += Task_PropertyChanged;
+            this.RefreshVisibility();
+        }
+
+        public void OnContinentChanged(int currentContinentId)
+        {
+            this.currentContinentId = currentContinentId;
+            this.RefreshVisibility();
+        }
+
+        private void HiddenMarkerCategories_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            this.RefreshVisibility();
         }
 
         private void TaskViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -208,7 +239,9 @@ namespace GW2PAO.Modules.Map.ViewModels
         {
             Continent cont;
 
-            if (this.taskViewModel.Task.MapID > 0)
+            if (this.taskViewModel.Task.ContinentId > 0)
+                cont = this.zoneService.GetContinent(this.taskViewModel.Task.ContinentId);
+            else if (this.taskViewModel.Task.MapID > 0)
                 cont = this.zoneService.GetContinentByMap(this.taskViewModel.Task.MapID);
             else if (this.playerService.HasValidMapId)
                 cont = this.zoneService.GetContinentByMap(this.playerService.MapId);
@@ -218,5 +251,14 @@ namespace GW2PAO.Modules.Map.ViewModels
             return cont;
         }
 
+        private void RefreshVisibility()
+        {
+            bool isVisible = true;
+
+            isVisible &= this.taskViewModel.Task.ContinentId == currentContinentId;
+            isVisible &= !this.userData.HiddenMarkerCategories.Contains(this.TaskViewModel.Category);
+
+            this.IsVisible = isVisible;
+        }
     }
 }
