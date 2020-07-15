@@ -32,7 +32,7 @@ namespace GW2PAO.API.Data
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de" };
+            var supported = new[] { "en", "es", "fr", "de", "zh" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
