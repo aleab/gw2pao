@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using NLog.Fluent;
 
 namespace GW2PAO.Data.UserData
 {
@@ -73,7 +74,7 @@ namespace GW2PAO.Data.UserData
             }
             catch (Exception ex)
             {
-                logger.Warn("Unable to load user settings! Exception: ", ex);
+                logger.Warn(ex, "Unable to load user settings! Exception: ");
                 return default(T);
             }
         }
