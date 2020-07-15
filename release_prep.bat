@@ -7,46 +7,46 @@ xcopy es\GW2PAO.resources.dll Locale\es\ /Y
 xcopy fr\GW2PAO.resources.dll Locale\fr\ /Y
 xcopy ru\GW2PAO.resources.dll Locale\ru\ /Y
 xcopy ko\GW2PAO.resources.dll Locale\ko\ /Y
-rd /S /Q en
-rd /S /Q it
-rd /S /Q ja
-rd /S /Q ko
-rd /S /Q ru
-rd /S /Q zh-Hans
-rd /S /Q zh-Hant
-rd /S /Q de
-rd /S /Q es
-rd /S /Q fr
-rd /S /Q hu
-rd /S /Q ro
-rd /S /Q sv
-rd /S /Q pt-BR
-del /Q *.xml
-del /Q *.pdb
-del /Q BitFactory.dll
-del /Q GW2NET.*
-del /Q GW2PAO.*.dll
-del /Q GwApiNET.dll
-del /Q Hardcodet.Wpf.TaskbarNotification.dll
-del /Q Intellibox.dll
-del /Q Microsoft.Expression.*
-del /Q Microsoft.Practices.*
-del /Q Newtonsoft.Json.dll
-del /Q NHotkey.*
-del /Q NLog.dll
-del /Q OxyPlot.*
-del /Q RestSharp.dll
-del /Q SLF.*
-del /Q System.Windows.Interactivity.dll
-del /Q TS3QueryLib.Core.Framework.dll
-del /Q Xceed.Wpf.*
-del /Q FileDb*
-del /Q ImageFileCache.WPF.*
-del /Q MapControl.WPF.*
-del /Q FontAwesome.Sharp.*
-del /Q *.vshost.*
-del /Q Logs/*
-del /Q UserData/*
+rd /S /Q en 2>NUL
+rd /S /Q it 2>NUL
+rd /S /Q ja 2>NUL
+rd /S /Q ko 2>NUL
+rd /S /Q ru 2>NUL
+rd /S /Q zh-Hans 2>NUL
+rd /S /Q zh-Hant 2>NUL
+rd /S /Q de 2>NUL
+rd /S /Q es 2>NUL
+rd /S /Q fr 2>NUL
+rd /S /Q hu 2>NUL
+rd /S /Q ro 2>NUL
+rd /S /Q sv 2>NUL
+rd /S /Q pt-BR 2>NUL
+del /Q *.xml 2>NUL
+del /Q *.pdb 2>NUL
+del /Q BitFactory.dll 2>NUL
+del /Q GW2NET.* 2>NUL
+del /Q GW2PAO.*.dll 2>NUL
+del /Q GwApiNET.dll 2>NUL
+del /Q Hardcodet.Wpf.TaskbarNotification.dll 2>NUL
+del /Q Intellibox.dll 2>NUL
+del /Q Microsoft.Expression.* 2>NUL
+del /Q Microsoft.Practices.* 2>NUL
+del /Q Newtonsoft.Json.dll 2>NUL
+del /Q NHotkey.* 2>NUL
+del /Q NLog.dll 2>NUL
+del /Q OxyPlot.* 2>NUL
+del /Q RestSharp.dll 2>NUL
+del /Q SLF.* 2>NUL
+del /Q System.Windows.Interactivity.dll 2>NUL
+del /Q TS3QueryLib.Core.Framework.dll 2>NUL
+del /Q Xceed.Wpf.* 2>NUL
+del /Q FileDb* 2>NUL
+del /Q ImageFileCache.WPF.* 2>NUL
+del /Q MapControl.WPF.* 2>NUL
+del /Q FontAwesome.Sharp.* 2>NUL
+del /Q *.vshost.* 2>NUL
+del /Q Logs/* 2>NUL
+del /Q UserData/* 2>NUL
 popd
 
 xcopy AnetCopyright.txt GW2PAO\bin\x86\Release\ /Y
@@ -62,56 +62,56 @@ xcopy es\GW2PAO.resources.dll Locale\es\ /Y
 xcopy fr\GW2PAO.resources.dll Locale\fr\ /Y
 xcopy ru\GW2PAO.resources.dll Locale\ru\ /Y
 xcopy ko\GW2PAO.resources.dll Locale\ko\ /Y
-rd /S /Q de
-rd /S /Q en
-rd /S /Q es
-rd /S /Q fr
-rd /S /Q it
-rd /S /Q ja
-rd /S /Q ko
-rd /S /Q ru
-rd /S /Q zh-Hans
-rd /S /Q zh-Hant
-rd /S /Q hu
-rd /S /Q ro
-rd /S /Q sv
-rd /S /Q pt-BR
-del /Q *.xml
-del /Q *.pdb
-del /Q BitFactory.dll
-del /Q GW2NET.*
-del /Q GW2PAO.*.dll
-del /Q GwApiNET.dll
-del /Q Hardcodet.Wpf.TaskbarNotification.dll
-del /Q Intellibox.dll
-del /Q Microsoft.Expression.*
-del /Q Microsoft.Practices.*
-del /Q Newtonsoft.Json.dll
-del /Q NHotkey.*
-del /Q NLog.dll
-del /Q OxyPlot.*
-del /Q RestSharp.dll
-del /Q SLF.*
-del /Q System.Windows.Interactivity.dll
-del /Q TS3QueryLib.Core.Framework.dll
-del /Q Xceed.Wpf.*
-del /Q avcodec-53.dll
-del /Q avformat-53.dll
-del /Q avutil-51.dll
-del /Q Awesomium*
-del /Q icudt.dll
-del /Q inspector.pak
-del /Q libEGL.dll
-del /Q libGLESv2.dll
-del /Q xinput9_1_0.dll
-del /Q pdf_js.pak
-del /Q FileDb*
-del /Q ImageFileCache.WPF.*
-del /Q MapControl.WPF.*
-del /Q FontAwesome.Sharp.*
-del /Q *.vshost.*
-del /Q Logs/*
-del /Q UserData/*
+rd /S /Q de 2>NUL
+rd /S /Q en 2>NUL
+rd /S /Q es 2>NUL
+rd /S /Q fr 2>NUL
+rd /S /Q it 2>NUL
+rd /S /Q ja 2>NUL
+rd /S /Q ko 2>NUL
+rd /S /Q ru 2>NUL
+rd /S /Q zh-Hans 2>NUL
+rd /S /Q zh-Hant 2>NUL
+rd /S /Q hu 2>NUL
+rd /S /Q ro 2>NUL
+rd /S /Q sv 2>NUL
+rd /S /Q pt-BR 2>NUL
+del /Q *.xml 2>NUL
+del /Q *.pdb 2>NUL
+del /Q BitFactory.dll 2>NUL
+del /Q GW2NET.* 2>NUL
+del /Q GW2PAO.*.dll 2>NUL
+del /Q GwApiNET.dll 2>NUL
+del /Q Hardcodet.Wpf.TaskbarNotification.dll 2>NUL
+del /Q Intellibox.dll 2>NUL
+del /Q Microsoft.Expression.* 2>NUL
+del /Q Microsoft.Practices.* 2>NUL
+del /Q Newtonsoft.Json.dll 2>NUL
+del /Q NHotkey.* 2>NUL
+del /Q NLog.dll 2>NUL
+del /Q OxyPlot.* 2>NUL
+del /Q RestSharp.dll 2>NUL
+del /Q SLF.* 2>NUL
+del /Q System.Windows.Interactivity.dll 2>NUL
+del /Q TS3QueryLib.Core.Framework.dll 2>NUL
+del /Q Xceed.Wpf.* 2>NUL
+del /Q avcodec-53.dll 2>NUL
+del /Q avformat-53.dll 2>NUL
+del /Q avutil-51.dll 2>NUL
+del /Q Awesomium* 2>NUL
+del /Q icudt.dll 2>NUL
+del /Q inspector.pak 2>NUL
+del /Q libEGL.dll 2>NUL
+del /Q libGLESv2.dll 2>NUL
+del /Q xinput9_1_0.dll 2>NUL
+del /Q pdf_js.pak 2>NUL
+del /Q FileDb* 2>NUL
+del /Q ImageFileCache.WPF.* 2>NUL
+del /Q MapControl.WPF.* 2>NUL
+del /Q FontAwesome.Sharp.* 2>NUL
+del /Q *.vshost.* 2>NUL
+del /Q Logs/* 2>NUL
+del /Q UserData/* 2>NUL
 popd
 
 xcopy AnetCopyright.txt GW2PAO\bin\x86\Release_WithoutBrowser\ /Y
