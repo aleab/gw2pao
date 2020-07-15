@@ -2,14 +2,37 @@
 using System.IO;
 using System.Linq;
 using GW2PAO.API.Data;
-using GW2PAO.API.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GW2PAO.API.UnitTest
 {
     [TestClass]
-    public class MegaserverEventTimeTableTests
+    public class WorldBossEventTimeTableTests
     {
+        private static readonly string renamedFilename = "renamedFile.xml";
+
+        [ClassInitialize]
+        public static void Init(TestContext context)
+        {
+            if (File.Exists(WorldBossEventTimeTable.StandardFilename))
+                File.Delete(WorldBossEventTimeTable.StandardFilename);
+            if (File.Exists(WorldBossEventTimeTable.AdjustedFilename))
+                File.Delete(WorldBossEventTimeTable.AdjustedFilename);
+            if (File.Exists(renamedFilename))
+                File.Delete(renamedFilename);
+
+            File.Copy(Path.Combine("TestResources", WorldBossEventTimeTable.StandardFilename), WorldBossEventTimeTable.StandardFilename);
+            File.Copy(Path.Combine("TestResources", WorldBossEventTimeTable.AdjustedFilename), WorldBossEventTimeTable.AdjustedFilename);
+        }
+
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            File.Delete(WorldBossEventTimeTable.StandardFilename);
+            File.Delete(WorldBossEventTimeTable.AdjustedFilename);
+            File.Delete(renamedFilename);
+        }
+
         [TestMethod]
         public void MegaserverEventTimeTable_Constructor()
         {
@@ -24,6 +47,7 @@ namespace GW2PAO.API.UnitTest
             WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(false);
             Assert.IsNotNull(mett);
             Assert.IsNotNull(mett.WorldEvents);
+            Assert.IsTrue(mett.WorldEvents.Count > 0);
         }
 
         [TestMethod]
@@ -32,18 +56,17 @@ namespace GW2PAO.API.UnitTest
             WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(true);
             Assert.IsNotNull(mett);
             Assert.IsNotNull(mett.WorldEvents);
+            Assert.IsTrue(mett.WorldEvents.Count > 0);
         }
 
         [TestMethod]
         [ExpectedException(typeof(FileNotFoundException))]
         public void MegaserverEventTimeTable_LoadTable_Standard_MissingFile()
         {
-            string renamedFilename = "renamedFile.xml";
             File.Move(WorldBossEventTimeTable.StandardFilename, renamedFilename);
-
             try
             {
-                WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(false);
+                WorldBossEventTimeTable.LoadTable(false);
             }
             finally
             {
@@ -52,15 +75,14 @@ namespace GW2PAO.API.UnitTest
         }
 
         [TestMethod]
+
         [ExpectedException(typeof(FileNotFoundException))]
         public void MegaserverEventTimeTable_LoadTable_Adjusted_MissingFile()
         {
-            string renamedFilename = "renamedFile.xml";
             File.Move(WorldBossEventTimeTable.AdjustedFilename, renamedFilename);
-
             try
             {
-                WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(true);
+                WorldBossEventTimeTable.LoadTable(true);
             }
             finally
             {
@@ -72,13 +94,12 @@ namespace GW2PAO.API.UnitTest
         [ExpectedException(typeof(InvalidOperationException))]
         public void MegaserverEventTimeTable_LoadTable_Standard_InvalidFile()
         {
-            string renamedFilename = "renamedFile.xml";
             File.Move(WorldBossEventTimeTable.StandardFilename, renamedFilename);
             File.WriteAllText(WorldBossEventTimeTable.StandardFilename, "invalid data");
 
             try
             {
-                WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(false);
+                WorldBossEventTimeTable.LoadTable(false);
             }
             finally
             {
@@ -91,13 +112,12 @@ namespace GW2PAO.API.UnitTest
         [ExpectedException(typeof(InvalidOperationException))]
         public void MegaserverEventTimeTable_LoadTable_Adjusted_InvalidFile()
         {
-            string renamedFilename = "renamedFile.xml";
             File.Move(WorldBossEventTimeTable.AdjustedFilename, renamedFilename);
             File.WriteAllText(WorldBossEventTimeTable.AdjustedFilename, "invalid data");
 
             try
             {
-                WorldBossEventTimeTable mett = WorldBossEventTimeTable.LoadTable(true);
+                WorldBossEventTimeTable.LoadTable(true);
             }
             finally
             {
@@ -109,17 +129,35 @@ namespace GW2PAO.API.UnitTest
         [TestMethod]
         public void MegaserverEventTimeTable_CreateTable_Standard_Success()
         {
-            File.Delete(WorldBossEventTimeTable.StandardFilename);
-            WorldBossEventTimeTable.CreateTable(false);
-            Assert.IsTrue(File.Exists(WorldBossEventTimeTable.StandardFilename));
+            File.Move(WorldBossEventTimeTable.StandardFilename, renamedFilename);
+            try
+            {
+                WorldBossEventTimeTable.CreateTable(false);
+                Assert.IsTrue(File.Exists(WorldBossEventTimeTable.StandardFilename));
+            }
+            finally
+            {
+                if (File.Exists(WorldBossEventTimeTable.StandardFilename))
+                    File.Delete(WorldBossEventTimeTable.StandardFilename);
+                File.Move(renamedFilename, WorldBossEventTimeTable.StandardFilename);
+            }
         }
 
         [TestMethod]
         public void MegaserverEventTimeTable_CreateTable_Adjusted_Success()
         {
-            File.Delete(WorldBossEventTimeTable.AdjustedFilename);
-            WorldBossEventTimeTable.CreateTable(true);
-            Assert.IsTrue(File.Exists(WorldBossEventTimeTable.AdjustedFilename));
+            File.Move(WorldBossEventTimeTable.AdjustedFilename, renamedFilename);
+            try
+            {
+                WorldBossEventTimeTable.CreateTable(true);
+                Assert.IsTrue(File.Exists(WorldBossEventTimeTable.AdjustedFilename));
+            }
+            finally
+            {
+                if (File.Exists(WorldBossEventTimeTable.AdjustedFilename))
+                    File.Delete(WorldBossEventTimeTable.AdjustedFilename);
+                File.Move(renamedFilename, WorldBossEventTimeTable.AdjustedFilename);
+            }
         }
 
         [TestMethod]

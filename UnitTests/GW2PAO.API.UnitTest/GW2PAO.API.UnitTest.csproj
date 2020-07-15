@@ -208,7 +208,7 @@
   <ItemGroup>
     <Compile Include="CommerceServiceTests.cs" />
     <Compile Include="DungeonsServiceTests.cs" />
-    <Compile Include="MegaserverEventTimeTableTests.cs" />
+    <Compile Include="WorldBossEventTimeTableTests.cs" />
     <Compile Include="DungeonsTableTests.cs" />
     <Compile Include="EventsServiceTests.cs" />
     <Compile Include="ItemsDatabaseBuilderTests.cs" />
@@ -225,6 +225,18 @@
       <Project>{65064198-8a49-4693-bee2-ff6376f24188}</Project>
       <Name>GW2PAO.API</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TestResources\AdjustedEventTimeTable.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestResources\Dungeons.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestResources\StandardEventTimeTable.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

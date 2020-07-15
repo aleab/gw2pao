@@ -31,7 +31,8 @@ namespace GW2PAO.API.UnitTest
         public void CommerceService_Constructor_NoDatabaseFile()
         {
             string renamedFilename = "renamedDB.json";
-            File.Move(Paths.LocalizationFolder + "\\ItemDatabase.json", renamedFilename);
+            string itemDbJson = Path.Combine(Paths.LocalizationFolder, "en", "ItemDatabase.json");
+            File.Move(itemDbJson, renamedFilename);
 
             try
             {
@@ -42,7 +43,7 @@ namespace GW2PAO.API.UnitTest
             }
             finally
             {
-                File.Move(renamedFilename, Paths.LocalizationFolder + "\\ItemDatabase.json");
+                File.Move(renamedFilename, itemDbJson);
             }
         }
 
@@ -50,8 +51,9 @@ namespace GW2PAO.API.UnitTest
         public void CommerceService_Constructor_InvalidDatabaseFile()
         {
             string renamedFilename = "renamedDB.json";
-            File.Move(Paths.LocalizationFolder + "\\ItemDatabase.json", renamedFilename);
-            File.WriteAllText(Paths.LocalizationFolder + "\\ItemDatabase.json", "invalid file");
+            string itemDbJson = Path.Combine(Paths.LocalizationFolder, "en", "ItemDatabase.json");
+            File.Move(itemDbJson, renamedFilename);
+            File.WriteAllText(itemDbJson, "invalid file");
 
             try
             {
@@ -62,8 +64,8 @@ namespace GW2PAO.API.UnitTest
             }
             finally
             {
-                File.Delete(Paths.LocalizationFolder + "\\ItemDatabase.json");
-                File.Move(renamedFilename, Paths.LocalizationFolder + "\\ItemDatabase.json");
+                File.Delete(itemDbJson);
+                File.Move(renamedFilename, itemDbJson);
             }
         }
 
@@ -98,7 +100,8 @@ namespace GW2PAO.API.UnitTest
             cs.ItemsDB.Clear();
 
             string renamedFilename = "renamedDB.json";
-            File.Move(Paths.LocalizationFolder + "\\ItemDatabase.json", renamedFilename);
+            string itemDbJson = Path.Combine(Paths.LocalizationFolder, "en", "ItemDatabase.json");
+            File.Move(itemDbJson, renamedFilename);
 
             try
             {
@@ -107,7 +110,7 @@ namespace GW2PAO.API.UnitTest
             }
             finally
             {
-                File.Move(renamedFilename, Paths.LocalizationFolder + "\\ItemDatabase.json");
+                File.Move(renamedFilename, itemDbJson);
             }
         }
 
@@ -118,8 +121,9 @@ namespace GW2PAO.API.UnitTest
             cs.ItemsDB.Clear();
 
             string renamedFilename = "renamedDB.json";
-            File.Move(Paths.LocalizationFolder + "\\ItemDatabase.json", renamedFilename);
-            File.WriteAllText(Paths.LocalizationFolder + "\\ItemDatabase.json", "invalid file");
+            string itemDbJson = Path.Combine(Paths.LocalizationFolder, "en", "ItemDatabase.json");
+            File.Move(itemDbJson, renamedFilename);
+            File.WriteAllText(itemDbJson, "invalid file");
 
             try
             {
@@ -128,8 +132,8 @@ namespace GW2PAO.API.UnitTest
             }
             finally
             {
-                File.Delete(Paths.LocalizationFolder + "\\ItemDatabase.json");
-                File.Move(renamedFilename, Paths.LocalizationFolder + "\\ItemDatabase.json");
+                File.Delete(itemDbJson);
+                File.Move(renamedFilename, itemDbJson);
             }
         }
 

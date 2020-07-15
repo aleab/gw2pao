@@ -145,7 +145,7 @@ namespace GW2PAO.API.UnitTest
 
             // Cancel it
             cancelToken.Cancel();
-            Assert.IsTrue(progressEvent.WaitOne(5000));
+            progressEvent.WaitOne(5000);
             Assert.IsFalse(progressEvent.WaitOne(5000));
         }
     }
