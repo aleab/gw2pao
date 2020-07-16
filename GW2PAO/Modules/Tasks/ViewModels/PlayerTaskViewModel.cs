@@ -152,7 +152,6 @@ namespace GW2PAO.Modules.Tasks.ViewModels
                 if (SetProperty(ref this.isPlayerOnMap, value))
                 {
                     this.OnPropertyChanged(() => this.DisplayLocation);
-                    this.RefreshVisibility();
                 }
             }
         }
@@ -275,6 +274,7 @@ namespace GW2PAO.Modules.Tasks.ViewModels
             this.DeleteCommand = new DelegateCommand(this.Delete);
             this.UserData.PropertyChanged += (o, e) => this.RefreshVisibility();
             this.Task.PropertyChanged += (o, e) => this.RefreshVisibility();
+            this.PropertyChanged += (o, e) => this.RefreshVisibility();
             this.RefreshVisibility();
         }
 
