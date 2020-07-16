@@ -116,7 +116,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de", "ko" };
+            var supported = new[] { "en", "es", "fr", "de", "zh" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -542,8 +542,8 @@ namespace GW2PAO.API.Providers
                 new ObjectiveNames() { ID = WvWObjectiveIds.BB_Spawn_Border_Green,   Cardinal = "", Full = "Green Border", Short = "Border" },
             };
 
-            // Korean
-            List<ObjectiveNames> korean = new List<ObjectiveNames>()
+            // Chinese
+            List<ObjectiveNames> chinese = new List<ObjectiveNames>()
             {
                 // Eternal Battleground
                 new ObjectiveNames() { ID = WvWObjectiveIds.EB_Castle_Stonemist, Cardinal = "C", Full = "Stonemist Castle", Short = "Stonemist" },
@@ -649,7 +649,7 @@ namespace GW2PAO.API.Providers
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
-            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
+            Serialization.SerializeToXml(chinese, this.GetFilePath("zh"));
         }
 
         /// <summary>

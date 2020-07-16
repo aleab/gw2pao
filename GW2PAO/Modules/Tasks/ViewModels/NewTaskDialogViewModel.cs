@@ -121,6 +121,8 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         /// </summary>
         public ICommand ApplyCommand { get; private set; }
 
+        public ICommand ClearCommand { get; private set; }
+
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -144,6 +146,7 @@ namespace GW2PAO.Modules.Tasks.ViewModels
             this.Task = new PlayerTask();
             this.RefreshLocationCommand = new DelegateCommand(this.RefreshLocation);
             this.ApplyCommand = new DelegateCommand(this.AddOrUpdateTask);
+            this.ClearCommand = new DelegateCommand(this.Clear);
             this.RefreshLocation();
         }
 
@@ -183,6 +186,12 @@ namespace GW2PAO.Modules.Tasks.ViewModels
             this.Task.Name = string.Empty;
             this.Task.Description = string.Empty;
             this.Task.CharacterCompletions.Clear();
+        }
+
+        private void Clear()
+        {
+            this.Task = new PlayerTask();
+            this.SelectedItem = null;
         }
     }
 }

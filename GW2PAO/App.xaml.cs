@@ -29,6 +29,9 @@ namespace GW2PAO
         /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
+        private const int WM_APP = 0x8000;
+        public const int WM_X_EXIT = WM_APP + 0;
+
         protected override void OnStartup(StartupEventArgs e)
         {
             if (Process.GetProcessesByName("GW2PAO").Count() > 1)

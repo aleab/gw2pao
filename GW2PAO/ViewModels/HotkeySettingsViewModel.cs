@@ -319,7 +319,7 @@ namespace GW2PAO.ViewModels
                 }
                 catch (Exception ex)
                 {
-                    logger.Warn("Unable to load user hotkeys! Exception: ", ex);
+                    logger.Warn(ex, "Unable to load user hotkeys! Exception: ");
                 }
             }
 

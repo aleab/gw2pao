@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -120,9 +121,44 @@ namespace GW2PAO.Views
             User32.HideFromTaskbar(this);
         }
 
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+
+            HwndSource hwndSource = PresentationSource.FromVisual(this) as HwndSource;
+            hwndSource?.AddHook(this.WndProc);
+        }
+
+        private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+        {
+            if (msg == App.WM_X_EXIT)
+            {
+                handled = true;
+                Task.Factory.StartNew(() =>
+                {
+                    Commands.ApplicationShutdownCommand.Execute(null);
+                    Application.Current.Dispatcher.BeginInvokeShutdown(System.Windows.Threading.DispatcherPriority.Normal);
+                });
+            }
+
+            return IntPtr.Zero;
+        }
+
         private void CleanupTrayIcon()
         {
             Threading.InvokeOnUI(() => this.TrayIcon.Dispose());
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.OverlayIconX = this.Left;
+            Settings.Default.OverlayIconY = this.Top;
+        }
+
+        private void SavePosition()
+        {
+            this.CommitPositionSettings();
+            Settings.Default.Save();
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
@@ -166,12 +202,8 @@ namespace GW2PAO.Views
 
         private void ShellView_Closing(object sender, CancelEventArgs e)
         {
-            if (this.WindowState == System.Windows.WindowState.Normal)
-            {
-                Properties.Settings.Default.OverlayIconX = this.Left;
-                Properties.Settings.Default.OverlayIconY = this.Top;
-                Properties.Settings.Default.Save();
-            }
+            if (this.WindowState == WindowState.Normal)
+                this.SavePosition();
         }
 
         private void OnSettingsPropertyChanged(object sender, PropertyChangedEventArgs e)

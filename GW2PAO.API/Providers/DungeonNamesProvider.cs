@@ -121,7 +121,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de", "ko" };
+            var supported = new[] { "en", "es", "fr", "de", "zh" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -411,7 +411,7 @@ namespace GW2PAO.API.Providers
                 }},
             };
 
-            List<DungeonName> korean = new List<DungeonName>()
+            List<DungeonName> chinese = new List<DungeonName>()
             {
                 new DungeonName { ID = DungeonID.AscalonianCatacombs, Name = "Ascalonian Catacombs", PathNames = new List<PathName>()
                 {
@@ -484,7 +484,7 @@ namespace GW2PAO.API.Providers
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
-            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
+            Serialization.SerializeToXml(chinese, this.GetFilePath("zh"));
         }
 
         /// <summary>

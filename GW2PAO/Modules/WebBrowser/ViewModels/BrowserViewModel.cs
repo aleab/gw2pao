@@ -182,7 +182,7 @@ namespace GW2PAO.Modules.WebBrowser.ViewModels
             }
             catch (Exception ex)
             {
-                logger.Warn("Unable to load bookmarks! Exception: ", ex);
+                logger.Warn(ex, "Unable to load bookmarks! Exception: ");
                 return false;
             }
         }

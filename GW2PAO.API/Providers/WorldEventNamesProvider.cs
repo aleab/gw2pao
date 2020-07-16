@@ -96,7 +96,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de", "ko" };
+            var supported = new[] { "en", "es", "fr", "de", "zh" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -182,8 +182,8 @@ namespace GW2PAO.API.Providers
                 new EventName() { ID = WorldBossID.FrozenMaw, Name = "Schamanenoberhaupt der Svanir" }
             };
 
-            // Korean
-            List<EventName> korean = new List<EventName>()
+            // Chinese
+            List<EventName> chinese = new List<EventName>()
             {
                 new EventName() { ID = WorldBossID.Megadestroyer, Name = "Megadestroyer" },
                 new EventName() { ID = WorldBossID.Tequatl, Name = "Tequatl" },
@@ -204,7 +204,7 @@ namespace GW2PAO.API.Providers
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
-            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
+            Serialization.SerializeToXml(chinese, this.GetFilePath("zh"));
         }
 
         /// <summary>

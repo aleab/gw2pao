@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using GW2PAO.Modules.Events.ViewModels.MetaEventTimers;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using GW2PAO.Views.Events.MetaEventTimers;
 using NLog;
@@ -179,6 +180,12 @@ namespace GW2PAO.Modules.Events.Views.MetaEventTimers
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.MetaEventTimersX = this.Left;
+            Settings.Default.MetaEventTimersY = this.Top;
         }
     }
 }

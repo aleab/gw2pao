@@ -16,6 +16,7 @@ using GW2PAO.API.Services.Interfaces;
 using GW2PAO.Modules.Tasks.Models;
 using GW2PAO.Modules.Tasks.ViewModels;
 using GW2PAO.Views;
+using NLog;
 
 namespace GW2PAO.Modules.Tasks.Views
 {
@@ -24,6 +25,8 @@ namespace GW2PAO.Modules.Tasks.Views
     /// </summary>
     public partial class AddNewTaskDialog : OverlayWindow
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// The player task that this dialog is adding or editing
         /// </summary>
@@ -94,6 +97,16 @@ namespace GW2PAO.Modules.Tasks.Views
         private void OnIntelliboxSuggestItem_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.ItemsEntryBox.ChooseCurrentItem();
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.TaskData.ClearCommand.Execute(null);
+        }
+
+        private void IconImage_OnImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            logger.Error(e.ErrorException, "Failed to load task image");
         }
     }
 }

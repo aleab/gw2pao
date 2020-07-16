@@ -15,6 +15,7 @@ using GW2PAO.Views;
 using NLog;
 using System.ComponentModel.Composition;
 using GW2PAO.Modules.Commerce.ViewModels;
+using GW2PAO.Properties;
 
 namespace GW2PAO.Modules.Commerce.Views
 {
@@ -106,6 +107,12 @@ namespace GW2PAO.Modules.Commerce.Views
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.EctoHelperX = this.Left;
+            Settings.Default.EctoHelperY = this.Top;
         }
     }
 }

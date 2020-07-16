@@ -6,7 +6,6 @@ using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Data.Enums;
 using GW2PAO.API.Providers;
 using GW2PAO.API.Services;
-using GW2PAO.API.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -15,6 +14,12 @@ namespace GW2PAO.API.UnitTest
     [TestClass]
     public class EventsServiceTests
     {
+        [ClassCleanup]
+        public static void Cleanup()
+        {
+            File.Delete(MetaEventsTable.Filename);
+        }
+
         [TestMethod]
         public void EventsService_LoadTable_Standard_Success()
         {

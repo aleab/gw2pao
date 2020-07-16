@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Interop;
 using GW2PAO.Infrastructure;
+using GW2PAO.Properties;
 using GW2PAO.Utility;
 using Microsoft.Practices.Prism.PubSubEvents;
 
@@ -103,6 +104,8 @@ namespace GW2PAO.Views
             this.Loaded += OverlayWindowBase_Loaded;
             this.ResizeHelper = new ResizeSnapHelper(this);
 
+            this.LocationChanged += this.OverlayWindowBase_LocationChanged;
+
             this.IsClosed = false;
             this.Closed += (o, e) => this.IsClosed = true;
 
@@ -138,13 +141,17 @@ namespace GW2PAO.Views
         /// <summary>
         /// Event handler for the Location Changed event
         /// </summary>
-        private void OverlayWindowBase_LocationChanged(object sender, EventArgs e)
+        protected void OverlayWindowBase_LocationChanged(object sender, EventArgs e)
         {
-            if (this.IsMouseOver)
-            {
-                System.Windows.Point MousePoint = Mouse.GetPosition(this);
-                System.Windows.Point ScreenPoint = this.PointToScreen(MousePoint);
-            }
+            //if (this.IsMouseOver)
+            //{
+            //    System.Windows.Point MousePoint = Mouse.GetPosition(this);
+            //    System.Windows.Point ScreenPoint = this.PointToScreen(MousePoint);
+            //}
+
+            // Automatically save the updated position to the settings
+            this.CommitPositionSettings();
+            Settings.Default.Save();
         }
 
         /// <summary>
@@ -173,5 +180,7 @@ namespace GW2PAO.Views
             bool isSticky = (bool)e.NewValue;
             OverlayWindow window = (OverlayWindow)source;
         }
+
+        protected virtual void CommitPositionSettings() {}
     }
 }

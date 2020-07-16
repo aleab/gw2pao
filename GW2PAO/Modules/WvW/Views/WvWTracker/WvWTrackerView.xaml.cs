@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using GW2PAO.API.Data.Enums;
 using GW2PAO.Modules.WvW.ViewModels.WvWTracker;
 using GW2PAO.PresentationCore;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -376,6 +377,12 @@ namespace GW2PAO.Modules.WvW.Views.WvWTracker
                     e.Handled = true;
                 }
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.WvWTrackerX= this.Left;
+            Settings.Default.WvWTrackerY = this.Top;
         }
     }
 }

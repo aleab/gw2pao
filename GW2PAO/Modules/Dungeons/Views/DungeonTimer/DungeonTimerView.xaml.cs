@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Dungeons.ViewModels.DungeonTimer;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 
 namespace GW2PAO.Modules.Dungeons.Views.DungeonTimer
@@ -105,6 +106,12 @@ namespace GW2PAO.Modules.Dungeons.Views.DungeonTimer
                 Properties.Settings.Default.DungeonTimerY = this.Top;
                 Properties.Settings.Default.Save();
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.DungeonTimerX = this.Left;
+            Settings.Default.DungeonTimerY = this.Top;
         }
     }
 }

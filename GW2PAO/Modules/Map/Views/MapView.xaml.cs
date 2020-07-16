@@ -10,6 +10,7 @@ using GW2PAO.PresentationCore.DragDrop;
 using GW2PAO.Modules.Map.Interfaces;
 using MapControl;
 using System.Windows.Data;
+using GW2PAO.Properties;
 
 namespace GW2PAO.Modules.Map.Views
 {
@@ -244,6 +245,12 @@ namespace GW2PAO.Modules.Map.Views
                 // Set the maps' center
                 this.Map.TargetCenter = new Location(centralLatitude * 180 / Math.PI, centralLongitude * 180 / Math.PI);
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.MapViewX = this.Left;
+            Settings.Default.MapViewY = this.Top;
         }
     }
 }

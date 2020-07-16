@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using GW2PAO.Modules.Events.ViewModels.WorldBossTimers;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using GW2PAO.Views.Events.WorldBossTimers;
 using NLog;
@@ -179,6 +180,12 @@ namespace GW2PAO.Modules.Events.Views.WorldBossTimers
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.EventTrackerX = this.Left;
+            Settings.Default.EventTrackerY = this.Top;
         }
     }
 }

@@ -94,7 +94,7 @@ namespace GW2PAO.API.Providers
         {
             var lang = culture.TwoLetterISOLanguageName;
 
-            var supported = new[] { "en", "es", "fr", "de", "ko" };
+            var supported = new[] { "en", "es", "fr", "de", "zh" };
             if (!supported.Contains(lang))
                 lang = "en"; // Default to english if not supported
 
@@ -239,8 +239,8 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Ereignis endet"}
             };
 
-            // Korean
-            List<MetaEventStageName> korean = new List<MetaEventStageName>()
+            // Chinese
+            List<MetaEventStageName> chinese = new List<MetaEventStageName>()
             {
                 new MetaEventStageName() { ID = MetaEventStageID.TimberlineFalls_LeyLine,    Name = "Ley-Line Anomaly" },
                 new MetaEventStageName() { ID = MetaEventStageID.IronMarches_LeyLine,        Name = "Ley-Line Anomaly" },
@@ -268,14 +268,14 @@ namespace GW2PAO.API.Providers
                 new MetaEventStageName() { ID = MetaEventStageID.JahaiBluffs_DangerousPrey,  Name = "Dangerous Prey"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Keep,      Name = "Thunderhead Keep"},
                 new MetaEventStageName() { ID = MetaEventStageID.ThunderheadPeaks_Oil,       Name = "The Oil Floes"},
-                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "이벤트 종료"}
+                new MetaEventStageName() { ID = MetaEventStageID.EventEnds,                  Name = "Event Ends"}
             };
 
             Serialization.SerializeToXml(english, this.GetFilePath("en"));
             Serialization.SerializeToXml(spanish, this.GetFilePath("es"));
             Serialization.SerializeToXml(french, this.GetFilePath("fr"));
             Serialization.SerializeToXml(german, this.GetFilePath("de"));
-            Serialization.SerializeToXml(korean, this.GetFilePath("ko"));
+            Serialization.SerializeToXml(chinese, this.GetFilePath("zh"));
         }
 
         /// <summary>
