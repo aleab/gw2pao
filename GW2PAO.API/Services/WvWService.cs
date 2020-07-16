@@ -368,6 +368,9 @@ namespace GW2PAO.API.Services
         public IEnumerable<WvWObjective> GetAllObjectives(string matchId)
         {
             List<WvWObjective> objectives = new List<WvWObjective>();
+            if (string.IsNullOrEmpty(matchId))
+                return objectives;
+
             try
             {
                 var matchDetails = this.matchService.Find(new Matchup { MatchId = matchId });
