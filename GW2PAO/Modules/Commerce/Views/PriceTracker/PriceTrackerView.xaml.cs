@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Commerce.ViewModels.PriceTracker;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -167,6 +168,12 @@ namespace GW2PAO.Modules.Commerce.Views.PriceTracker
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.PriceTrackerX = this.Left;
+            Settings.Default.PriceTrackerY = this.Top;
         }
     }
 }

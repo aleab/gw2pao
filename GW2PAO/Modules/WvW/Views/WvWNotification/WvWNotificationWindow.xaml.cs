@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.WvW.ViewModels.WvWNotification;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -83,6 +84,12 @@ namespace GW2PAO.Modules.WvW.Views.WvWNotification
                 this.Left = Properties.Settings.Default.WvWNotificationX;
                 this.Top = Properties.Settings.Default.WvWNotificationY;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.WvWNotificationX = this.Left;
+            Settings.Default.WvWNotificationY = this.Top;
         }
     }
 }

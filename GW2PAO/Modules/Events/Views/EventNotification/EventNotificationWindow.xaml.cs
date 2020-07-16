@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Events.Interfaces;
 using GW2PAO.Modules.Events.ViewModels.EventNotification;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -83,6 +84,12 @@ namespace GW2PAO.Modules.Events.Views.EventNotification
                 this.Left = Properties.Settings.Default.EventNotificationX;
                 this.Top = Properties.Settings.Default.EventNotificationY;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.EventNotificationX = this.Left;
+            Settings.Default.EventNotificationY = this.Top;
         }
     }
 }

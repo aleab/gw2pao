@@ -149,6 +149,18 @@ namespace GW2PAO.Views
             Threading.InvokeOnUI(() => this.TrayIcon.Dispose());
         }
 
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.OverlayIconX = this.Left;
+            Settings.Default.OverlayIconY = this.Top;
+        }
+
+        private void SavePosition()
+        {
+            this.CommitPositionSettings();
+            Settings.Default.Save();
+        }
+
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -190,12 +202,8 @@ namespace GW2PAO.Views
 
         private void ShellView_Closing(object sender, CancelEventArgs e)
         {
-            if (this.WindowState == System.Windows.WindowState.Normal)
-            {
-                Properties.Settings.Default.OverlayIconX = this.Left;
-                Properties.Settings.Default.OverlayIconY = this.Top;
-                Properties.Settings.Default.Save();
-            }
+            if (this.WindowState == WindowState.Normal)
+                this.SavePosition();
         }
 
         private void OnSettingsPropertyChanged(object sender, PropertyChangedEventArgs e)

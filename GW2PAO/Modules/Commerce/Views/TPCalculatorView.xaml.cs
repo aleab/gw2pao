@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -126,6 +127,12 @@ namespace GW2PAO.Modules.Commerce.Views
                     }
                 }
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.TPCalculatorX = this.Left;
+            Settings.Default.TPCalculatorY = this.Top;
         }
     }
 }

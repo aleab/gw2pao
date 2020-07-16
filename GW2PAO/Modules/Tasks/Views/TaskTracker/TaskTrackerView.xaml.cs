@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Tasks.ViewModels;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -141,6 +142,12 @@ namespace GW2PAO.Modules.Tasks.Views.TaskTracker
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.TaskTrackerX = this.Left;
+            Settings.Default.TaskTrackerY = this.Top;
         }
     }
 }

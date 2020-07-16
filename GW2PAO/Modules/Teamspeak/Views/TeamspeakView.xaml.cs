@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Teamspeak.ViewModels;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -184,6 +185,12 @@ namespace GW2PAO.Modules.Teamspeak.Views
         {
             this.ClientListPopup.IsOpen = true;
             e.Handled = true;
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.TeamspeakX = this.Left;
+            Settings.Default.TeamspeakY = this.Top;
         }
     }
 }

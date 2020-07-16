@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GW2PAO.Modules.ZoneCompletion.ViewModels;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -135,6 +136,12 @@ namespace GW2PAO.Modules.ZoneCompletion.Views
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.ZoneAssistantX = this.Left;
+            Settings.Default.ZoneAssistantY = this.Top;
         }
     }
 }

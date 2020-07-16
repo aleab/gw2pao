@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GW2PAO.Modules.Dungeons.Interfaces;
 using GW2PAO.Modules.Dungeons.ViewModels;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
@@ -184,6 +185,12 @@ namespace GW2PAO.Modules.Dungeons.Views
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.DungeonTrackerX = this.Left;
+            Settings.Default.DungeonTrackerY = this.Top;
         }
     }
 }

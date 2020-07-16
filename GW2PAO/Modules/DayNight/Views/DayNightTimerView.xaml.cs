@@ -15,6 +15,7 @@ using GW2PAO.Views;
 using NLog;
 using System.ComponentModel.Composition;
 using GW2PAO.Modules.DayNight.ViewModels;
+using GW2PAO.Properties;
 
 namespace GW2PAO.Modules.DayNight.Views
 {
@@ -131,6 +132,12 @@ namespace GW2PAO.Modules.DayNight.Views
                 contextMenu.IsOpen = true;
                 e.Handled = true;
             }
+        }
+
+        protected override void CommitPositionSettings()
+        {
+            Settings.Default.DayNightX = this.Left;
+            Settings.Default.DayNightY = this.Top;
         }
     }
 }

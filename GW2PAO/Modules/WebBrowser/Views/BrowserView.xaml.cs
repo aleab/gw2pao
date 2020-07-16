@@ -16,6 +16,7 @@ using Awesomium.Core;
 using Awesomium.Windows.Controls;
 using GW2PAO.Modules.WebBrowser.ViewModels;
 using GW2PAO.PresentationCore;
+using GW2PAO.Properties;
 using GW2PAO.Views;
 using NLog;
 
