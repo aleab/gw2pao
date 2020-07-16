@@ -13,6 +13,7 @@ using GW2PAO.Infrastructure;
 using GW2PAO.Properties;
 using GW2PAO.Utility;
 using Microsoft.Practices.Prism.PubSubEvents;
+using NLog;
 
 namespace GW2PAO.Views
 {
@@ -96,6 +97,8 @@ namespace GW2PAO.Views
         /// </summary>
         protected ResizeSnapHelper ResizeHelper;
 
+        private Point DragStartPosition { get; set; }
+
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -104,12 +107,27 @@ namespace GW2PAO.Views
             this.Loaded += OverlayWindowBase_Loaded;
             this.ResizeHelper = new ResizeSnapHelper(this);
 
-            this.LocationChanged += this.OverlayWindowBase_LocationChanged;
+            this.MouseLeftButtonDown += OverlayWindow_MouseLeftButtonDown;
+            this.MouseLeftButtonUp += OverlayWindow_MouseLeftButtonUp;
 
             this.IsClosed = false;
             this.Closed += (o, e) => this.IsClosed = true;
 
             OverlayWindow.EventAggregator.GetEvent<GW2ProcessFocused>().Subscribe(o => Threading.BeginInvokeOnUI(() => User32.SetTopMost(this, this.Topmost)));
+        }
+
+        private void OverlayWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragStartPosition = new Point(this.Left, this.Top);
+        }
+
+        private void OverlayWindow_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (Math.Abs(this.DragStartPosition.X - this.Left) > 1 || Math.Abs(this.DragStartPosition.Y - this.Top) > 1)
+            {
+                this.CommitPositionSettings();
+                Settings.Default.Save();
+            }
         }
 
         /// <summary>
@@ -148,10 +166,6 @@ namespace GW2PAO.Views
             //    System.Windows.Point MousePoint = Mouse.GetPosition(this);
             //    System.Windows.Point ScreenPoint = this.PointToScreen(MousePoint);
             //}
-
-            // Automatically save the updated position to the settings
-            this.CommitPositionSettings();
-            Settings.Default.Save();
         }
 
         /// <summary>

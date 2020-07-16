@@ -63,9 +63,6 @@ namespace GW2PAO.Modules.Events.Views.EventNotification
         {
             this.DragMove();
             e.Handled = true;
-            Properties.Settings.Default.EventNotificationX = this.Left;
-            Properties.Settings.Default.EventNotificationY = this.Top;
-            Properties.Settings.Default.Save();
         }
 
         private void LoadWindowLocation()

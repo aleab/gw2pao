@@ -63,9 +63,6 @@ namespace GW2PAO.Modules.WvW.Views.WvWNotification
         {
             this.DragMove();
             e.Handled = true;
-            Properties.Settings.Default.WvWNotificationX = this.Left;
-            Properties.Settings.Default.WvWNotificationY = this.Top;
-            Properties.Settings.Default.Save();
         }
 
         private void LoadWindowLocation()
