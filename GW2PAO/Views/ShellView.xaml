@@ -5,7 +5,7 @@
         xmlns:resx="clr-namespace:GW2PAO.Properties"
         xmlns:src="clr-namespace:GW2PAO.Views"
         xmlns:core="clr-namespace:GW2PAO.PresentationCore;assembly=GW2PAO.PresentationCore"
-        Title="{x:Static resx:Resources.ApplicationName}"
+        Title="GW2 Personal Assistant Overlay"
         SizeToContent="WidthAndHeight"
         WindowStyle="None"
         AllowsTransparency="true"
