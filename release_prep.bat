@@ -1,5 +1,7 @@
 @echo off
 
+set WD=%CD%
+
 REM --------------------- Release Cleanup ---------------------
 pushd GW2PAO\bin\x86\Release
 xcopy de\GW2PAO.resources.dll Locale\de\ /Y
@@ -31,6 +33,7 @@ del /Q Hardcodet.Wpf.TaskbarNotification.dll 2>NUL
 del /Q Intellibox.dll 2>NUL
 del /Q Microsoft.Expression.* 2>NUL
 del /Q Microsoft.Practices.* 2>NUL
+del /Q Microsoft.Xaml.Behaviors.* 2>NUL
 del /Q Newtonsoft.Json.dll 2>NUL
 del /Q NHotkey.* 2>NUL
 del /Q NLog.dll 2>NUL
@@ -86,6 +89,7 @@ del /Q Hardcodet.Wpf.TaskbarNotification.dll 2>NUL
 del /Q Intellibox.dll 2>NUL
 del /Q Microsoft.Expression.* 2>NUL
 del /Q Microsoft.Practices.* 2>NUL
+del /Q Microsoft.Xaml.Behaviors.* 2>NUL
 del /Q Newtonsoft.Json.dll 2>NUL
 del /Q NHotkey.* 2>NUL
 del /Q NLog.dll 2>NUL
@@ -119,3 +123,5 @@ xcopy LICENSE.txt GW2PAO\bin\x86\Release_WithoutBrowser\ /Y
 xcopy ThirdPartyLicenses.txt GW2PAO\bin\x86\Release_WithoutBrowser\ /Y
 xcopy Tasks GW2PAO\bin\x86\Release_WithoutBrowser\Tasks\ /Y /S /E
 xcopy Drawings GW2PAO\bin\x86\Release_WithoutBrowser\Drawings\ /Y /S /E
+
+cd /d "%WD%"
