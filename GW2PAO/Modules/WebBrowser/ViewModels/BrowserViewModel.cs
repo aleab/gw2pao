@@ -138,7 +138,7 @@ namespace GW2PAO.Modules.WebBrowser.ViewModels
                 Directory.CreateDirectory(GW2PAO.Data.UserData.UserData<object>.DataDirectory);
             }
 
-            string fullPath = GW2PAO.Data.UserData.UserData<object>.DataDirectory + BOOKMARKS_FILENAME;
+            string fullPath = Path.Combine(GW2PAO.Data.UserData.UserData<object>.DataDirectory, BOOKMARKS_FILENAME);
             using (TextWriter writer = new StreamWriter(fullPath, false, Encoding.Unicode))
             {
                 serializer.Serialize(writer, this.Bookmarks);
@@ -154,7 +154,7 @@ namespace GW2PAO.Modules.WebBrowser.ViewModels
             XmlSerializer deserializer = new XmlSerializer(this.Bookmarks.GetType());
             object loadedBookmarks = null;
 
-            string fullPath = GW2PAO.Data.UserData.UserData<object>.DataDirectory + BOOKMARKS_FILENAME;
+            string fullPath = Path.Combine(GW2PAO.Data.UserData.UserData<object>.DataDirectory, BOOKMARKS_FILENAME);
             try
             {
                 if (File.Exists(fullPath))
