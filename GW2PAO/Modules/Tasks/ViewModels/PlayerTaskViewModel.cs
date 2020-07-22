@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using GW2PAO.API.Data.Enums;
 using GW2PAO.API.Services.Interfaces;
 using GW2PAO.Modules.Tasks.Interfaces;
 using GW2PAO.Modules.Tasks.Models;
@@ -35,6 +36,7 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         private double directionFromPlayer;
         private bool isAbovePlayer;
         private bool isBelowPlayer;
+        private bool isAtPlayer;
         private bool isVisible;
 
         /// <summary>
@@ -161,17 +163,7 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         /// </summary>
         public double DistanceFromPlayer
         {
-            get
-            {
-                if (this.HasZoneLocation && this.IsPlayerOnMap)
-                {
-                    return this.distanceFromPlayer;
-                }
-                else
-                {
-                    return double.MaxValue;
-                }
-            }
+            get { return this.HasZoneLocation && this.IsPlayerOnMap ? Math.Round(this.distanceFromPlayer) : double.MaxValue; }
             set { SetProperty(ref this.distanceFromPlayer, value); }
         }
 
@@ -200,6 +192,12 @@ namespace GW2PAO.Modules.Tasks.ViewModels
         {
             get { return this.isBelowPlayer; }
             set { SetProperty(ref this.isBelowPlayer, value); }
+        }
+
+        public bool IsAtPlayer
+        {
+            get { return this.isAtPlayer; }
+            set { SetProperty(ref this.isAtPlayer, value); }
         }
 
         /// <summary>

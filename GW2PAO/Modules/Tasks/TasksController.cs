@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using GW2PAO.API.Data.Enums;
 using GW2PAO.API.Services.Interfaces;
 using GW2PAO.API.Util;
 using GW2PAO.Modules.Tasks.Interfaces;
@@ -475,6 +476,17 @@ namespace GW2PAO.Modules.Tasks
                     bool isAbove = (ptask.Task.Location.Z > 0) && (taskMapPosition.Z - playerMapPosition.Z > ABOVE_BELOW_THRESHOLD);
                     bool isBelow = (ptask.Task.Location.Z > 0) && (playerMapPosition.Z - taskMapPosition.Z > ABOVE_BELOW_THRESHOLD);
 
+                    double threshold = 1;
+                    switch (ptask.UserData.DistanceUnits)
+                    {
+                        case Units.Meters:
+                        case Units.Feet:
+                            threshold = 5;
+                            break;
+                    }
+
+                    bool isAt = newDistance < threshold;
+
                     Threading.BeginInvokeOnUI(() =>
                         {
                             ptask.IsPlayerOnMap = true;
@@ -482,6 +494,7 @@ namespace GW2PAO.Modules.Tasks
                             ptask.DirectionFromPlayer = newAngle;
                             ptask.IsAbovePlayer = isAbove;
                             ptask.IsBelowPlayer = isBelow;
+                            ptask.IsAtPlayer = isAt;
                         });
 
                     // Check for auto-completion detection

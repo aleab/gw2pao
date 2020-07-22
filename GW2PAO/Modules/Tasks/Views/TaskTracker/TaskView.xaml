@@ -173,28 +173,46 @@
                 <Grid Name="DirectionGrid"
                       Height="15" Width="13"
                       Grid.Row="0">
-                    <Path Stretch="Uniform"
-                          Stroke="Black" Fill="Goldenrod"
+                    <Path Stroke="Black" Fill="Goldenrod"
                           StrokeThickness="1"
                           StrokeStartLineCap="Round" StrokeEndLineCap="Round"
                           RenderTransformOrigin="0.5,0.5">
-                        <Path.Data>
-                            <PathGeometry FillRule="Nonzero">
-                                <PathGeometry.Figures>
-                                    <PathFigure StartPoint="5,0">
-                                        <LineSegment Point="10,10"/>
-                                        <LineSegment Point="5,8" />
-                                        <LineSegment Point="0,10"/>
-                                        <LineSegment Point="5,0"/>
-                                    </PathFigure>
-                                </PathGeometry.Figures>
-                            </PathGeometry>
-                        </Path.Data>
-                        <Path.RenderTransform>
-                            <TransformGroup>
-                                <RotateTransform Angle="{Binding DirectionFromPlayer}" />
-                            </TransformGroup>
-                        </Path.RenderTransform>
+                        <Path.Style>
+                            <Style>
+                                <Setter Property="Path.Stretch" Value="Uniform" />
+                                <Setter Property="Path.RenderTransform">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <RotateTransform Angle="{Binding DirectionFromPlayer}" />
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Path.Data">
+                                    <Setter.Value>
+                                        <PathGeometry FillRule="Nonzero">
+                                            <PathGeometry.Figures>
+                                                <PathFigure StartPoint="5,0">
+                                                    <LineSegment Point="10,10"/>
+                                                    <LineSegment Point="5,8" />
+                                                    <LineSegment Point="0,10"/>
+                                                    <LineSegment Point="5,0"/>
+                                                </PathFigure>
+                                            </PathGeometry.Figures>
+                                        </PathGeometry>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsAtPlayer}" Value="True">
+                                        <Setter Property="Path.Stretch" Value="None" />
+                                        <Setter Property="Path.Data">
+                                            <Setter.Value>
+                                                <EllipseGeometry Center="6.5,7.5" RadiusX="5" RadiusY="5" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Path.Style>
                     </Path>
                 </Grid>
                 <StackPanel Orientation="Horizontal"
@@ -206,7 +224,7 @@
                                             FontSize="10">
                         <core:OutlinedTextBlock.Style>
                             <Style TargetType="core:OutlinedTextBlock" BasedOn="{StaticResource {x:Type core:OutlinedTextBlock}}">
-                                <Setter Property="Text" Value="{Binding DistanceFromPlayer}"/>
+                                <Setter Property="Text" Value="{Binding DistanceFromPlayer, StringFormat={}{0:0.##}}"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding UserData.DistanceUnits}" Value="TimeDistance">
                                         <Setter Property="Text" Value="{Binding DistanceFromPlayer, Converter={StaticResource TimeConverter}, ConverterParameter=true}"/>
