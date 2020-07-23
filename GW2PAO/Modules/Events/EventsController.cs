@@ -5,6 +5,8 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using GW2PAO.API.Constants;
+using GW2PAO.API.Data.Entities;
 using GW2PAO.API.Services.Interfaces;
 using GW2PAO.API.Util;
 using GW2PAO.Modules.Events.Interfaces;
@@ -238,11 +240,6 @@ namespace GW2PAO.Modules.Events
                         foreach (var stage in metaEvent.Stages)
                         {
                             stage.Name = this.eventsService.GetLocalizedName(stage.ID);
-                            if (!this.UserData.ShowEndOfEvents)
-                            {
-                                logger.Debug("Do not show \"End of Events\", Skipping..");
-                                continue;
-                            }
                         }
 
                         logger.Debug("Initializing view models for {0}", metaEvent.ID);
@@ -430,8 +427,10 @@ namespace GW2PAO.Modules.Events
                     var ens = this.UserData.NotificationSettings.FirstOrDefault(ns => ns.EventID == metaEvent.EventId);
                     if (ens != null)
                     {
-                        if (ens.IsNotificationEnabled
-                            && metaEvent.TimeUntilNextStage.CompareTo(ens.NotificationInterval) < 0)
+                        var shouldDisplayNotification = ens.IsNotificationEnabled
+                                                     && metaEvent.TimeUntilNextStage < ens.NotificationInterval
+                                                     && !(metaEvent.NextStage.ID == MetaEventStageID.EventEnds && !this.UserData.ShowEndOfEvents);
+                        if (shouldDisplayNotification)
                         {
                             var notification = new MetaEventNotificationViewModel(metaEvent, this.EventNotifications);
                             this.DisplayEventNotification(notification, this.EventNotifications);
@@ -455,9 +454,9 @@ namespace GW2PAO.Modules.Events
         {
             const int SLEEP_TIME = 250;
 
-            if (this.UserData.AreEventNotificationsEnabled
-                && (this.armedEventNotifications[notification.EventId] == true)
-                && !notificationCollection.Any((n) => n.EventId == notification.EventId))
+            if (this.UserData.AreEventNotificationsEnabled &&
+                this.armedEventNotifications[notification.EventId] &&
+                notificationCollection.All(n => n.EventId != notification.EventId))
             {
                 Task.Factory.StartNew(() =>
                 {
