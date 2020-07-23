@@ -34,6 +34,8 @@ namespace GW2PAO.Modules.Events
 
         private bool areCompletedEventsVisible;
         private bool areInactiveEventsVisible;
+        private bool areHiddenEventsVisible;
+        private bool areHiddenMetaEventsVisible;
         private bool showWaypointCopyButtons;
         private bool areEventNotificationsEnabled;
         private bool useAdjustedTimeTable;
@@ -62,6 +64,18 @@ namespace GW2PAO.Modules.Events
         {
             get { return this.areInactiveEventsVisible; }
             set { SetProperty(ref this.areInactiveEventsVisible, value); }
+        }
+
+        public bool AreHiddenEventsVisible
+        {
+            get { return this.areHiddenEventsVisible; }
+            set { SetProperty(ref this.areHiddenEventsVisible, value); }
+        }
+
+        public bool AreHiddenMetaEventsVisible
+        {
+            get { return this.areHiddenMetaEventsVisible; }
+            set { SetProperty(ref this.areHiddenMetaEventsVisible, value); }
         }
 
         /// <summary>
@@ -171,6 +185,8 @@ namespace GW2PAO.Modules.Events
         {
             this.AreCompletedEventsVisible = true;
             this.AreInactiveEventsVisible = true;
+            this.AreHiddenEventsVisible = false;
+            this.AreHiddenMetaEventsVisible = false;
             this.ShowWaypointCopyButtons = true;
             this.AreEventNotificationsEnabled = true;
             this.UseAdjustedTimeTable = true;

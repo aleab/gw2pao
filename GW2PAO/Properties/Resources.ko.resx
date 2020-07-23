@@ -1103,4 +1103,10 @@
   <data name="MercenaryObjects" xml:space="preserve">
     <value>Mercenary Objectives</value>
   </data>
+  <data name="ShowHiddenEvents" xml:space="preserve">
+    <value>숨긴 이벤트 표시</value>
+  </data>
+  <data name="ToggleHidden" xml:space="preserve">
+    <value>Toggle Hidden</value>
+  </data>
 </root>

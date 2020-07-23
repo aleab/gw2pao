@@ -24,7 +24,7 @@
 
     <UserControl.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="{x:Static resx:Resources.Hide}" Command="{Binding HideCommand}" />
+            <MenuItem Header="{x:Static resx:Resources.ToggleHidden}" Command="{Binding HideCommand}" />
             <MenuItem Header="{x:Static resx:Resources.CopyWaypointCode}" Command="{Binding CopyWaypointCommand}" />
         </ContextMenu>
     </UserControl.ContextMenu>
@@ -124,10 +124,20 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
+            <Grid.Resources>
+                <Style TargetType="core:OutlinedTextBlock">
+                    <Setter Property="Fill" Value="{Binding State, Converter={StaticResource StateConverter}}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsHidden}" Value="True">
+                            <Setter Property="Fill" Value="DarkGray" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
+
             <core:OutlinedTextBlock Name="EventName"
                                     Grid.Row="0" Grid.Column="0"
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
                                     Text="{Binding EventName}" />
 
@@ -192,7 +202,6 @@
             <core:OutlinedTextBlock Name="TimerValue"
                                     Grid.Row="0" Grid.Column="3"
                                     VerticalAlignment="Center" HorizontalAlignment="Center"
-                                    Fill="{Binding State, Converter={StaticResource StateConverter}}"
                                     FontSize="13"
                                     Text="{Binding TimerValue, Converter={StaticResource TimeConverter}}" />
 

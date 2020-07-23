@@ -729,6 +729,9 @@
     <value>Remise à zéro des évènements masqués</value>
     <comment>Forces events hidden from view to be shown again</comment>
   </data>
+  <data name="ShowHiddenEvents" xml:space="preserve">
+    <value>Afficher les événements masqués</value>
+  </data>
   <data name="ResetHiddenObjectives" xml:space="preserve">
     <value>Remise à zéro des objectifs masqués</value>
   </data>
@@ -1138,5 +1141,8 @@ Lorsqu'un objectif est capturé par un autre monde chez l'ennemi</value>
   </data>
   <data name="SpawnPoints" xml:space="preserve">
     <value>Respawn Points</value>
+  </data>
+  <data name="ToggleHidden" xml:space="preserve">
+    <value>Toggle Hidden</value>
   </data>
 </root>

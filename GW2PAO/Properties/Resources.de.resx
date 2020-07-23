@@ -725,7 +725,7 @@
     <comment>Menu item for the Dungeons Tracker</comment>
   </data>
   <data name="ResetHiddenEvents" xml:space="preserve">
-    <value>Ausgeblendete Events zurücksetzen</value>
+    <value>Ausgeblendete Veranstaltungen zurücksetzen</value>
     <comment>Forces events hidden from view to be shown again</comment>
   </data>
   <data name="ResetHiddenObjectives" xml:space="preserve">
@@ -837,7 +837,7 @@
     <value>Punkte anzeigen Held</value>
   </data>
   <data name="ShowInactiveEvents" xml:space="preserve">
-    <value>Inaktive Events anzeigen</value>
+    <value>Inaktive Veranstaltungen anzeigen</value>
     <comment>Show world events even if they are inactive</comment>
   </data>
   <data name="ShowNone" xml:space="preserve">
@@ -1137,5 +1137,11 @@ Gebietsabschluss-Assistent umschalten</value>
   </data>
   <data name="SpawnPoints" xml:space="preserve">
     <value>Respawn Points</value>
+  </data>
+  <data name="ShowHiddenEvents" xml:space="preserve">
+    <value>Ausgeblendete Veranstaltungen anzeigen</value>
+  </data>
+  <data name="ToggleHidden" xml:space="preserve">
+    <value>Toggle Hidden</value>
   </data>
 </root>

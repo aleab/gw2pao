@@ -28,6 +28,7 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private TimeSpan timeUntilNextStage;
         private TimeSpan timeSinceStageStarted;
         private bool isVisible;
+        private bool isHidden;
 
         public string Name { get; set; }
 
@@ -109,10 +110,16 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
             set { SetProperty(ref this.isVisible, value); }
         }
 
+        public bool IsHidden
+        {
+            get { return this.isHidden; }
+            set { SetProperty(ref this.isHidden, value); }
+        }
+
         /// <summary>
         /// Command to hide the event
         /// </summary>
-        public DelegateCommand HideCommand { get { return new DelegateCommand(this.AddToHiddenEvents); } }
+        public DelegateCommand HideCommand { get; }
 
         /// <summary>
         /// Default Constructor
@@ -122,11 +129,15 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
             this.metaEventData = metaEventData;
             this.UserData = userData;
             this.IsVisible = true;
+            this.isHidden = this.UserData.HiddenMetaEvents.Any(id => id == this.EventId);
 
             var currentTime = DateTime.UtcNow.TimeOfDay;
             this.InitializeStagesAndTimers(currentTime);
             this.prevUpdateTimeUtc = currentTime;
 
+            this.HideCommand = new DelegateCommand(this.AddOrRemoveToHiddenEvents);
+
+            this.UserData.PropertyChanged += UserData_PropertyChanged;
             this.UserData.HiddenMetaEvents.CollectionChanged += (o, e) => this.RefreshVisibility();
         }
 
@@ -224,10 +235,18 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         /// <summary>
         /// Adds the meta event to the list of hidden meta events
         /// </summary>
-        private void AddToHiddenEvents()
+        private void AddOrRemoveToHiddenEvents()
         {
-            logger.Debug("Adding \"{0}\" to hidden meta events", this.MapName);
-            this.UserData.HiddenMetaEvents.Add(this.EventId);
+            if (this.UserData.HiddenMetaEvents.Any(id => id == this.EventId))
+            {
+                logger.Debug("Removing \"{0}\" from hidden meta events", this.MapName);
+                this.UserData.HiddenMetaEvents.Remove(this.EventId);
+            }
+            else
+            {
+                logger.Debug("Adding \"{0}\" to hidden meta events", this.MapName);
+                this.UserData.HiddenMetaEvents.Add(this.EventId);
+            }
         }
 
         /// <summary>
@@ -236,7 +255,8 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
         private void RefreshVisibility()
         {
             logger.Trace("Refreshing visibility of meta event \"{0}\"", this.MapName);
-            if (this.UserData.HiddenMetaEvents.Any(id => id == this.EventId))
+            this.IsHidden = this.UserData.HiddenMetaEvents.Any(id => id == this.EventId);
+            if (!this.UserData.AreHiddenMetaEventsVisible && this.IsHidden)
             {
                 this.IsVisible = false;
             }
@@ -245,6 +265,16 @@ namespace GW2PAO.Modules.Events.ViewModels.MetaEventTimers
                 this.IsVisible = true;
             }
             logger.Trace("IsVisible = {0}", this.IsVisible);
+        }
+
+        private void UserData_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case nameof(this.UserData.AreHiddenMetaEventsVisible):
+                    this.RefreshVisibility();
+                    break;
+            }
         }
     }
 }

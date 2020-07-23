@@ -69,6 +69,7 @@
                     <Image.ContextMenu>
                         <ContextMenu Name="MainMenu">
                             <MenuItem Header="{x:Static resx:Resources.ResetHiddenEvents}" Command="{Binding ResetHiddenEventsCommand}" />
+                            <MenuItem Header="{x:Static resx:Resources.ShowHiddenEvents}" IsCheckable="True" IsChecked="{Binding UserData.AreHiddenMetaEventsVisible}" />
                             <Separator />
                             <MenuItem Header="{x:Static resx:Resources.Settings}" Command="{Binding SettingsCommand}" />
                             <Separator />

@@ -23,6 +23,7 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
         private TimeSpan timeSinceActive;
         private TimeSpan timerValue;
         private bool isVisible;
+        private bool isHidden;
 
         /// <summary>
         /// The general events-related user settings/data
@@ -90,6 +91,12 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
             set { SetProperty(ref this.isVisible, value); }
         }
 
+        public bool IsHidden
+        {
+            get { return this.isHidden; }
+            set { SetProperty(ref this.isHidden, value); }
+        }
+
         /// <summary>
         /// Daily treasure obtained state
         /// Resets at UTC midnight
@@ -119,7 +126,7 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
         /// <summary>
         /// Command to hide the event
         /// </summary>
-        public DelegateCommand HideCommand { get { return new DelegateCommand(this.AddToHiddenEvents); } }
+        public DelegateCommand HideCommand { get; }
 
         /// <summary>
         /// Command to copy the nearest waypoint's chat code to the clipboard
@@ -141,6 +148,9 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
             this.EventModel = eventData;
             this.UserData = userData;
             this.IsVisible = true;
+            this.isHidden = this.UserData.HiddenEvents.Any(id => id == this.EventModel.ID);
+
+            this.HideCommand = new DelegateCommand(this.AddOrRemoveToHiddenEvents);
 
             this.State = EventState.Unknown;
             this.TimerValue = TimeSpan.Zero;
@@ -151,10 +161,18 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
         /// <summary>
         /// Adds the event to the list of hidden events
         /// </summary>
-        private void AddToHiddenEvents()
+        private void AddOrRemoveToHiddenEvents()
         {
-            logger.Debug("Adding \"{0}\" to hidden events", this.EventName);
-            this.UserData.HiddenEvents.Add(this.EventModel.ID);
+            if (this.UserData.HiddenEvents.Any(id => id == this.EventModel.ID))
+            {
+                logger.Debug("Removing \"{0}\" from hidden events", this.EventName);
+                this.UserData.HiddenEvents.Remove(this.EventModel.ID);
+            }
+            else
+            {
+                logger.Debug("Adding \"{0}\" to hidden events", this.EventName);
+                this.UserData.HiddenEvents.Add(this.EventModel.ID);
+            }
         }
 
         /// <summary>
@@ -163,17 +181,16 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
         private void RefreshVisibility()
         {
             logger.Trace("Refreshing visibility of \"{0}\"", this.EventName);
-            if (this.UserData.HiddenEvents.Any(id => id == this.EventId))
+            this.IsHidden = this.UserData.HiddenEvents.Any(id => id == this.EventModel.ID);
+            if (!this.UserData.AreHiddenEventsVisible && this.IsHidden)
             {
                 this.IsVisible = false;
             }
-            else if (!this.UserData.AreInactiveEventsVisible
-                    && this.State == EventState.Inactive)
+            else if (!this.UserData.AreInactiveEventsVisible && this.State == EventState.Inactive)
             {
                 this.IsVisible = false;
             }
-            else if (!this.UserData.AreCompletedEventsVisible
-                    && this.IsTreasureObtained)
+            else if (!this.UserData.AreCompletedEventsVisible && this.IsTreasureObtained)
             {
                 this.IsVisible = false;
             }
@@ -217,6 +234,5 @@ namespace GW2PAO.Modules.Events.ViewModels.WorldBossTimers
             logger.Debug("Copying \"{0}\" to clipboard", fullText);
             System.Windows.Clipboard.SetDataObject(fullText);
         }
-
     }
 }

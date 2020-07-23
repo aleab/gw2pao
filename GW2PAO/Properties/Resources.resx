@@ -217,6 +217,9 @@
     <value>Hide</value>
     <comment>Used in several places, hides something from view</comment>
   </data>
+  <data name="ToggleHidden" xml:space="preserve">
+    <value>Toggle Hidden</value>
+  </data>
   <data name="IP" xml:space="preserve">
     <value>IP: </value>
     <comment>IP Address</comment>
@@ -284,6 +287,9 @@
   <data name="ResetHiddenEvents" xml:space="preserve">
     <value>Reset Hidden Events</value>
     <comment>Forces events hidden from view to be shown again</comment>
+  </data>
+  <data name="ShowHiddenEvents" xml:space="preserve">
+    <value>Show Hidden Events</value>
   </data>
   <data name="Revenue" xml:space="preserve">
     <value>Revenue:</value>

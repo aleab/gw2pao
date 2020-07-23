@@ -1137,4 +1137,10 @@
   <data name="SpawnPoints" xml:space="preserve">
     <value>Respawn Points</value>
   </data>
+  <data name="ShowHiddenEvents" xml:space="preserve">
+    <value>Показать скрытые ивенты</value>
+  </data>
+  <data name="ToggleHidden" xml:space="preserve">
+    <value>Toggle Hidden</value>
+  </data>
 </root>

@@ -23,7 +23,7 @@
 
     <UserControl.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="{x:Static resx:Resources.Hide}" Command="{Binding HideCommand}" />
+            <MenuItem Header="{x:Static resx:Resources.ToggleHidden}" Command="{Binding HideCommand}" />
         </ContextMenu>
     </UserControl.ContextMenu>
     
@@ -79,12 +79,22 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
+            <Grid.Resources>
+                <Style TargetType="core:OutlinedTextBlock">
+                    <Setter Property="Fill" Value="White" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsHidden}" Value="True">
+                            <Setter Property="Fill" Value="DarkGray" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Resources>
+
             <core:OutlinedTextBlock Name="MapName"
                                     Grid.Row="0"
                                     Grid.Column="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
-                                    Fill="White"
                                     FontSize="13"
                                     Text="{Binding MapName}" />
 
@@ -95,12 +105,10 @@
                         Margin="0,0,5,0">
                 <core:OutlinedTextBlock Name="EventName"
                                         VerticalAlignment="Center"
-                                        Fill="White"
                                         FontSize="13"
                                         Text="{Binding NextStage.Name}" />
                 <core:OutlinedTextBlock Margin="3,0,0,0"
                                         VerticalAlignment="Center"
-                                        Fill="White"
                                         FontSize="13"
                                         Text="{x:Static resx:Resources.In}" />
             </StackPanel>
@@ -110,7 +118,6 @@
                                     Grid.Column="2"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Right"
-                                    Fill="White"
                                     FontSize="13"
                                     Text="{Binding TimeUntilNextStage, Converter={StaticResource TimeConverter}}" />
         </Grid>
