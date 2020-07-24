@@ -13,7 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GW2PAO.Properties;
 using GW2PAO.ViewModels;
+using NLog;
 
 namespace GW2PAO.Views
 {
@@ -33,6 +35,22 @@ namespace GW2PAO.Views
         public GeneralSettingsView()
         {
             InitializeComponent();
+        }
+
+        private void OverlayColorPicker_OnInitialized(object sender, EventArgs e)
+        {
+            this.OverlayColorPicker.SelectedColor = Settings.Default.OverlayColor;
+        }
+
+        private void ColorPicker_OnSelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            if (this.ViewModel != null && e.NewValue != null)
+                this.ViewModel.OverlayColor = e.NewValue.Value;
+        }
+
+        private void ColorPicker_OnClosed(object sender, RoutedEventArgs e)
+        {
+            this.ViewModel?.ApplyOverlayColorCommand.Execute();
         }
     }
 }

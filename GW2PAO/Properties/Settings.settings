@@ -257,5 +257,8 @@
     <Setting Name="ShowDayNightTime" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="OverlayColor" Type="System.Windows.Media.Color" Scope="User">
+      <Value Profile="(Default)">#00FFFFFF</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -300,6 +300,7 @@
     <Compile Include="Modules\Map\Views\Controls\MapSettingControl.xaml.cs">
       <DependentUpon>MapSettingControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modules\NotificationWindow.cs" />
     <Compile Include="Modules\Tasks\PlayerTasksFactory.cs" />
     <Compile Include="Modules\Tasks\ViewModels\EditCategoryViewModel.cs" />
     <Compile Include="Modules\Tasks\ViewModels\TaskCategoryViewModel.cs" />
@@ -635,6 +636,10 @@
     <Page Include="Modules\WvW\Views\WvWSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\BaseControlStyles\XceedColorPickerStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Style\BaseControlStyles\DialogStyle.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -1154,4 +1154,7 @@
   <data name="ToggleHidden" xml:space="preserve">
     <value>Toggle Hidden</value>
   </data>
+  <data name="OverlayColorSetting" xml:space="preserve">
+    <value>Overlay Color:</value>
+  </data>
 </root>

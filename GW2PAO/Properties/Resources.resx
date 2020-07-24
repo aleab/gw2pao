@@ -676,6 +676,9 @@
     <value>Language:</value>
     <comment>Shown in the general settings, next to the dropdown that allows selection of the current language.</comment>
   </data>
+  <data name="OverlayColorSetting" xml:space="preserve">
+    <value>Overlay Color:</value>
+  </data>
   <data name="Location" xml:space="preserve">
     <value>Location</value>
   </data>

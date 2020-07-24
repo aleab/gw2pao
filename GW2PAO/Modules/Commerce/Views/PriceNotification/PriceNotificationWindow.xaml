@@ -1,4 +1,4 @@
-﻿<src:OverlayWindow x:Class="GW2PAO.Modules.Commerce.Views.PriceNotification.PriceNotificationWindow"
+﻿<src:NotificationWindow x:Class="GW2PAO.Modules.Commerce.Views.PriceNotification.PriceNotificationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:src="clr-namespace:GW2PAO.Views"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -17,10 +17,10 @@
         Width="252" 
         MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
-    <src:OverlayWindow.Resources>
+    <src:NotificationWindow.Resources>
         <core:AutoRefreshCollectionViewSource Source="{Binding PriceNotifications}" x:Key="PriceNotificationsCollection" />
         <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
-    </src:OverlayWindow.Resources>
+    </src:NotificationWindow.Resources>
 
     <Grid>
         <Border BorderThickness="2,10,0,0" CornerRadius="10" ClipToBounds="True" Margin="2,0,0,0"
@@ -67,4 +67,4 @@
         </ItemsControl>
     </Grid>
 
-</src:OverlayWindow>
+</src:NotificationWindow>

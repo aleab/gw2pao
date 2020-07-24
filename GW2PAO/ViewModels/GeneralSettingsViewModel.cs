@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using GW2PAO.Infrastructure;
 using GW2PAO.Infrastructure.Interfaces;
 using GW2PAO.Properties;
@@ -217,6 +218,19 @@ namespace GW2PAO.ViewModels
             }
         }
 
+        public Color OverlayColor
+        {
+            get { return Settings.Default.OverlayColor; }
+            set
+            {
+                if (!Settings.Default.OverlayColor.Equals(value))
+                {
+                    Settings.Default.OverlayColor = value;
+                    this.OnPropertyChanged(() => this.OverlayColor);
+                }
+            }
+        }
+
         /// <summary>
         /// Full collection of possible languages
         /// </summary>
@@ -237,12 +251,15 @@ namespace GW2PAO.ViewModels
             private set;
         }
 
+        public DelegateCommand ApplyOverlayColorCommand { get; }
+
         /// <summary>
         /// Default constructor
         /// </summary>
         public GeneralSettingsViewModel()
         {
             this.ApplyLanguageCommand = new DelegateCommand(this.ApplyLanguage, this.CanApplyLanguage);
+            this.ApplyOverlayColorCommand = new DelegateCommand(this.ApplyOverlayColor);
             this.currentLanguage = LanguageExtensions.FromTwoLetterISOLanguageName(Settings.Default.Language);
         }
 
@@ -276,6 +293,11 @@ namespace GW2PAO.ViewModels
         private bool CanApplyLanguage()
         {
             return LanguageExtensions.FromTwoLetterISOLanguageName(Settings.Default.Language) != this.currentLanguage;
+        }
+
+        private void ApplyOverlayColor()
+        {
+            Settings.Default.Save();
         }
     }
 }

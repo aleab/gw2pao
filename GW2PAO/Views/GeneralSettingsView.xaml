@@ -1,12 +1,14 @@
-﻿<UserControl x:Class="GW2PAO.Views.GeneralSettingsView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:resx="clr-namespace:GW2PAO.Properties"
              xmlns:core="clr-namespace:GW2PAO.PresentationCore;assembly=GW2PAO.PresentationCore"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:xc="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             x:Class="GW2PAO.Views.GeneralSettingsView"
+             mc:Ignorable="d"
              SnapsToDevicePixels="True"
              UseLayoutRounding="True">
     <StackPanel Margin="15,10,0,0">
@@ -71,11 +73,29 @@
                       Margin="5"
                       Height="24"
                       Width="150"/>
-            <Button Name="ApplyLanguageButton"
+            <Button x:Name="ApplyLanguageButton"
                     Grid.Column="2"
                     Height="25" MinWidth="45"
                     Content="{x:Static resx:Resources.Apply}"
                     Command="{Binding ApplyLanguageCommand}"/>
+        </Grid>
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <core:OutlinedTextBlock Grid.Column="0"
+                                    VerticalAlignment="Center"
+                                    Text="{x:Static resx:Resources.OverlayColorSetting}" />
+            <xc:ColorPicker x:Name="OverlayColorPicker"
+                            Grid.Column="1"
+                            Margin="5" Height="24" Width="150"
+                            HorizontalAlignment="Left"
+                            ColorMode="ColorCanvas" ShowAdvancedButton="False"
+                            Style="{DynamicResource ColorPicker}"
+                            Initialized="OverlayColorPicker_OnInitialized"
+                            SelectedColorChanged="ColorPicker_OnSelectedColorChanged"
+                            Closed="ColorPicker_OnClosed" />
         </Grid>
     </StackPanel>
 </UserControl>

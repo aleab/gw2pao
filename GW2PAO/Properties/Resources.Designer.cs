@@ -1492,6 +1492,15 @@ namespace GW2PAO.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Overlay Color:.
+        /// </summary>
+        public static string OverlayColorSetting {
+            get {
+                return ResourceManager.GetString("OverlayColorSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Overlay Menu Icon.
         /// </summary>
         public static string OverlayMenuIcon {

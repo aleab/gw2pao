@@ -22,7 +22,7 @@ namespace GW2PAO.Modules.Commerce.Views.PriceNotification
     /// <summary>
     /// Interaction logic for EventNotificationWindow.xaml
     /// </summary>
-    public partial class PriceNotificationWindow : OverlayWindow
+    public partial class PriceNotificationWindow : NotificationWindow
     {
         /// <summary>
         /// Default logger

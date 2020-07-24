@@ -22,7 +22,7 @@ namespace GW2PAO.Modules.WvW.Views.WvWNotification
     /// <summary>
     /// Interaction logic for EventNotificationWindow.xaml
     /// </summary>
-    public partial class WvWNotificationWindow : OverlayWindow
+    public partial class WvWNotificationWindow : NotificationWindow
     {
         /// <summary>
         /// Default logger

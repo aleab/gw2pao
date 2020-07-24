@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Interop;
+using System.Windows.Media;
 using GW2PAO.Infrastructure;
 using GW2PAO.Properties;
 using GW2PAO.Utility;
@@ -114,6 +115,20 @@ namespace GW2PAO.Views
             this.Closed += (o, e) => this.IsClosed = true;
 
             OverlayWindow.EventAggregator.GetEvent<GW2ProcessFocused>().Subscribe(o => Threading.BeginInvokeOnUI(() => User32.SetTopMost(this, this.Topmost)));
+
+            this.Background = new SolidColorBrush(Settings.Default.OverlayColor);
+            Settings.Default.PropertyChanged += Settings_PropertyChanged;
+        }
+
+        private void Settings_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case nameof(Settings.Default.OverlayColor):
+                    this.Background = this.GetBackgroundBrush();
+                    break;
+                default: break;
+            }
         }
 
         private void OverlayWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -196,5 +211,10 @@ namespace GW2PAO.Views
         }
 
         protected virtual void CommitPositionSettings() {}
+
+        protected virtual Brush GetBackgroundBrush()
+        {
+            return new SolidColorBrush(Settings.Default.OverlayColor);
+        }
     }
 }
