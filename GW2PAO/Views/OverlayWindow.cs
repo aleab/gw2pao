@@ -116,8 +116,13 @@ namespace GW2PAO.Views
 
             OverlayWindow.EventAggregator.GetEvent<GW2ProcessFocused>().Subscribe(o => Threading.BeginInvokeOnUI(() => User32.SetTopMost(this, this.Topmost)));
 
-            this.Background = new SolidColorBrush(Settings.Default.OverlayColor);
             Settings.Default.PropertyChanged += Settings_PropertyChanged;
+        }
+
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+            this.Background = this.GetBackgroundBrush();
         }
 
         private void Settings_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -12,7 +12,6 @@ namespace GW2PAO.Views
             {
                 Opacity = 0,
             };
-            this.Background = background;
         }
 
         protected override Brush GetBackgroundBrush()

@@ -108,7 +108,6 @@ namespace GW2PAO.Views
             this.Closing += ShellView_Closing;
 
             this.background = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)) { Opacity = 0, };
-            this.Background = background;
         }
 
         private void ShellView_Loaded(object sender, RoutedEventArgs e)
